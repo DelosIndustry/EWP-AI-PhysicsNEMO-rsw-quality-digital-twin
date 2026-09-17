@@ -1,0 +1,12 @@
+{
+  "data_file": "nominal_state_dependent_diagnostics.npz",
+  "files": {
+    "contact_law_curves.png": "bounded synthetic contact-law curves",
+    "energy_conservation.png": "state-dependent energy ledgers",
+    "evaluated_contact_histories.png": "Rpp histories used by solver",
+    "external_observability.png": "external-data observability matrix",
+    "force_sensitivity_histories.png": "force-only response comparison",
+    "identifiability_decomposition.png": "same V/I, different heat split"
+  },
+  "human_guide": "INTERPRETATION.md"
+}

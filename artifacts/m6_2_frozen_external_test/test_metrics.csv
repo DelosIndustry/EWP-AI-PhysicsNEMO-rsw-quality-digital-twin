@@ -1,0 +1,4 @@
+task,task_type,model,test_samples,mae,rmse,median_absolute_error,r2,bias,validation_mae,test_to_validation_mae_ratio,accuracy,balanced_accuracy,macro_f1,class_counts,per_class_recall,confusion_matrix,validation_macro_f1,test_minus_validation_macro_f1
+nugget_diameter_mm,regression,random_forest,98,0.23684010787062065,0.33669224312644574,0.16284629316353194,0.20549222437646786,0.04574080941645795,0.23236452485799428,1.0192610426026156,,,,,,,,
+pull_test_n,regression,random_forest,97,147.6199537775458,243.56718789599796,89.4612683653354,0.5829751618429353,12.642701140046492,174.15030393593298,0.8476583183676368,,,,,,,,
+category,classification,random_forest_balanced,98,,,,,,,,0.8877551020408163,0.5681818181818182,0.6003210272873194,"{'Bad': 4, 'Explode': 6, 'Good': 88}","{'Bad': 0.75, 'Explode': 0.0, 'Good': 0.9545454545454546}","[[3, 1, 0], [0, 0, 6], [0, 4, 84]]",0.6813492063492065,-0.08102817906188708

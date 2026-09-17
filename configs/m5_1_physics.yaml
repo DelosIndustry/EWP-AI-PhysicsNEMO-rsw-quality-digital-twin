@@ -1,0 +1,40 @@
+project:
+  name: rsw_quality_digital_twin
+  stage: m5_1_physics_constraints
+  seed: 42
+
+data:
+  expected_manifest_id: 8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be
+  verify_checksums: true
+  reference_residual_audit_path: projects/rsw_quality_digital_twin/artifacts/m5_1_reference_residual/reference_residual_audit.json
+
+reference_residual_gate:
+  splits: [train, validation]
+  maximum_equivalent_temperature_error_k: 1.0e-3
+  maximum_initial_condition_error_k: 1.0e-6
+
+# Cumulative one-factor-at-a-time ablation. The data MSE weight remains fixed.
+loss_ablation:
+  data_only:
+    data: 1.0
+    initial: 0.0
+    nonnegative: 0.0
+    thermal_residual: 0.0
+  plus_initial:
+    data: 1.0
+    initial: 0.1
+    nonnegative: 0.0
+    thermal_residual: 0.0
+  plus_nonnegative:
+    data: 1.0
+    initial: 0.1
+    nonnegative: 0.1
+    thermal_residual: 0.0
+  plus_thermal_residual:
+    data: 1.0
+    initial: 0.1
+    nonnegative: 0.1
+    thermal_residual: 0.01
+
+visualization:
+  dpi: 150

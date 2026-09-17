@@ -1,0 +1,143 @@
+project:
+  name: rsw_quality_digital_twin
+  schema_version: "0.1"
+  seed: 42
+  stage: m0_model_contract
+
+physics:
+  coordinate_system: axisymmetric_rz
+  coupling: sequential_electrical_thermal
+  transient: true
+  model_fidelity:
+    electrical_conduction: true
+    thermal_conduction: true
+    effective_contact_layer: true
+    mechanical_deformation: false
+    phase_transformation: false
+    melt_flow: false
+  # These sizes define the first full pipeline target, not a converged production mesh.
+  grid:
+    time_steps: 32
+    radial_cells: 64
+    axial_cells: 32
+  smoke_grid:
+    time_steps: 4
+    radial_cells: 8
+    axial_cells: 8
+  boundary_model:
+    electrode_geometry: boundary_only
+    radial_axis: symmetry
+    outer_radial: electrically_and_thermally_insulated
+  parameter_ranges:
+    # Physical ranges remain unset until the M1/M2 solver and source review establish
+    # internally consistent SI values. Do not silently substitute industrial specifications.
+    current_a: null
+    weld_time_s: null
+    sheet_thickness_m: null
+    contact_resistivity_ohm_m2: null
+    thermal_contact_conductance_w_m2k: null
+
+data:
+  simulation_source: in_repository_axisymmetric_solver
+  experimental_sources: [mendeley_rsw_v3, polito_automotive_rsw]
+  source_policy: separate_manifests_and_result_tables
+  field_input_channels:
+    - electrical_conductivity_s_per_m
+    - thermal_conductivity_w_per_mk
+    - volumetric_heat_capacity_j_per_m3k
+    - sheet_mask
+    - interface_mask
+    - current_schedule_a
+    - contact_resistivity_ohm_m2
+    - thermal_contact_conductance_w_per_m2k
+    - initial_temperature_k
+    - cooling_coefficient_w_per_m2k
+  field_target: temperature_rise_k
+  tensor_contract:
+    channels_first: "B,C,T,R,Z"
+    token_features: "B,(T*R*Z),C"
+    token_coordinates: "B,(T*R*Z),3  # normalized t,r,z"
+  smoke_split_sizes:
+    train: 64
+    validation: 16
+    test_iid: 16
+    test_process_ood: 16
+    test_corner: 8
+  full_split_sizes:
+    train: 1024
+    validation: 128
+    validation_qualification: 128
+    validation_process_ood: 64
+    test_iid: 128
+    test_qualification: 128
+    test_process_ood: 128
+    test_corner: 64
+
+model_candidates:
+  fno3d:
+    architecture: physicsnemo_fno3d
+    in_channels: 10
+    out_channels: 1
+    dimension: 3
+    latent_channels: 16
+    num_fno_layers: 4
+    num_fno_modes: [6, 6, 6]
+    padding: 4
+    padding_type: constant
+    activation_fn: gelu
+    coord_features: true
+    decoder_layers: 1
+    decoder_layer_size: 32
+    decoder_activation_fn: silu
+  transolver:
+    architecture: physicsnemo_transolver_points
+    layout: flattened_spacetime_coordinates
+    functional_dim: 10
+    out_dim: 1
+    embedding_dim: 3
+    n_layers: 4
+    n_hidden: 128
+    dropout: 0.0
+    n_head: 8
+    act: gelu
+    mlp_ratio: 4
+    slice_num: 32
+    unified_pos: false
+    ref: 8
+    use_te: false
+    time_input: false
+    plus: false
+  future_meshgraphnet:
+    enabled: false
+    activation_gate: validated_unstructured_mesh_dataset
+  future_domino:
+    enabled: false
+    activation_gate: justified_3d_geometry_and_memory_budget
+
+training:
+  device: cuda
+  precision: fp32
+  batch_size: 2
+  optimizer: adamw
+  learning_rate: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: cosine
+  epochs: 100
+  early_stopping_patience: 20
+  checkpoint_metric: validation_melt_diameter_proxy_mae_mm
+  seeds: [17, 42, 91]
+
+loss:
+  temperature_field_mse_weight: 1.0
+  melt_boundary_weight: 0.0
+  electrical_residual_weight: 0.0
+  thermal_residual_weight: 0.0
+
+quality:
+  # Set only after the solver distribution and external-data mapping are audited.
+  limits_source: unset_learning_thresholds
+  melt_temperature_k: null
+  min_melt_diameter_m: null
+  max_temperature_k: null
+  confidence_method: split_conformal_absolute_error
+  ood_action: REVIEW

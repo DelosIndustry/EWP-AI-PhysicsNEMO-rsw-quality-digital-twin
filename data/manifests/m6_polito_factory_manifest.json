@@ -1,0 +1,142 @@
+{
+  "adapter_version": "m6-rsw-external-v1",
+  "config_sha256": "290ef543a3b948328519af8fcfd99eab12524fedea716e22f8e4d494dbc18d38",
+  "contract": {
+    "accuracy_only_allowed": false,
+    "forbidden_target": "internal temperature field T(r,z,t)",
+    "independent_sample": "sample_row_id",
+    "input_signal_semantics": "upstream normalized voltage/current/force",
+    "required_metrics": [
+      "pr_auc",
+      "fault_recall",
+      "precision",
+      "false_negative_rate"
+    ],
+    "si_unit_reconstruction_allowed": false,
+    "split_unit": "Car Body",
+    "target": "Fault"
+  },
+  "created_at_utc": "2026-09-09T09:46:41.800391+00:00",
+  "dataset_kind": "factory_timeseries",
+  "files": {
+    "samples": {
+      "bytes": 105865,
+      "path": "samples.csv",
+      "sha256": "ce997977c5a04a0c50db5ff115b6b35c67cdd9329d92435ea7ee43547a8b65e0"
+    },
+    "test": {
+      "bytes": 351023,
+      "path": "test.npz",
+      "sha256": "42e4615f8510b53ce3cf88ce9ae1d503ab3145b11f2e376a129afbaab439421d"
+    },
+    "train": {
+      "bytes": 1611806,
+      "path": "train.npz",
+      "sha256": "1bff7815c24248ef07fb8c6aa9d1e9a0bacc622a7b30bf887faf76a0e2dc97be"
+    },
+    "validation": {
+      "bytes": 360065,
+      "path": "validation.npz",
+      "sha256": "4a3ac5750efc586e959503b9eec07968c08fc089de66b5913ed5087c49c57987"
+    }
+  },
+  "manifest_id": "9c3b4a099d3f05641f15c18b24f8321b0050691732727e822f2b46ee30e21975",
+  "schema_version": "1.0",
+  "source": {
+    "download_manifest_id": "04f0c46c456fcb2af5daed2ccb38b2787b88820c01dff45d5189d0ef334b3fcd",
+    "files": [
+      {
+        "bytes": 24823087,
+        "filename": "current.csv",
+        "sha256": "0d01cda0b4f5bd280aaeff5676376dda491f78b09b29a651318ce7bd6b1b49c2"
+      },
+      {
+        "bytes": 22176815,
+        "filename": "force.csv",
+        "sha256": "7fb4db697401fcbe6c7710889e52fef322978d8646ba21627d6e68a5a071cba4"
+      },
+      {
+        "bytes": 39055,
+        "filename": "labels.csv",
+        "sha256": "5f0dc537ac9aceffd6fc1be2b90d68fd2d481c59738097390bb9778b39331007"
+      },
+      {
+        "bytes": 25175528,
+        "filename": "voltage.csv",
+        "sha256": "7237a046a98b35d041309d3623d909fba153cf5b60a27ace9673af88a6a055e3"
+      }
+    ],
+    "metadata": {
+      "commit": "81b93668db6d52fde747c7a049e2d4b0f04d5d40",
+      "license": "not declared in the repository; local analysis only",
+      "repository": "smartdatapolito/resistance_spot_welding_dataset"
+    }
+  },
+  "validation": {
+    "combination_method": "source row order; never metadata-key join",
+    "conflicting_label_key_rows": 2,
+    "duplicate_metadata_key_rows": 52,
+    "group_key": "Car Body",
+    "group_overlap_count": 0,
+    "immutable_sample_row_id": true,
+    "passed": true,
+    "sample_count": 1976,
+    "signal_step_count": 1000,
+    "signal_storage_dtype": "float32",
+    "source_semantics": "upstream normalized [0,1]; no SI-unit reconstruction",
+    "split_summary": {
+      "test": {
+        "car_bodies": [
+          2,
+          6,
+          12,
+          23
+        ],
+        "fault": 12,
+        "fault_rate": 0.04054054054054054,
+        "normal": 284,
+        "samples": 296
+      },
+      "train": {
+        "car_bodies": [
+          0,
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          24,
+          25,
+          26
+        ],
+        "fault": 55,
+        "fault_rate": 0.03985507246376811,
+        "normal": 1325,
+        "samples": 1380
+      },
+      "validation": {
+        "car_bodies": [
+          4,
+          8,
+          10,
+          27
+        ],
+        "fault": 12,
+        "fault_rate": 0.04,
+        "normal": 288,
+        "samples": 300
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+project:
+  name: rsw_quality_digital_twin
+  stage: m5_2_frozen_test_ood_evaluation
+  experiment_id: E05_2
+  seed: 42
+
+data:
+  expected_manifest_id: 8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be
+  verify_checksums: true
+
+frozen_selection:
+  policy: minimum_validation_tmax_mae_among_overfit_eligible
+  source_results_path: projects/rsw_quality_digital_twin/artifacts/m5_1_physics_ablation/m5_1_results.json
+  source_results_sha256: 448f9cf2514155a9a7ec042a9c3b4d801e33d4057799d66d249c1ba45929cc85
+  selected_model: fno3d
+  selected_variant: data_only
+  selected_epoch: 20
+  checkpoint_role: best_validation
+  checkpoint_path: projects/rsw_quality_digital_twin/artifacts/m5_1_physics_ablation/data_only/best.ckpt
+  checkpoint_sha256: 69214e20273644fada91f82688ce9de5baa81154dc034ac782b46de7601170e2
+  base_config_sha256: e425cbc6c6e733a2461ec2fe9e7565d59107e5e2ae8c8f7f4d8a0ddc9d056c13
+  physics_config_sha256: 7a77a8d37d34935ccb75aadea81e705c6c23efa52fd1adda0c66ab97b6b2811a
+  validation_snapshot:
+    field_nrmse: 0.3109439892282593
+    tmax_mae_k: 20.515750885009766
+    overfit_field_nrmse: 0.047133351123012104
+
+evaluation:
+  splits: [test_iid, test_process_ood, test_corner]
+  device: cuda
+  precision: fp32
+  batch_size: 8
+  num_workers: 0
+  measure_performance: true
+  latency_warmup: 10
+  latency_repetitions: 50
+  test_results_are_reporting_only: true
+
+visualization:
+  dpi: 150

@@ -1,0 +1,34 @@
+experiment_id: E02_M2_thermal_solver
+
+# All values below form a synthetic numerical-verification case. They are not
+# calibrated automotive welding specifications or quality limits.
+geometry:
+  radius_m: 0.005
+  height_m: 0.002
+  radial_cells: 24
+  axial_cells: 48
+
+electrical:
+  conductivity_s_m: 1.0e6
+  peak_current_a: 5000.0
+  weld_time_s: 0.04
+
+thermal:
+  conductivity_w_mk: 45.0
+  volumetric_heat_capacity_j_m3k: 3.8e6
+  initial_temperature_k: 293.15
+  ambient_temperature_k: 293.15
+  electrode_cooling_w_m2k: 2.0e4
+  interface_conductance_w_m2k: 2.0e5
+
+time:
+  total_time_s: 0.08
+  time_steps: 80
+
+convergence:
+  final_time_s: 0.01
+  radial_cells: 4
+  grid_axial_cells: [8, 16, 32, 64]
+  grid_base_time_steps: 5
+  time_axial_cells: 128
+  time_step_counts: [8, 16, 32, 64]

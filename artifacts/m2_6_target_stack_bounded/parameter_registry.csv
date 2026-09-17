@@ -1,0 +1,13 @@
+name,role,minimum,nominal,maximum,units,evidence_id,include_in_screening,note
+sheet_thickness_m,bounded,0.0006,0.00063,0.00066,m_per_sheet,mendeley_target_stack,True,
+electrode_tip_radius_m,fixed,0.0015875,0.0015875,0.0015875,m,mendeley_tip_diameter,False,
+effective_contact_radius_m,nuisance,0.0011,0.00135,0.0015875,m,effective_contact_area_unknown,True,
+bulk_resistivity_scale,bounded,1.0,1.15,1.3,relative_to_electrolytic_iron,nist_iron_resistivity_proxy,True,
+thermal_conductivity_scale,bounded,0.85,1.0,1.15,relative,carbon_steel_k_0p1pct,True,Wider than the reported low-temperature measurement uncertainty because the curve is extended above 1073.15 K.
+volumetric_heat_capacity_scale,bounded,0.9,1.0,1.1,relative,mills_steel_property_model,True,
+latent_heat_scale,bounded,0.85,1.0,1.15,relative,generic_low_carbon_phase_proxy,True,
+faying_resistance_scale,nuisance,0.5,1.0,1.5,relative_to_M2_4_reconstruction,synthetic_contact_reconstruction,True,
+electrode_resistance_scale,nuisance,0.5,1.0,1.5,relative_to_M2_4_reconstruction,synthetic_contact_reconstruction,True,
+faying_force_exponent,nuisance,0.3,0.5,0.7,dimensionless,contact_law_shape_prior,False,
+electrode_force_exponent,nuisance,0.25,0.4,0.55,dimensionless,contact_law_shape_prior,False,
+screening_peak_current_a,nuisance,3400.0,3800.0,4200.0,A,synthetic_screening_process,True,

@@ -1,0 +1,40 @@
+{
+  "experiment_id": "E11_M7_2b_polito_frozen_test",
+  "file_sha256": {
+    "config": "139380c5d860d7ecef29f4614cd9148527cd0208ca25128799f08d3bd0bbdb20",
+    "evaluator": "2660a300cd147c4b78f6e54206ffe30971a68c09e57632390024d0e94d493991",
+    "runner": "13080cce6a16db16dad1e2cf7d7dc4fa52c1d9a14bd7d07a63ddc042a09991e5"
+  },
+  "forbidden_actions": {
+    "feature_contract_change": true,
+    "model_fit": true,
+    "model_selection": true,
+    "production_release": true,
+    "threshold_tuning": true,
+    "validation_revisit_for_decisions": true
+  },
+  "frozen_selection_manifest_id": "2ca70b27dc8420683d9914cf2882199c9b9cdff6b6fb8e79bf4a79545612b653",
+  "frozen_thresholds": {
+    "fault_probability_fault_threshold": 0.7050271810002953,
+    "normal_probability_fault_threshold": 0.02019776752297377
+  },
+  "manifest_id": "c33ff7a804748c90a747f1e9347977d6bf4c6063363525c2c6590fffce7b099c",
+  "protocol_version": "1.0",
+  "reporting_contract": {
+    "bootstrap_unit": "Car Body",
+    "confidence_level": 0.95,
+    "primary_metric": "test_pr_auc",
+    "required_metrics": [
+      "pr_auc",
+      "roc_auc",
+      "fault_recall",
+      "fault_precision",
+      "brier_score",
+      "fault_escape_rate",
+      "normal_reject_rate",
+      "review_rate",
+      "auto_coverage"
+    ],
+    "test_access": "one_time_report_only"
+  }
+}

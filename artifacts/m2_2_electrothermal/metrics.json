@@ -1,0 +1,104 @@
+{
+  "all_checks_passed": true,
+  "constant_property_regression": {
+    "maximum_source_energy_difference_j": 0.0,
+    "maximum_temperature_difference_k": 1.7053025658242404e-13
+  },
+  "coupling_method": "interval-lagged fixed-current weak coupling",
+  "electrical_material": {
+    "calibration_status": "electrolytic_iron_proxy_not_low_carbon_steel_calibration",
+    "name": "nist_electrolytic_iron_relative_resistivity_proxy",
+    "out_of_range_policy": "error",
+    "resistivity_nano_ohm_m": [
+      105.6,
+      166.6,
+      241.8,
+      335.1,
+      449.1,
+      583.0,
+      737.0,
+      909.0
+    ],
+    "source_name": "NBS_Special_Publication_260-90_Table_4.1_electrolytic_iron",
+    "source_report_range_k": [
+      296.0,
+      1373.0
+    ],
+    "source_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication260-90.pdf",
+    "temperature_knots_k": [
+      300.0,
+      400.0,
+      500.0,
+      600.0,
+      700.0,
+      800.0,
+      900.0,
+      1000.0
+    ],
+    "transcribed_table_temperature_range_k": [
+      300.0,
+      1000.0
+    ],
+    "use_mode": "normalized_temperature_dependence_only"
+  },
+  "experiment_id": "E02_M2_2_temperature_dependent_electrothermal",
+  "fixed_current_scaling": {
+    "cold_temperature_k": 300.0,
+    "expected_resistivity_ratio": 3.173295454545455,
+    "hot_temperature_k": 600.0,
+    "power_ratio": 3.173295454545452,
+    "power_ratio_relative_error": 9.796202444678193e-16,
+    "voltage_ratio": 3.1732954545454515,
+    "voltage_ratio_relative_error": 1.1195659936775077e-15
+  },
+  "frozen_property_comparison": {
+    "frozen_final_terminal_energy_j": 51.468279541147794,
+    "frozen_maximum_temperature_k": 575.0211280182502,
+    "peak_temperature_increase_k": 59.847863519661246,
+    "terminal_energy_increase_j": 26.038539127477705,
+    "terminal_energy_ratio": 1.5059143099325953
+  },
+  "temperature_dependent_case": {
+    "final_active_power_w": 2676.6016840144766,
+    "final_active_voltage_v": 0.7647433382898505,
+    "final_terminal_energy_j": 77.5068186686255,
+    "final_thermal_source_energy_j": 77.5068186686255,
+    "initial_active_power_w": 1286.706988528695,
+    "initial_active_voltage_v": 0.3676305681510557,
+    "max_current_conservation_relative_error": 4.807329137942602e-15,
+    "max_electrical_residual_relative_norm": 5.057796636246244e-16,
+    "max_energy_balance_relative_error": 5.177043574907406e-15,
+    "max_nonlinear_residual_relative_norm": 2.3818470601789725e-16,
+    "max_target_current_relative_error": 3.1182675489357538e-15,
+    "max_terminal_source_energy_relative_gap": 1.725681191635802e-16,
+    "maximum_electrical_evaluation_temperature_k": 634.8689915379115,
+    "maximum_liquid_fraction": 0.0,
+    "maximum_nonlinear_iterations": 1,
+    "maximum_temperature_k": 634.8689915379115
+  },
+  "v3_dataset_readiness": {
+    "coverage_shortfall_k": 797.0,
+    "electrical_table_maximum_temperature_k": 1000.0,
+    "ready": false,
+    "status": "blocked_electrical_property_temperature_range",
+    "thermal_liquidus_temperature_k": 1797.0
+  },
+  "verification_checks": {
+    "constant_property_one_way_regression": true,
+    "coupled_temperature_inside_electrical_table": true,
+    "current_conservation": true,
+    "electrical_linear_convergence": true,
+    "electrical_property_range_guard": true,
+    "fixed_current_power_scaling": true,
+    "fixed_current_voltage_scaling": true,
+    "post_pulse_cooling": true,
+    "target_current_accuracy": true,
+    "temperature_feedback_exceeds_frozen_case": true,
+    "temperature_feedback_power_rise": true,
+    "temperature_feedback_voltage_rise": true,
+    "terminal_source_energy_consistency": true,
+    "thermal_energy_balance": true,
+    "thermal_nonlinear_convergence": true
+  },
+  "verification_scope": "synthetic numerical coupling verification; electrical and thermal materials are uncalibrated proxies"
+}

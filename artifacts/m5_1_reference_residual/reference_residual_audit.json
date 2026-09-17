@@ -1,0 +1,91 @@
+{
+  "device": "cpu",
+  "experiment_id": "E05_1_reference_residual_audit",
+  "figures": [
+    "projects/rsw_quality_digital_twin/artifacts/m5_1_reference_residual/figures/reference_residual_distribution.png",
+    "projects/rsw_quality_digital_twin/artifacts/m5_1_reference_residual/figures/reference_residual_by_time.png",
+    "projects/rsw_quality_digital_twin/artifacts/m5_1_reference_residual/figures/reference_residual_worst_field.png"
+  ],
+  "gate": {
+    "maximum_equivalent_temperature_error_k": 0.001,
+    "maximum_initial_condition_error_k": 1e-06,
+    "observed_maximum_equivalent_temperature_error_k": 0.00035106836003251374,
+    "observed_maximum_initial_condition_error_k": 0.0,
+    "passed": true
+  },
+  "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+  "method": "M2_axisymmetric_finite_volume_backward_euler",
+  "residual_unit": "equivalent_one_step_temperature_error_k",
+  "results": [
+    {
+      "dimensionless_rms_residual": 3.37989357407697e-07,
+      "equivalent_temperature_max_absolute_k": 0.00035106836003251374,
+      "equivalent_temperature_p95_absolute_k": 6.011784716974944e-05,
+      "equivalent_temperature_rms_k": 3.0181505804837434e-05,
+      "initial_condition_max_absolute_k": 0.0,
+      "rms_by_interval_k": [
+        1.6706844163026616e-05,
+        2.8116736823446085e-05,
+        3.747126289890358e-05,
+        3.3252584637840106e-05,
+        2.9198566428786274e-05,
+        3.019981745550112e-05,
+        3.2130644762720874e-05
+      ],
+      "sample_count": 64,
+      "split": "train",
+      "time_end_s": [
+        0.011428571306169033,
+        0.022857142612338066,
+        0.034285712987184525,
+        0.04571428522467613,
+        0.05714285746216774,
+        0.06857142597436905,
+        0.07999999821186066
+      ],
+      "worst": {
+        "axial_index": 2,
+        "interval_end_s": 0.034285712987184525,
+        "interval_index": 2,
+        "radial_index": 2,
+        "sample_index": 57,
+        "signed_equivalent_temperature_k": 0.00035106836003251374
+      }
+    },
+    {
+      "dimensionless_rms_residual": 1.8756476740839455e-07,
+      "equivalent_temperature_max_absolute_k": 0.00013130600564181805,
+      "equivalent_temperature_p95_absolute_k": 3.423649541218765e-05,
+      "equivalent_temperature_rms_k": 1.674900996805921e-05,
+      "initial_condition_max_absolute_k": 0.0,
+      "rms_by_interval_k": [
+        1.5374796262816434e-05,
+        1.5039073413085084e-05,
+        1.666977766576751e-05,
+        2.0079468807426505e-05,
+        1.675853433647868e-05,
+        1.7695027325835292e-05,
+        1.503722829979723e-05
+      ],
+      "sample_count": 16,
+      "split": "validation",
+      "time_end_s": [
+        0.011428571306169033,
+        0.022857142612338066,
+        0.034285712987184525,
+        0.04571428522467613,
+        0.05714285746216774,
+        0.06857142597436905,
+        0.07999999821186066
+      ],
+      "worst": {
+        "axial_index": 2,
+        "interval_end_s": 0.04571428522467613,
+        "interval_index": 3,
+        "radial_index": 2,
+        "sample_index": 12,
+        "signed_equivalent_temperature_k": 0.00013130600564181805
+      }
+    }
+  ]
+}

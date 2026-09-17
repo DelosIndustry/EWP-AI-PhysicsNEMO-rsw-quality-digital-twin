@@ -1,0 +1,6 @@
+candidate_id,raw_audited,classification_benchmark_allowed,terminal_energy_calibration_allowed,internal_temperature_validation_allowed
+mendeley_rsw_v3,True,True,False,False
+polito_automotive_rsw,True,True,False,False
+ieee_biw_rsw,False,False,False,False
+figshare_dynamic_resistance,False,False,False,False
+zak_aluminum_rsw,False,False,False,False

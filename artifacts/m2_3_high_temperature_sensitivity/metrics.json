@@ -1,0 +1,190 @@
+{
+  "all_checks_passed": true,
+  "bridge_scenarios": {
+    "early_rise": {
+      "exponent": 0.5,
+      "meaning": "resistance_rises_earlier_inside_unmeasured_gap"
+    },
+    "late_rise": {
+      "exponent": 2.0,
+      "meaning": "resistance_rises_later_inside_unmeasured_gap"
+    },
+    "linear": {
+      "exponent": 1.0,
+      "meaning": "straight_endpoint_interpolation"
+    }
+  },
+  "contact_model_review": {
+    "electrode_plate_status": "not_calibrated",
+    "force_dependence_status": "not_implemented",
+    "plate_plate_status": "not_calibrated",
+    "reason": "published_models_require_stack_specific_pressure_surface_and_coating_parameters",
+    "source_urls": [
+      "https://doi.org/10.1179/136217101101538631",
+      "https://doi.org/10.1016/j.jmatprotec.2007.04.127",
+      "https://doi.org/10.1016/j.ijheatmasstransfer.2012.01.040"
+    ],
+    "temperature_dependence_status": "not_implemented"
+  },
+  "evidence": {
+    "bridge_measurement_status": "no_direct_points_used_sensitivity_assumptions_only",
+    "bridge_temperature_k": [
+      1100.0,
+      1200.0,
+      1300.0,
+      1400.0
+    ],
+    "high_measurement_range_k": [
+      1500.0,
+      1800.0
+    ],
+    "high_reported_resistivity_inaccuracy_fraction": 0.01,
+    "high_resistivity_nano_ohm_m": [
+      1206.6,
+      1211.0,
+      1215.4,
+      1219.8,
+      1224.2,
+      1228.6,
+      1232.9,
+      1237.3,
+      1241.7,
+      1253.5,
+      1256.5,
+      1259.6,
+      1262.6,
+      1265.7,
+      1268.7
+    ],
+    "high_source_name": "Cezairliyan_McClure_1974_NBS_99_9_percent_iron",
+    "high_source_url": "https://nvlpubs.nist.gov/nistpubs/jres/78A/jresv78An1p1_A1b.pdf",
+    "high_temperature_k": [
+      1500.0,
+      1520.0,
+      1540.0,
+      1560.0,
+      1580.0,
+      1600.0,
+      1620.0,
+      1640.0,
+      1660.0,
+      1700.0,
+      1720.0,
+      1740.0,
+      1760.0,
+      1780.0,
+      1800.0
+    ],
+    "low_resistivity_nano_ohm_m": [
+      105.6,
+      166.6,
+      241.8,
+      335.1,
+      449.1,
+      583.0,
+      737.0,
+      909.0
+    ],
+    "low_source_name": "NBS_SP_260_90_Table_4_1_electrolytic_iron_RRR20",
+    "low_source_uncertainty_note": "recommended_values_corrected_for_thermal_expansion",
+    "low_source_url": "https://www.govinfo.gov/content/pkg/GOVPUB-C13-8476c611bb917728f7f6e93844b12e9c/pdf/GOVPUB-C13-8476c611bb917728f7f6e93844b12e9c.pdf",
+    "low_temperature_k": [
+      300.0,
+      400.0,
+      500.0,
+      600.0,
+      700.0,
+      800.0,
+      900.0,
+      1000.0
+    ],
+    "material_scope": "pure_or_electrolytic_iron_proxy_not_automotive_steel_calibration",
+    "units": "nano_ohm_m"
+  },
+  "experiment_id": "E02_M2_3_high_temperature_bulk_resistivity_sensitivity",
+  "reference_conductivity_diagnostic": {
+    "configured_effective_reference_s_m": 1000000.0,
+    "configured_to_measured_ratio": 0.10560000000000001,
+    "interpretation": "effective scale; bulk and contact are not separated",
+    "measured_low_table_implied_bulk_s_m": 9469696.969696969
+  },
+  "scenario_metrics": {
+    "early_rise": {
+      "final_terminal_energy_j": 462.9943020488601,
+      "max_current_conservation_relative_error": 6.382418959810002e-15,
+      "max_energy_balance_relative_error": 1.6916880872145367e-15,
+      "max_nonlinear_residual_relative_norm": 2.984872123973716e-10,
+      "max_target_current_relative_error": 2.233846635933508e-15,
+      "max_terminal_source_energy_relative_gap": 1.3012985286265667e-16,
+      "maximum_active_power_w": 26281.167256913464,
+      "maximum_active_voltage_v": 4.610731097704116,
+      "maximum_electrical_evaluation_temperature_k": 1774.968085207334,
+      "maximum_liquid_fraction": 0.24027880025289897,
+      "maximum_nonlinear_iterations": 11,
+      "maximum_temperature_k": 1774.968085207334,
+      "mushy_diameter_proxy_mm": 3.0,
+      "temperature_inside_curve": true
+    },
+    "late_rise": {
+      "final_terminal_energy_j": 453.8029350005217,
+      "max_current_conservation_relative_error": 1.1328793653662722e-14,
+      "max_energy_balance_relative_error": 2.0041622290783172e-15,
+      "max_nonlinear_residual_relative_norm": 7.311752231039997e-10,
+      "max_target_current_relative_error": 2.0742861619382572e-15,
+      "max_terminal_source_energy_relative_gap": 1.3012985286265667e-16,
+      "maximum_active_power_w": 25442.740554303586,
+      "maximum_active_voltage_v": 4.4636386937374715,
+      "maximum_electrical_evaluation_temperature_k": 1774.2261870416476,
+      "maximum_liquid_fraction": 0.21469610488439872,
+      "maximum_nonlinear_iterations": 7,
+      "maximum_temperature_k": 1774.2261870416476,
+      "mushy_diameter_proxy_mm": 3.0,
+      "temperature_inside_curve": true
+    },
+    "linear": {
+      "final_terminal_energy_j": 458.4344284561831,
+      "max_current_conservation_relative_error": 6.541979433805257e-15,
+      "max_energy_balance_relative_error": 1.6916880872145367e-15,
+      "max_nonlinear_residual_relative_norm": 7.2779101777931e-10,
+      "max_target_current_relative_error": 2.552967583924009e-15,
+      "max_terminal_source_energy_relative_gap": 1.3012985286265667e-16,
+      "maximum_active_power_w": 25858.229265451868,
+      "maximum_active_voltage_v": 4.536531450079275,
+      "maximum_electrical_evaluation_temperature_k": 1774.5411810158498,
+      "maximum_liquid_fraction": 0.22555796606378675,
+      "maximum_nonlinear_iterations": 7,
+      "maximum_temperature_k": 1774.5411810158498,
+      "mushy_diameter_proxy_mm": 3.0,
+      "temperature_inside_curve": true
+    }
+  },
+  "sensitivity_spread": {
+    "linear_time_refinement_tmax_difference_k": 3.788781452027706,
+    "maximum_liquid_fraction_range": 0.025582695368500247,
+    "maximum_temperature_range_k": 0.7418981656865071,
+    "mushy_diameter_proxy_range_mm": 0.0,
+    "terminal_energy_range_j": 9.191367048338407
+  },
+  "study_scope": "pure/electrolytic-iron bulk-resistivity bridge sensitivity; not automotive steel or contact calibration",
+  "v3_dataset_readiness": {
+    "bridge_direct_measurement_ready": false,
+    "bulk_temperature_coverage_ready": true,
+    "electrode_plate_contact_model_ready": false,
+    "force_dependence_ready": false,
+    "plate_plate_contact_model_ready": false,
+    "ready": false,
+    "status": "blocked_grade_and_contact_calibration",
+    "target_steel_grade_calibrated": false
+  },
+  "verification_checks": {
+    "all_constructed_curves_monotone": true,
+    "all_scenario_temperatures_inside_curve": true,
+    "bridge_assumption_changes_result_in_expected_direction": true,
+    "bridge_resistivity_ordered": true,
+    "bulk_curve_covers_liquidus": true,
+    "direct_measurements_preserved": true,
+    "phase_change_activated": true,
+    "scenario_energy_and_current_numerics": true,
+    "time_refinement_stable": true
+  }
+}

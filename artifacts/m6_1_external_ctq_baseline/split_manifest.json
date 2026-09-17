@@ -1,0 +1,2370 @@
+{
+  "assignments": [
+    {
+      "internal_split": "train",
+      "sample_id": 1,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 3,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 4,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 5,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 6,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 7,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 8,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 9,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 10,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 11,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 12,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 13,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 14,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 15,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 16,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 17,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 18,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 19,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 20,
+      "stratification_category": "Explode",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 21,
+      "stratification_category": "Explode",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 22,
+      "stratification_category": "Explode",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 24,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 25,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 26,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 27,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 28,
+      "stratification_category": "Explode",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 29,
+      "stratification_category": "Explode",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 30,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 31,
+      "stratification_category": "Bad",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 34,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 35,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 36,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 37,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 39,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 40,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 41,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 42,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 44,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 45,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 46,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 47,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 48,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 49,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 50,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 51,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 52,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 53,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 54,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 55,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 58,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 59,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 60,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 61,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 62,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 64,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 65,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 66,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 67,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 70,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 71,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 72,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 73,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 75,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 77,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 79,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 80,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 81,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 82,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 83,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 85,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 86,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 87,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 88,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 89,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 90,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 91,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 92,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 93,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 94,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 95,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 96,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 97,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 98,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 99,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 100,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 101,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 102,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 103,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 105,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 106,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 108,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 109,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 110,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 111,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 112,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 113,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 114,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 116,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 118,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 119,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 122,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 123,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 125,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 127,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 128,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 129,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 130,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 132,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 133,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 135,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 136,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 137,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 138,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 140,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 141,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 142,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 143,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 144,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 145,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 146,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 147,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 149,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 150,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 151,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 152,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 153,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 154,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 157,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 158,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 160,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 161,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 164,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 166,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 167,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 168,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 171,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 172,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 173,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 174,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 176,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 177,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 178,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 179,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 180,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 181,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 182,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 183,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 186,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 187,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 188,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 189,
+      "stratification_category": "Bad",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 191,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 193,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 195,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 196,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 198,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 199,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 201,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 203,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 204,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 205,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 207,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 209,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 210,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 212,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 213,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 214,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 215,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 216,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 218,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 219,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 222,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 224,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 225,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 226,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 227,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 228,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 229,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 230,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 231,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 232,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 233,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 234,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 235,
+      "stratification_category": "Bad",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 236,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 237,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 238,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 239,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 240,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 241,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 242,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 243,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 244,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 246,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 247,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 248,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 249,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 251,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 254,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 255,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 256,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 257,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 258,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 259,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 261,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 262,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 264,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 265,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 266,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 268,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 269,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 270,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 271,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 272,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 274,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 275,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 276,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 278,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 279,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 282,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 283,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 284,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 285,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 286,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 287,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 288,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 289,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 290,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 291,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 292,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 294,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 295,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 296,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 297,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 298,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 299,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 300,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 302,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 303,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 304,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 305,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 306,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 307,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 310,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 311,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 312,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 313,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 314,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 316,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 317,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 318,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 320,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 322,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 323,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 326,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 328,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 329,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 330,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 331,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 332,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 333,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 334,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 337,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 338,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 340,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 342,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 343,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 344,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 345,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 346,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 347,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 349,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 350,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 352,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 353,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 354,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 355,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 357,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 358,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 359,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 360,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 363,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 364,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 366,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 367,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 368,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 369,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 371,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 372,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 373,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 374,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 375,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 376,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 377,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 378,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 379,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 380,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 382,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 383,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 384,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 385,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 386,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 387,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 388,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 389,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 390,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 391,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 392,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 393,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 394,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 395,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 396,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 397,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 398,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 399,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 400,
+      "stratification_category": "Bad",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 401,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 403,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 404,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 405,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 406,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 407,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 408,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 410,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 411,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 413,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 414,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 415,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 416,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 417,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 418,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 419,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 420,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 422,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 423,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 427,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 428,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 429,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 430,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 431,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 432,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 433,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 434,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 435,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 436,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 437,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 439,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 440,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 441,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 442,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 443,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 446,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 447,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 448,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 449,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 450,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 451,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 452,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 454,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 455,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 456,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 457,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 458,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 459,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 460,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 461,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 462,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 463,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 465,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 466,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 467,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 468,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 469,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 470,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 471,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 472,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 473,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 475,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 476,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 478,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 479,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 481,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 482,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 484,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 486,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "validation",
+      "sample_id": 487,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 488,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 489,
+      "stratification_category": "Explode",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 491,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 492,
+      "stratification_category": "Good",
+      "target_stack_compatible": false
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 493,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 494,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    },
+    {
+      "internal_split": "train",
+      "sample_id": 495,
+      "stratification_category": "Good",
+      "target_stack_compatible": true
+    }
+  ],
+  "external_test_outcomes_used": false,
+  "independent_group": "sample_id",
+  "manifest_id": "a7f9c4477da399b24d9a020363bcf48a1786c773f7c600b1f4983147c1772043",
+  "method": "deterministic_stratified_independent_weld_holdout",
+  "schema_version": "0.1",
+  "seed": 42,
+  "source_split": "development",
+  "validation_fraction": 0.2
+}

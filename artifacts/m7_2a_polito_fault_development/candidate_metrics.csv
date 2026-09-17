@@ -1,0 +1,5 @@
+model,model_family,validation_sample_count,validation_fault_count,validation_fault_prevalence,validation_pr_auc,validation_roc_auc,validation_brier_score,validation_accuracy_at_0p5,validation_balanced_accuracy_at_0p5,validation_fault_recall_at_0p5,validation_fault_precision_at_0p5,validation_f1_at_0p5,validation_confusion_matrix_at_0p5,selected_epoch
+prior,statistical_feature_classifier,300,12,0.04,0.04,0.5,0.03840002100399075,0.96,0.5,0.0,0.0,0.0,"[[288, 0], [12, 0]]",
+logistic_balanced,statistical_feature_classifier,300,12,0.04,0.2331247068931301,0.8428819444444444,0.11655730094646595,0.8466666666666667,0.7604166666666666,0.6666666666666666,0.16,0.25806451612903225,"[[246, 42], [4, 8]]",
+random_forest_balanced,statistical_feature_classifier,300,12,0.04,0.61038739289127,0.8799189814814815,0.0297592466642531,0.97,0.7447916666666667,0.5,0.6666666666666666,0.5714285714285714,"[[285, 3], [6, 6]]",
+cnn_1d,raw_normalized_signal_cnn,300,12,0.04,0.23084456453523206,0.8041087962962963,0.23795063157704854,0.6566666666666666,0.7413194444444444,0.8333333333333334,0.09009009009009009,0.16260162601626016,"[[187, 101], [2, 10]]",14

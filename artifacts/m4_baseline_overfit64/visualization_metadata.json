@@ -1,0 +1,19 @@
+{
+  "figure_files": [
+    "cnn3d_training_history.png",
+    "cnn3d_worst_field_panel.png",
+    "tmax_error_histogram.png",
+    "tmax_parity.png"
+  ],
+  "visualization_split": "validation",
+  "worst_sample": {
+    "absolute_tmax_error_k": 85.96438598632812,
+    "contact_model_id": 211000002,
+    "sample_index": 9,
+    "schedule_id": 211000002,
+    "selection_rule": "maximum_absolute_tmax_error",
+    "split": "validation",
+    "stack_id": 211000002,
+    "time_index": 3
+  }
+}

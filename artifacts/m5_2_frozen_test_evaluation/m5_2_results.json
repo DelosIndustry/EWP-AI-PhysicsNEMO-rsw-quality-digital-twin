@@ -1,0 +1,172 @@
+{
+  "device": "cuda",
+  "experiment_id": "E05_2",
+  "frozen_selection": {
+    "base_config_sha256": "e425cbc6c6e733a2461ec2fe9e7565d59107e5e2ae8c8f7f4d8a0ddc9d056c13",
+    "checkpoint_path": "projects/rsw_quality_digital_twin/artifacts/m5_1_physics_ablation/data_only/best.ckpt",
+    "checkpoint_role": "best_validation",
+    "checkpoint_sha256": "69214e20273644fada91f82688ce9de5baa81154dc034ac782b46de7601170e2",
+    "physics_config_sha256": "7a77a8d37d34935ccb75aadea81e705c6c23efa52fd1adda0c66ab97b6b2811a",
+    "policy": "minimum_validation_tmax_mae_among_overfit_eligible",
+    "selected_epoch": 20,
+    "selected_model": "fno3d",
+    "selected_variant": "data_only",
+    "source_results_path": "projects/rsw_quality_digital_twin/artifacts/m5_1_physics_ablation/m5_1_results.json",
+    "source_results_sha256": "448f9cf2514155a9a7ec042a9c3b4d801e33d4057799d66d249c1ba45929cc85",
+    "validation_snapshot": {
+      "field_nrmse": 0.3109439892282593,
+      "overfit_field_nrmse": 0.047133351123012104,
+      "tmax_mae_k": 20.515750885009766
+    },
+    "verified": true
+  },
+  "interpretation": "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/INTERPRETATION.md",
+  "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+  "ood_to_iid_ratios": {
+    "test_corner": {
+      "field_nrmse": 2.091433926659701,
+      "thermal_residual_rmse_normalized": 4.785322607251053,
+      "tmax_mae_k": 8.869365689116066,
+      "worst_5pct_tmax_mae_k": 5.6713792133749825
+    },
+    "test_process_ood": {
+      "field_nrmse": 2.658893373297596,
+      "thermal_residual_rmse_normalized": 3.225409659024519,
+      "tmax_mae_k": 6.642532820888785,
+      "worst_5pct_tmax_mae_k": 8.027417640311644
+    }
+  },
+  "post_test_model_selection_allowed": false,
+  "precision": "fp32",
+  "reference_residual_gate": {
+    "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+    "maximum_equivalent_temperature_error_k": 0.001,
+    "maximum_initial_condition_error_k": 1e-06,
+    "observed_maximum_equivalent_temperature_error_k": 0.00035106836003251374,
+    "observed_maximum_initial_condition_error_k": 0.0,
+    "passed": true,
+    "path": "projects/rsw_quality_digital_twin/artifacts/m5_1_reference_residual/reference_residual_audit.json"
+  },
+  "results": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_1_physics_ablation/data_only/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E05_2",
+      "field_nrmse": 0.21198691842421882,
+      "initial_condition_rmse_k": 6.825142083785412,
+      "initial_condition_rmse_normalized": 0.07643175267766553,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.093994140625,
+      "nonnegative_penalty_rmse_normalized": 0.01360451680798254,
+      "normalized_mse": 0.05986413359642029,
+      "p50_latency_ms": 3.491557203233242,
+      "p95_latency_ms": 3.5396263003349304,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": 29.58642578125,
+      "predicted_tmax_max_k": 751.32861328125,
+      "predicted_tmax_mean_k": 562.5509567260742,
+      "predicted_tmax_min_k": 453.19256591796875,
+      "reference_tmax_max_k": 703.0169677734375,
+      "reference_tmax_mean_k": 514.4386444091797,
+      "reference_tmax_min_k": 382.0413818359375,
+      "sample_count": 16,
+      "selected_epoch": 20,
+      "split": "test_iid",
+      "thermal_residual_equivalent_temperature_rmse_k": 33.943724103831975,
+      "thermal_residual_rmse_normalized": 0.3801207789983598,
+      "tmax_mae_k": 48.112321853637695,
+      "tmax_mean_signed_error_k": 48.11231231689453,
+      "tmax_underprediction_fraction": 0.0,
+      "variant": "data_only",
+      "worst_5pct_tmax_mae_k": 104.6146240234375
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_1_physics_ablation/data_only/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E05_2",
+      "field_nrmse": 0.5636506126239335,
+      "initial_condition_rmse_k": 8.755909549007137,
+      "initial_condition_rmse_normalized": 0.09805356502505956,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.0386962890625,
+      "nonnegative_penalty_rmse_normalized": 0.009180952458020754,
+      "normalized_mse": 2.7846490144729614,
+      "p50_latency_ms": 3.4988578408956528,
+      "p95_latency_ms": 3.5391206853091717,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": 29.58642578125,
+      "predicted_tmax_max_k": 796.7430419921875,
+      "predicted_tmax_mean_k": 635.4743843078613,
+      "predicted_tmax_min_k": 547.9888916015625,
+      "reference_tmax_max_k": 1623.3310546875,
+      "reference_tmax_mean_k": 946.986156463623,
+      "reference_tmax_min_k": 581.479736328125,
+      "sample_count": 16,
+      "selected_epoch": 20,
+      "split": "test_process_ood",
+      "thermal_residual_equivalent_temperature_rmse_k": 109.48241558776303,
+      "thermal_residual_rmse_normalized": 1.2260452321772342,
+      "tmax_mae_k": 319.5876770019531,
+      "tmax_mean_signed_error_k": -311.5117721557617,
+      "tmax_underprediction_fraction": 0.75,
+      "variant": "data_only",
+      "worst_5pct_tmax_mae_k": 839.7852783203125
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_1_physics_ablation/data_only/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E05_2",
+      "field_nrmse": 0.44335663320045365,
+      "initial_condition_rmse_k": 10.352615988778826,
+      "initial_condition_rmse_normalized": 0.11593437544707196,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.01513671875,
+      "nonnegative_penalty_rmse_normalized": 0.0035135546604943718,
+      "normalized_mse": 3.6600351333618164,
+      "p50_latency_ms": 3.499770537018776,
+      "p95_latency_ms": 3.545932099223137,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": 29.3349609375,
+      "predicted_tmax_max_k": 1055.623291015625,
+      "predicted_tmax_mean_k": 969.609489440918,
+      "predicted_tmax_min_k": 873.5100708007812,
+      "reference_tmax_max_k": 1485.995361328125,
+      "reference_tmax_mean_k": 1396.3352813720703,
+      "reference_tmax_min_k": 1276.6790771484375,
+      "sample_count": 8,
+      "selected_epoch": 20,
+      "split": "test_corner",
+      "thermal_residual_equivalent_temperature_rmse_k": 162.43167032835962,
+      "thermal_residual_rmse_normalized": 1.8190005572267323,
+      "tmax_mae_k": 426.7257766723633,
+      "tmax_mean_signed_error_k": -426.72579193115234,
+      "tmax_underprediction_fraction": 1.0,
+      "variant": "data_only",
+      "worst_5pct_tmax_mae_k": 593.3092041015625
+    }
+  ],
+  "test_access_mode": "single_frozen_checkpoint_reporting_only",
+  "visualization": {
+    "figures": [
+      "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_split_accuracy.png",
+      "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_tmax_parity.png",
+      "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_physics_constraints.png",
+      "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_ood_degradation.png",
+      "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_worst_fields.png"
+    ],
+    "worst_samples": {
+      "test_corner": {
+        "sample_index": 5,
+        "time_index": 3
+      },
+      "test_iid": {
+        "sample_index": 5,
+        "time_index": 3
+      },
+      "test_process_ood": {
+        "sample_index": 3,
+        "time_index": 4
+      }
+    }
+  }
+}

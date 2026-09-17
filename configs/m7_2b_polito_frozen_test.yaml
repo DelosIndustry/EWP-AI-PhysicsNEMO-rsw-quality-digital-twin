@@ -1,0 +1,55 @@
+experiment_id: E11_M7_2b_polito_frozen_test
+seed: 42
+
+inputs:
+  source_manifest: projects/rsw_quality_digital_twin/data/manifests/m6_polito_factory_manifest.json
+  test_npz: projects/rsw_quality_digital_twin/data/processed_external/polito_factory/test.npz
+  source_split: test
+
+frozen_selection:
+  selection_manifest: projects/rsw_quality_digital_twin/artifacts/m7_2a_polito_fault_development/selection_manifest.json
+  expected_manifest_id: 2ca70b27dc8420683d9914cf2882199c9b9cdff6b6fb8e79bf4a79545612b653
+  selection_manifest_sha256: 07fa21964b83e33233fdf03174cae27d977343ae297a722294d2bdbbf8dfdaa2
+  selected_model: random_forest_balanced
+  selected_model_file: projects/rsw_quality_digital_twin/artifacts/m7_2a_polito_fault_development/random_forest_balanced.pkl
+  selected_model_sha256: d0684bfa135a0a771393ac765d08dbcf64e8e3ee8154d8e30cf3e9699eb7c432
+  source_manifest_sha256: 38f76120742274f67e925fd3cce9ad3f83a6bcd45eef6aa0969f68b1588034ef
+  test_npz_sha256: 42e4615f8510b53ce3cf88ce9ae1d503ab3145b11f2e376a129afbaab439421d
+
+protocol:
+  manifest: projects/rsw_quality_digital_twin/configs/m7_2b_evaluation_protocol.json
+
+test_access_contract:
+  verify_selection_before_test_access: true
+  verify_evaluation_protocol_before_test_access: true
+  allow_model_fit: false
+  allow_model_selection: false
+  allow_threshold_tuning: false
+  allow_feature_contract_change: false
+  allow_validation_revisit_for_decisions: false
+  report_only: true
+
+fixed_decision_thresholds:
+  normal_probability_fault_threshold: 0.02019776752297377
+  fault_probability_fault_threshold: 0.7050271810002953
+  overlap_or_middle_action: REVIEW
+
+bootstrap:
+  replicates: 5000
+  confidence_level: 0.95
+  method: car_body_cluster_resampling
+
+verification:
+  expected_test_samples: 296
+  expected_test_faults: 12
+  expected_test_car_bodies: 4
+  expected_signal_steps: 1000
+  expected_statistical_feature_count: 69
+  expected_figure_count: 7
+
+release_policy:
+  automatic_factory_quality_acceptance: false
+  si_physics_interpretation_allowed: false
+  mendeley_category_merge_allowed: false
+  physicsnemo_temperature_validation_claim_allowed: false
+  production_release_allowed: false

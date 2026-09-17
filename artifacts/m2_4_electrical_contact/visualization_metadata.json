@@ -1,0 +1,11 @@
+{
+  "data_file": "nominal_diagnostics.npz",
+  "files": {
+    "contact_resistance_profiles.png": "radial synthetic Rpp assumptions",
+    "contact_sensitivity_histories.png": "temperature and voltage response",
+    "energy_ledger.png": "electrical and thermal conservation",
+    "nominal_heat_and_temperature_fields.png": "spatial source decomposition",
+    "power_decomposition.png": "bulk and contact terminal-energy split"
+  },
+  "human_guide": "INTERPRETATION.md"
+}

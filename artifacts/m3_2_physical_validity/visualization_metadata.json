@@ -1,0 +1,54 @@
+{
+  "figures": {
+    "energy_temperature_map.png": {
+      "selection": "all samples",
+      "splits": [
+        "train",
+        "validation",
+        "test_iid",
+        "test_process_ood",
+        "test_corner"
+      ]
+    },
+    "hottest_parameter_profiles.png": {
+      "sample_ids": [
+        "test_corner:46",
+        "test_corner:36",
+        "train:553",
+        "test_corner:47",
+        "test_corner:38",
+        "test_corner:39",
+        "test_corner:44",
+        "test_corner:45",
+        "test_corner:29",
+        "test_corner:37"
+      ],
+      "selection": "global highest Tmax"
+    },
+    "temperature_ecdf.png": {
+      "selection": "all samples",
+      "splits": [
+        "train",
+        "validation",
+        "test_iid",
+        "test_process_ood",
+        "test_corner"
+      ]
+    },
+    "temperature_regime_fractions.png": {
+      "selection": "all samples",
+      "splits": [
+        "train",
+        "validation",
+        "test_iid",
+        "test_process_ood",
+        "test_corner"
+      ]
+    }
+  },
+  "source_manifest_id": "2e43da1c058aef17a5500145fc92ea241b038457973adbcddb7162c1b39d2b98",
+  "threshold_semantics": {
+    "review_temperature_k": "engineering model-review boundary",
+    "solidus_liquidus": "literature plausibility reference; not calibrated quality limits"
+  }
+}

@@ -1,0 +1,185 @@
+experiment_id: E02_M2_7_calibration_feasibility
+seed: 42
+
+inputs:
+  records_csv: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/records.csv
+  welds_csv: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv
+  external_manifest: projects/rsw_quality_digital_twin/data/manifests/m6_mendeley_ctq_manifest.json
+  selection_split: development
+  nominal_sampling_hz: 10.0
+  expected_manifest_id: e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62
+  target_material: AISI 1010 carbon steel
+  target_thickness_interval_mm: [0.60, 0.66]
+  contact_law_force_validity_n: [1500.0, 6000.0]
+  external_test_outcomes_used: false
+
+frozen_inputs:
+  - path: projects/rsw_quality_digital_twin/artifacts/m2_6_target_stack_bounded/metrics.json
+    sha256: aa6c62538b48d436a664de3f63d26525df442977b640c4452d382b4b0e37e6fd
+  - path: projects/rsw_quality_digital_twin/artifacts/m2_6_target_stack_bounded/target_stack_manifest.json
+    sha256: ff72bd492ae0bacbdf6c3f76631fb611c888f24c35f35cd2fa3b0cdb5fa743d1
+  - path: projects/rsw_quality_digital_twin/configs/m2_6_target_stack_bounded.yaml
+    sha256: d7bb5860255fc71a1e2562aeb804418d5994483adab527c698b2fa42f565d320
+  - path: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/records.csv
+    sha256: bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108
+  - path: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv
+    sha256: 69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6
+
+unit_claims:
+  - claim_id: mendeley_csv_force_header
+    quantity: electrode_force_signal
+    reported_unit: N
+    source_url: https://data.mendeley.com/datasets/rwh8kjzdch/3
+    locator: Data_RSW.csv column header Force (N)
+    status: documented
+  - claim_id: data_in_brief_force_description
+    quantity: electrode_force_signal
+    reported_unit: N
+    source_url: https://doi.org/10.1016/j.dib.2025.111373
+    locator: data description and parameter table
+    status: documented
+  - claim_id: sensors_table5_force_description
+    quantity: electrode_force_signal
+    reported_unit: PSI
+    source_url: https://doi.org/10.3390/s25061744
+    locator: Table 5, Electrode pressure range 0-133.53 PSI
+    status: conflicted
+  - claim_id: data_in_brief_current_header
+    quantity: welding_current_signal
+    reported_unit: A
+    source_url: https://doi.org/10.1016/j.dib.2025.111373
+    locator: Data_RSW.csv and Table 4
+    status: documented
+
+calibration_evidence:
+  force_sensor:
+    sensor: PSD-S1 load cell, reported maximum 300 kg
+    nominal_recording_rate_hz: 10.0
+    calibration_mass_g: [0, 266, 532, 798, 1064, 1330, 1596, 1862, 2128]
+    measured_mean_g: [0.18, 264.42, 529.26, 797.45, 1064.58, 1332.91, 1599.81, 1866.22, 2132.53]
+    measured_sd_g: [0.271, 7.022, 3.618, 0.331, 0.245, 0.232, 0.950, 0.667, 0.330]
+    maximum_reference_mass_force_n: 20.8685512
+    traceability_status: reported_mass_check_not_electrode_transfer_chain
+    measurement_location: not_reported_in_reviewed_public_materials
+    piston_area: not_reported_in_reviewed_public_materials
+    mechanical_transfer_ratio: not_reported_in_reviewed_public_materials
+    friction_correction: not_reported_in_reviewed_public_materials
+  current_sensor:
+    instrument_chain: 6000 A to 5 A current transformer plus ACS712 module
+    nominal_recording_rate_hz: 10.0
+    bench_calibration_secondary_a: [0.0, 5.0]
+    transfer_chain_status: component_ratios_reported_but_archived_scaling_equation_not_verified
+  pneumatic_setting:
+    pressure_psi: [35, 50, 65, 80, 95]
+    pressure_is_not_tip_force_without_transfer_chain: true
+
+candidate_datasets:
+  - candidate_id: mendeley_rsw_v3
+    title: Resistance Spot Welding Insights Dataset
+    source_url: https://data.mendeley.com/datasets/rwh8kjzdch/3
+    access_status: raw_audited
+    signal_units_status: conflicted
+    timebase_status: nominal_only
+    internal_temperature_field: absent
+    target_stack_status: direct_AISI1010_lab_stack
+    allowed_use: measured_CTQ_and_guarded_development_features
+    note: Downloaded CC BY 4.0 data; force unit conflict and no voltage.
+  - candidate_id: polito_automotive_rsw
+    title: Automotive RSW Dataset
+    source_url: https://github.com/smartdatapolito/resistance_spot_welding_dataset
+    access_status: raw_audited
+    signal_units_status: normalized
+    timebase_status: padded_index_only
+    internal_temperature_field: absent
+    target_stack_status: anonymized_factory_groups
+    allowed_use: separate_fault_classification_and_OOD_benchmark
+    note: 1976 rows; voltage, current and force are upstream-normalized to 0-1.
+  - candidate_id: ieee_biw_rsw
+    title: Resistance Spot Welding Dataset for Automobile Body-in-White Quality Analysis
+    source_url: https://doi.org/10.21227/wfsq-xw87
+    access_status: login_required_not_raw_audited
+    signal_units_status: not_verified
+    timebase_status: claimed_synchronized_not_verified
+    internal_temperature_field: absent
+    target_stack_status: catalog_claim_only
+    allowed_use: none_until_sample_and_license_audit
+    note: Catalog advertises synchronized I/V/F/dynamic resistance and labels; 724.08 MB CSV requires login.
+  - candidate_id: figshare_dynamic_resistance
+    title: Welding Data
+    source_url: https://doi.org/10.6084/m9.figshare.30529277
+    access_status: public_catalog_not_raw_audited
+    signal_units_status: milliohm_documented
+    timebase_status: 750_indexed_variables_not_verified
+    internal_temperature_field: absent
+    target_stack_status: galvanized_steel_five_points
+    allowed_use: candidate_dynamic_resistance_expulsion_benchmark
+    note: Catalog reports 115 curves, including 70 expulsion curves; no reviewed I/V/F chain.
+  - candidate_id: zak_aluminum_rsw
+    title: Active learning for aluminium RSW resistance estimation
+    source_url: https://github.com/JanAlexanderZak/al_rsw_resistance
+    access_status: code_only_data_on_request
+    signal_units_status: not_verified
+    timebase_status: not_verified
+    internal_temperature_field: absent
+    target_stack_status: EN_AW_5182_and_6014_not_AISI1010
+    allowed_use: method_reference_only
+    note: Repository says the parquet data are available from the author on reasonable request.
+
+review_scope:
+  search_provider: Exa
+  search_date: "2026-09-12"
+  territories:
+    - force_sensor_calibration_and_units
+    - alternative_public_RSW_datasets
+  search_results_reviewed: 40
+  limitation: candidate metadata are catalog-level unless access_status is raw_audited
+
+tracks:
+  lab_external_ctq:
+    target: Mendeley AISI 1010 weld-level nugget, pull-test and category
+    next_status: guarded_baseline_feasible
+    default_feature_policy: exclude_force_until_unit_conflict_is_resolved
+    forbidden_claim: external_internal_temperature_validation
+  automotive_physical_twin:
+    target: body-in-white synchronized SI process calibration
+    next_status: blocked_pending_traceable_data_or_coupon_experiment
+    allowed_parallel_work: normalized_fault_classification_benchmark
+    forbidden_claim: calibrated_contact_law_or_temperature_field
+
+minimum_measurement_requirements:
+  - synchronized terminal voltage and welding current with verified SI transfer functions
+  - electrode force at a named measurement location with a traceable force calibration
+  - original timestamps, sampling mode, bandwidth, anti-alias filter and clock synchronization
+  - sheet grade, thickness, coating or surface preparation and lot identifiers
+  - electrode alloy, tip geometry, dress count, cooling boundary and contact geometry
+  - independent nugget cross-section or pull-test CTQ kept separate from solver fitting
+  - physical weld, batch and schedule group identifiers for leakage-safe splits
+
+proposed_coupon_protocol:
+  status: proposed_learning_protocol_not_industry_recipe
+  calibration:
+    current_level_codes: [I1, I2, I3]
+    force_level_codes: [F1, F2, F3]
+    replicates: 3
+  qualification:
+    sealed_schedule_codes: [Q1, Q2, Q3, Q4, Q5]
+    replicates: 3
+  total_welds: 42
+  setpoint_policy: choose numeric levels only inside approved equipment_and_material_WPS_limits
+  tier_a: terminal_V_I_F_plus_CTQ_identifies_only_effective_total_contact_component
+  tier_b: add_interface_voltage_taps_and_reference_coupons_for_contact_partition_claims
+  sampling_note: literature examples at 25.6-50 kHz are protocol references, not a universal threshold
+  destructive_test_note: 42 is one CTQ stream; separate specimens are needed if both cross-section and pull test are destructive
+
+verification:
+  expected_development_welds: 396
+  expected_development_records: 3378
+  expected_force_unit_status: conflicted
+  expected_candidate_count: 5
+  require_force_calibration_blocked: true
+  require_physical_twin_blocked: true
+  require_lab_track_feasible: true
+  require_no_test_outcomes_used: true
+
+visualization:
+  dpi: 150

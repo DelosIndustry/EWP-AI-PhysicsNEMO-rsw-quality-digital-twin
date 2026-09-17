@@ -1,0 +1,12 @@
+{
+  "bridge_measurement_status": "no_direct_points_used_sensitivity_assumptions_only",
+  "experiment_id": "E02_M2_3_high_temperature_bulk_resistivity_sensitivity",
+  "figures": {
+    "energy_conservation.png": "all cumulative energy and balance time points",
+    "peak_field_comparison.png": "global Tmax index per scenario with shared color scale",
+    "resistivity_evidence_and_bridges.png": "all direct points and assumed bridge knots",
+    "sensitivity_summary.png": "all three predeclared scenarios",
+    "sensitivity_time_histories.png": "all scenario time points"
+  },
+  "v3_dataset_readiness": "blocked_grade_and_contact_calibration"
+}

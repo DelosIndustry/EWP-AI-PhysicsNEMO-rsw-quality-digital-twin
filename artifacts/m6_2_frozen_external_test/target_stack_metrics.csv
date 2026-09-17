@@ -1,0 +1,4 @@
+task,task_type,sample_count,mae,rmse,r2,class_counts,balanced_accuracy,macro_f1,per_class_recall
+nugget_diameter_mm,regression,93,0.23743031208451584,0.33885003927467955,0.12212191014067642,,,,
+pull_test_n,regression,92,135.49555729480656,227.23351926073792,0.328874666379246,,,,
+category,classification,93,,,,"{'Bad': 1, 'Explode': 6, 'Good': 86}",0.32170542635658916,0.3161904761904762,"{'Bad': 0.0, 'Explode': 0.0, 'Good': 0.9651162790697675}"

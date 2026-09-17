@@ -1,0 +1,70 @@
+{
+  "all_checks_passed": true,
+  "current_scaling": {
+    "computed_current_ratio": 2.0,
+    "computed_joule_power_ratio": 4.0,
+    "expected_current_ratio": 2.0,
+    "expected_joule_power_ratio": 4.0
+  },
+  "experiment_id": "M1_electrical_solver",
+  "grid": {
+    "axial_cells": 48,
+    "height_m": 0.002,
+    "radial_cells": 24,
+    "radius_m": 0.005
+  },
+  "grid_convergence": {
+    "axial_cells": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "cell_size_m": [
+      0.00025,
+      0.000125,
+      6.25e-05,
+      3.125e-05
+    ],
+    "observed_order": 1.9935601310269384,
+    "potential_rmse_v": [
+      0.0031157525462188755,
+      0.0007872046496632819,
+      0.00019733844398447196,
+      4.936853998295039e-05
+    ],
+    "strictly_decreasing_error": true
+  },
+  "heterogeneous_validation": {
+    "computed_current_a": 1000.0000000000009,
+    "current_conservation_relative_error": 1.1368683772161593e-16,
+    "maximum_joule_heat_w_m3": 328942695.20757085,
+    "minimum_joule_heat_w_m3": 113727319.25006498
+  },
+  "homogeneous_validation": {
+    "analytic_current_a": 1000.0000000000019,
+    "analytic_current_relative_error": 3.9790393202565535e-15,
+    "analytic_joule_heat_w_m3": 162113893.82774106,
+    "applied_voltage_v": 0.025464790894703302,
+    "computed_current_a": 999.999999999998,
+    "current_conservation_relative_error": 2.273736754432325e-16,
+    "joule_heat_mean_w_m3": 162113893.82774103,
+    "joule_heat_relative_error": 1.8383570762517527e-16,
+    "linear_residual_relative_norm": 6.284490824535986e-16,
+    "minimum_joule_heat_w_m3": 162113893.82771876,
+    "potential_linf_normalized_error": 7.629712339393867e-15,
+    "target_current_a": 1000.0,
+    "target_current_relative_error": 2.0463630789890884e-15
+  },
+  "verification_checks": {
+    "analytic_current": true,
+    "analytic_potential": true,
+    "current_conservation": true,
+    "current_doubling": true,
+    "grid_convergence": true,
+    "nonnegative_joule_heat": true,
+    "quadratic_joule_scaling": true,
+    "target_current": true
+  },
+  "verification_scope": "synthetic numerical verification; not calibrated to a weld process"
+}

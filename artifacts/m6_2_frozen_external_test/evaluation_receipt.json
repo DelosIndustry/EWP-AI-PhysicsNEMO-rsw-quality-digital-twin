@@ -1,0 +1,32 @@
+{
+  "access_mode": "frozen_models_single_reporting_only",
+  "artifact_hashes": {
+    "bootstrap_intervals.csv": "7f24a806b58147989ef0ed81222cee733423e8e7874d5087beb1c92b016212ee",
+    "feature_exclusions.csv": "2aed66d5243e4bf5f07e7bc3e08ffba5101510751f7c1e8e4ca3cd621f2bcf4b",
+    "figures/bootstrap_confidence_intervals.png": "8db15447e5b252075c8c01c881e0e93cda5640cae1fbd3503d54fbf386fa7024",
+    "figures/class_recall_validation_test.png": "225c1536627e597e4d3cfef2c3367b49820a9bebe6847c10ee092983c0224a41",
+    "figures/classification_confusion_matrix.png": "ff293cbf1c4f85f17d04c80c6fd53e4f61ee414355ce740afca71915bee814f5",
+    "figures/regression_predicted_vs_measured.png": "9aa8321c424049f453cb7bb4a3bcde9fbcf2523855078a8bc2600291b8af3210",
+    "figures/regression_residuals.png": "e3057d7956acb0f7eb3ad46ebe3550913dc659af8dc25515c48251b1586f03d4",
+    "figures/test_composition.png": "8c51a767ec8a4a9203b43a4248a83daaed60ad8e8eca0883068b7e545bac395f",
+    "figures/validation_test_comparison.png": "91e65c28c0cd5fa54d6fad6e516b815c5b308132f71959cd7530c70b7a2d1929",
+    "target_stack_metrics.csv": "4787920038b2e1fda4b9536be7c4060ba80bf2b56d75e4e5d6dbfb103385f09d",
+    "test_metrics.csv": "a7f1503877c5941e0eb011607e25bba32b2d3166522e996e5a879eaa0cd9c8c0",
+    "test_predictions.csv": "cf89e10783d4c51cf1644081027b75455e031666f8927db923ae145fd8f72d46"
+  },
+  "evaluation_protocol_manifest_id": "f872a54b44d60bcbd613bb2f8a9d032c266088f0fd098b82b1eb26509dee8676",
+  "experiment_id": "E06_M6_2_frozen_external_test",
+  "external_manifest_id": "e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62",
+  "manifest_id": "4dbee4092cde82bc3735a0f055fde8ff7a041dd15cf7efd237de27cd29d5362b",
+  "model_fit_performed": false,
+  "model_selection_performed": false,
+  "schema_version": "1.0",
+  "selection_manifest_id": "174006ad63c751f58f40a38b8a4c27dbf7f110727f4f0c854b0f29801be6fd01",
+  "test_outcomes_accessed": true,
+  "test_source_hashes": {
+    "records_csv": "bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108",
+    "welds_csv": "69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6"
+  },
+  "test_weld_count": 99,
+  "threshold_tuning_performed": false
+}

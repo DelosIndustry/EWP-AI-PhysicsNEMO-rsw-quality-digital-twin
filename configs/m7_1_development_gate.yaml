@@ -1,0 +1,97 @@
+experiment_id: E09_M7_1_development_gate_feasibility
+seed: 42
+
+inputs:
+  m6_1_config: projects/rsw_quality_digital_twin/configs/m6_1_external_ctq_baseline.yaml
+  m6_1_selection_manifest: projects/rsw_quality_digital_twin/artifacts/m6_1_external_ctq_baseline/selection_manifest.json
+  m6_2_evaluation_receipt: projects/rsw_quality_digital_twin/artifacts/m6_2_frozen_external_test/evaluation_receipt.json
+  mendeley_manifest: projects/rsw_quality_digital_twin/data/manifests/m6_mendeley_ctq_manifest.json
+  polito_manifest: projects/rsw_quality_digital_twin/data/manifests/m6_polito_factory_manifest.json
+  source_split: development
+  external_test_outcomes_used: false
+
+frozen_inputs:
+  - path: projects/rsw_quality_digital_twin/configs/m6_1_external_ctq_baseline.yaml
+    sha256: 1baec5b2e7cd965461ffe4a45238ebc4da7d6ad7065c3e071bf44a20c5a36104
+  - path: projects/rsw_quality_digital_twin/artifacts/m6_1_external_ctq_baseline/selection_manifest.json
+    sha256: cc057173acf4c14f23cdffd3d0c7096328ac93535f80f05036bb6e88affbe368
+  - path: projects/rsw_quality_digital_twin/artifacts/m6_2_frozen_external_test/evaluation_receipt.json
+    sha256: 96d6d4988ce883f873e83366f6323383a5ae57bcbd3ca94d2c6fa34185e8c80d
+  - path: projects/rsw_quality_digital_twin/data/manifests/m6_mendeley_ctq_manifest.json
+    sha256: b29983679e66db53a38824699fc8d45dadac2806628238ad13db8a90e166179c
+  - path: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/records.csv
+    sha256: bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108
+  - path: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv
+    sha256: 69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6
+  - path: projects/rsw_quality_digital_twin/data/manifests/m6_polito_factory_manifest.json
+    sha256: 38f76120742274f67e925fd3cce9ad3f83a6bcd45eef6aa0969f68b1588034ef
+
+cross_fitting:
+  independent_group: sample_id
+  stratify_by: category
+  outer_folds: 5
+  inner_folds: 4
+  shuffle: true
+  probability_calibration: out_of_fold_multinomial_logistic_stacking
+  calibration_c: 1.0
+
+fixed_classifier:
+  source: M6.1_random_forest_balanced_hyperparameters
+  model_name: random_forest_balanced
+  target: category
+  classes: [Bad, Explode, Good]
+  reference_mapping:
+    PASS: [Good]
+    FAIL: [Bad, Explode]
+
+decision_policy:
+  status: learning_feasibility_not_production_specification
+  threshold_source: inner_cross_fitted_development_only
+  selection_objective:
+    primary: zero_observed_false_escape
+    secondary: zero_observed_false_reject
+    tertiary: maximize_auto_coverage
+  overlap_action: REVIEW
+  ood_action: REVIEW
+  numerical_failure_action: REVIEW
+  illustrative_costs:
+    false_escape: 20
+    false_reject: 5
+    review: 1
+  cost_status: illustrative_sensitivity_not_automotive_requirement
+
+ood:
+  candidates: [training_range, standardized_ledoit_wolf_mahalanobis]
+  mahalanobis_training_quantile: 0.975
+  combined_rule: any_candidate_warn_routes_to_review
+  known_ood_labels_available: false
+  selection_allowed_without_known_ood_labels: false
+
+bootstrap:
+  replicates: 2000
+  confidence_level: 0.95
+  method: stratified_independent_weld_resampling_of_cross_fitted_decisions
+
+verification:
+  expected_source_development_welds: 396
+  expected_feature_eligible_welds: 393
+  expected_category_counts:
+    Bad: 17
+    Explode: 25
+    Good: 351
+  expected_outer_prediction_count: 393
+  expected_figure_count: 7
+
+polito_track:
+  status: separate_M7_2_not_accessed_in_M7_1
+  target: Fault
+  normalized_signals: [voltage, current, force]
+  merge_with_mendeley_category_allowed: false
+  si_unit_reconstruction_allowed: false
+
+release_policy:
+  automatic_quality_acceptance: false
+  production_threshold_claim_allowed: false
+  known_ood_recall_claim_allowed: false
+  physicsnemo_temperature_field_validation_claim_allowed: false
+  automotive_physical_twin_calibration_ready: false

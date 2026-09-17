@@ -1,0 +1,57 @@
+experiment_id: E02_M2_1_enthalpy_phase_change
+
+# Synthetic numerical-verification geometry and schedule. These are not
+# calibrated automotive welding specifications.
+geometry:
+  radius_m: 0.005
+  height_m: 0.002
+  radial_cells: 12
+  axial_cells: 20
+
+electrical:
+  conductivity_s_m: 1.0e6
+  inactive_conductivity_fraction: 0.08
+  contact_radius_m: 0.0022
+  peak_current_a: 8500.0
+  weld_time_s: 0.04
+
+thermal:
+  initial_temperature_k: 293.15
+  ambient_temperature_k: 293.15
+  electrode_cooling_w_m2k: 2.0e4
+  interface_conductance_w_m2k: 2.0e5
+
+material:
+  name: example_low_carbon_steel_not_aisi_1010_calibration
+  temperature_knots_k: [293.15, 1768.0, 1797.0, 2100.0]
+  thermal_conductivity_values_w_mk: [28.4, 28.4, 36.0, 36.0]
+  volumetric_heat_capacity_values_j_m3k: [4.76e+6, 4.76e+6, 4.76e+6, 4.76e+6]
+  density_kg_m3: 7000.0
+  latent_heat_j_kg: 270000.0
+  solidus_temperature_k: 1768.0
+  liquidus_temperature_k: 1797.0
+  reference_temperature_k: 293.15
+  calibration_status: literature_plausibility_reference_only
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12525790/
+
+time:
+  total_time_s: 0.08
+  time_steps: 40
+
+solver:
+  nonlinear_tolerance: 1.0e-9
+  maximum_nonlinear_iterations: 50
+
+verification:
+  uniform_initial_temperature_k: 1600.0
+  uniform_source_w_m3: 1.5e11
+  uniform_final_time_s: 0.02
+  uniform_time_steps: 20
+  zero_latent_regression_tolerance_k: 1.0e-8
+  analytic_temperature_tolerance_k: 1.0e-6
+  maximum_energy_balance_relative_error: 1.0e-8
+  maximum_coupling_energy_relative_gap: 1.0e-10
+  require_coupled_temperature_within_material_knots: true
+
+visualization:
+  dpi: 150

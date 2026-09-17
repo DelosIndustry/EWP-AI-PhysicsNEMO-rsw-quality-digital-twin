@@ -1,0 +1,206 @@
+{
+  "device": "cuda",
+  "evaluation_splits": [
+    "validation"
+  ],
+  "experiment_id": "E05_physicsnemo_operator_comparison",
+  "m4_baseline_context": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m4_baseline_overfit64/mean/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E04",
+      "field_nrmse": 0.9009670349867663,
+      "melt_boundary_dice": null,
+      "melt_diameter_proxy_mae_mm": null,
+      "model": "mean",
+      "negative_temperature_rise_fraction": 0.0,
+      "normalized_mse": 0.3683769553899765,
+      "p50_latency_ms": 0.014813616871833801,
+      "p95_latency_ms": 0.01764846965670585,
+      "parameter_count": 0,
+      "peak_gpu_memory_mb": 0.48974609375,
+      "sample_count": 16,
+      "seed": 42,
+      "selected_epoch": null,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "validation",
+      "tmax_mae_k": 114.85108184814453,
+      "worst_5pct_tmax_mae_k": 188.62258911132812
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m4_baseline_overfit64/cnn3d/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E04",
+      "field_nrmse": 0.36722780389544535,
+      "melt_boundary_dice": null,
+      "melt_diameter_proxy_mae_mm": null,
+      "model": "cnn3d",
+      "negative_temperature_rise_fraction": 0.089111328125,
+      "normalized_mse": 0.06119920313358307,
+      "p50_latency_ms": 0.603286549448967,
+      "p95_latency_ms": 0.6116681732237339,
+      "parameter_count": 230145,
+      "peak_gpu_memory_mb": 6.568359375,
+      "sample_count": 16,
+      "seed": 42,
+      "selected_epoch": 20,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "validation",
+      "tmax_mae_k": 45.87347412109375,
+      "worst_5pct_tmax_mae_k": 85.96435546875
+    }
+  ],
+  "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+  "melt_ctq_status": "not_configured",
+  "overfit_checks": {
+    "fno3d": {
+      "passed": true,
+      "sample_count": 64,
+      "target_train_field_nrmse": 0.05,
+      "train_field_nrmse": 0.047133351123012104
+    },
+    "transolver": {
+      "passed": false,
+      "sample_count": 64,
+      "target_train_field_nrmse": 0.05,
+      "train_field_nrmse": 0.09341869507496525
+    }
+  },
+  "overfit_results": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_operator_comparison/fno3d/last.ckpt",
+      "checkpoint_role": "last_epoch",
+      "experiment_id": "E05_overfit_64",
+      "field_nrmse": 0.047133351123012104,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.067840576171875,
+      "normalized_mse": 0.0038400144112529233,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 64,
+      "seed": 42,
+      "selected_epoch": 100,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "train_overfit",
+      "tmax_mae_k": 6.41714334487915,
+      "worst_5pct_tmax_mae_k": 19.413665771484375
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_operator_comparison/transolver/last.ckpt",
+      "checkpoint_role": "last_epoch",
+      "experiment_id": "E05_overfit_64",
+      "field_nrmse": 0.09341869507496525,
+      "model": "transolver",
+      "negative_temperature_rise_fraction": 0.065673828125,
+      "normalized_mse": 0.015084947750438005,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 769185,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 64,
+      "seed": 42,
+      "selected_epoch": 100,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "train_overfit",
+      "tmax_mae_k": 14.902139663696289,
+      "worst_5pct_tmax_mae_k": 83.28729248046875
+    }
+  ],
+  "physicsnemo_version": "2.1.1",
+  "precision": "fp32",
+  "requested_epochs": 100,
+  "results": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_operator_comparison/fno3d/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E05",
+      "field_nrmse": 0.3109439892282593,
+      "melt_boundary_dice": null,
+      "melt_diameter_proxy_mae_mm": null,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.15380859375,
+      "normalized_mse": 0.04387720674276352,
+      "p50_latency_ms": 3.565962426364422,
+      "p95_latency_ms": 3.638417273759842,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": 37.71142578125,
+      "sample_count": 16,
+      "seed": 42,
+      "selected_epoch": 20,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "validation",
+      "tmax_mae_k": 20.515750885009766,
+      "worst_5pct_tmax_mae_k": 50.743133544921875
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_operator_comparison/transolver/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E05",
+      "field_nrmse": 0.29384449429539433,
+      "melt_boundary_dice": null,
+      "melt_diameter_proxy_mae_mm": null,
+      "model": "transolver",
+      "negative_temperature_rise_fraction": 0.0478515625,
+      "normalized_mse": 0.0391840897500515,
+      "p50_latency_ms": 2.926258370280266,
+      "p95_latency_ms": 2.979878429323435,
+      "parameter_count": 769185,
+      "peak_gpu_memory_mb": 49.6884765625,
+      "sample_count": 16,
+      "seed": 42,
+      "selected_epoch": 23,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "validation",
+      "tmax_mae_k": 12.457208633422852,
+      "worst_5pct_tmax_mae_k": 46.294891357421875
+    }
+  ],
+  "seed": 42,
+  "selection": {
+    "eligible_models": [
+      "fno3d"
+    ],
+    "physics_residual_next": "fno3d",
+    "provisional_reason": "melt CTQ is not configured",
+    "selected_model": "fno3d",
+    "selection_metric": "validation_tmax_mae_k",
+    "selection_split": "validation"
+  },
+  "test_access_policy": "frozen-best-checkpoint-only",
+  "train_samples": 64,
+  "visualization": {
+    "figure_files": [
+      "latency_accuracy_pareto.png",
+      "operator_tmax_error_histogram.png",
+      "operator_tmax_parity.png",
+      "operator_training_histories.png",
+      "operator_worst_field_panels.png",
+      "validation_accuracy_comparison.png"
+    ],
+    "visualization_split": "validation",
+    "worst_samples": {
+      "fno3d": {
+        "absolute_tmax_error_k": 50.743133544921875,
+        "contact_model_id": 211000001,
+        "sample_index": 4,
+        "schedule_id": 211000001,
+        "selection_rule": "maximum_absolute_tmax_error",
+        "split": "validation",
+        "stack_id": 211000001,
+        "time_index": 3
+      },
+      "transolver": {
+        "absolute_tmax_error_k": 46.294891357421875,
+        "contact_model_id": 211000003,
+        "sample_index": 15,
+        "schedule_id": 211000003,
+        "selection_rule": "maximum_absolute_tmax_error",
+        "split": "validation",
+        "stack_id": 211000003,
+        "time_index": 4
+      }
+    }
+  }
+}

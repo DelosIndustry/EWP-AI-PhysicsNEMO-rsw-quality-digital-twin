@@ -1,0 +1,210 @@
+{
+  "candidate_model_files": {
+    "cnn_1d": {
+      "path": "projects/rsw_quality_digital_twin/artifacts/m7_2a_polito_fault_development/cnn_1d.pt",
+      "sha256": "97aee14ebbdce4ff939514507e404ce5e4ab8adce890474f9b6aaf17710eeee0"
+    },
+    "logistic_balanced": {
+      "path": "projects/rsw_quality_digital_twin/artifacts/m7_2a_polito_fault_development/logistic_balanced.pkl",
+      "sha256": "2cafdf5a526a139057c2cdd81d943a618fbc1936a7b7871caea3901e8241e4c2"
+    },
+    "prior": {
+      "path": "projects/rsw_quality_digital_twin/artifacts/m7_2a_polito_fault_development/prior.pkl",
+      "sha256": "9ea79672f13df75b885ef31c503428d01f9624983dd1d96a481a2ddfc74a1c57"
+    },
+    "random_forest_balanced": {
+      "path": "projects/rsw_quality_digital_twin/artifacts/m7_2a_polito_fault_development/random_forest_balanced.pkl",
+      "sha256": "d0684bfa135a0a771393ac765d08dbcf64e8e3ee8154d8e30cf3e9699eb7c432"
+    }
+  },
+  "decision_thresholds": {
+    "fault_probability_fault_threshold": 0.7050271810002953,
+    "normal_probability_fault_threshold": 0.02019776752297377,
+    "threshold_overlap_routes_to_review": false,
+    "validation_auto_coverage": 0.43666666666666665,
+    "validation_fault_escape_count": 0,
+    "validation_normal_reject_count": 0,
+    "validation_review_rate": 0.5633333333333334
+  },
+  "development_input_hashes": {
+    "projects/rsw_quality_digital_twin/data/manifests/m6_polito_factory_manifest.json": {
+      "actual_sha256": "38f76120742274f67e925fd3cce9ad3f83a6bcd45eef6aa0969f68b1588034ef",
+      "expected_sha256": "38f76120742274f67e925fd3cce9ad3f83a6bcd45eef6aa0969f68b1588034ef"
+    },
+    "projects/rsw_quality_digital_twin/data/processed_external/polito_factory/train.npz": {
+      "actual_sha256": "1bff7815c24248ef07fb8c6aa9d1e9a0bacc622a7b30bf887faf76a0e2dc97be",
+      "expected_sha256": "1bff7815c24248ef07fb8c6aa9d1e9a0bacc622a7b30bf887faf76a0e2dc97be"
+    },
+    "projects/rsw_quality_digital_twin/data/processed_external/polito_factory/validation.npz": {
+      "actual_sha256": "4a3ac5750efc586e959503b9eec07968c08fc089de66b5913ed5087c49c57987",
+      "expected_sha256": "4a3ac5750efc586e959503b9eec07968c08fc089de66b5913ed5087c49c57987"
+    }
+  },
+  "experiment_id": "E10_M7_2a_polito_fault_development",
+  "feature_contract": {
+    "cross_dataset_category_merge_allowed": false,
+    "forbidden_model_inputs": [
+      "sample_row_id",
+      "car_body",
+      "date",
+      "welding_spot",
+      "fault"
+    ],
+    "include_validity_masks_for_cnn": true,
+    "semantics": "upstream_normalized_zero_to_one_no_si_reconstruction",
+    "si_unit_reconstruction_allowed": false,
+    "signals": [
+      "voltage",
+      "current",
+      "force"
+    ],
+    "statistical_features": [
+      "length_fraction",
+      "mean",
+      "standard_deviation",
+      "minimum",
+      "maximum",
+      "rms",
+      "q10",
+      "q25",
+      "median",
+      "q75",
+      "q90",
+      "first",
+      "last",
+      "end_minus_start",
+      "peak_position_fraction",
+      "trough_position_fraction",
+      "linear_slope_per_valid_step",
+      "derivative_absolute_mean",
+      "derivative_standard_deviation",
+      "derivative_absolute_maximum",
+      "early_mean",
+      "middle_mean",
+      "late_mean"
+    ]
+  },
+  "implementation_sha256": {
+    "config": "e9a5eeed8d3d14355ff0e382823271b892bd49457000333920dca76db9d1a8c7",
+    "evaluator": "383a5be07db5cff040e8f7bdf9fd183a2a78cd8ff7d041aa3a180ffd8b433f04",
+    "runner": "cc403719bd8b206c67fb3c79a477858eebfc6c07da111c0a082035af75811224"
+  },
+  "manifest_id": "2ca70b27dc8420683d9914cf2882199c9b9cdff6b6fb8e79bf4a79545612b653",
+  "release_policy": {
+    "automatic_factory_quality_acceptance": false,
+    "mendeley_category_merge_allowed": false,
+    "physicsnemo_temperature_validation_claim_allowed": false,
+    "polito_test_access_allowed": false,
+    "production_release_allowed": false,
+    "si_physics_interpretation_allowed": false
+  },
+  "scope": "polito_train_validation_only_test_sealed",
+  "sealed_test": {
+    "evaluation_allowed_in_m7_2a": false,
+    "file_opened_or_hashed": false,
+    "path_reference_only": "projects/rsw_quality_digital_twin/data/processed_external/polito_factory/test.npz",
+    "sha256_copied_from_source_manifest": "42e4615f8510b53ce3cf88ce9ae1d503ab3145b11f2e376a129afbaab439421d"
+  },
+  "seed": 42,
+  "selected_model": "random_forest_balanced",
+  "selected_model_file": "projects/rsw_quality_digital_twin/artifacts/m7_2a_polito_fault_development/random_forest_balanced.pkl",
+  "selected_model_sha256": "d0684bfa135a0a771393ac765d08dbcf64e8e3ee8154d8e30cf3e9699eb7c432",
+  "selected_validation_metrics": {
+    "model": "random_forest_balanced",
+    "model_family": "statistical_feature_classifier",
+    "selected_epoch": null,
+    "validation_accuracy_at_0p5": 0.97,
+    "validation_balanced_accuracy_at_0p5": 0.7447916666666667,
+    "validation_brier_score": 0.0297592466642531,
+    "validation_confusion_matrix_at_0p5": [
+      [
+        285,
+        3
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "validation_f1_at_0p5": 0.5714285714285714,
+    "validation_fault_count": 12,
+    "validation_fault_precision_at_0p5": 0.6666666666666666,
+    "validation_fault_prevalence": 0.04,
+    "validation_fault_recall_at_0p5": 0.5,
+    "validation_pr_auc": 0.61038739289127,
+    "validation_roc_auc": 0.8799189814814815,
+    "validation_sample_count": 300
+  },
+  "source_manifest_id": "9c3b4a099d3f05641f15c18b24f8321b0050691732727e822f2b46ee30e21975",
+  "statistical_feature_names": [
+    "voltage_length_fraction",
+    "voltage_mean",
+    "voltage_standard_deviation",
+    "voltage_minimum",
+    "voltage_maximum",
+    "voltage_rms",
+    "voltage_q10",
+    "voltage_q25",
+    "voltage_median",
+    "voltage_q75",
+    "voltage_q90",
+    "voltage_first",
+    "voltage_last",
+    "voltage_end_minus_start",
+    "voltage_peak_position_fraction",
+    "voltage_trough_position_fraction",
+    "voltage_linear_slope_per_valid_step",
+    "voltage_derivative_absolute_mean",
+    "voltage_derivative_standard_deviation",
+    "voltage_derivative_absolute_maximum",
+    "voltage_early_mean",
+    "voltage_middle_mean",
+    "voltage_late_mean",
+    "current_length_fraction",
+    "current_mean",
+    "current_standard_deviation",
+    "current_minimum",
+    "current_maximum",
+    "current_rms",
+    "current_q10",
+    "current_q25",
+    "current_median",
+    "current_q75",
+    "current_q90",
+    "current_first",
+    "current_last",
+    "current_end_minus_start",
+    "current_peak_position_fraction",
+    "current_trough_position_fraction",
+    "current_linear_slope_per_valid_step",
+    "current_derivative_absolute_mean",
+    "current_derivative_standard_deviation",
+    "current_derivative_absolute_maximum",
+    "current_early_mean",
+    "current_middle_mean",
+    "current_late_mean",
+    "force_length_fraction",
+    "force_mean",
+    "force_standard_deviation",
+    "force_minimum",
+    "force_maximum",
+    "force_rms",
+    "force_q10",
+    "force_q25",
+    "force_median",
+    "force_q75",
+    "force_q90",
+    "force_first",
+    "force_last",
+    "force_end_minus_start",
+    "force_peak_position_fraction",
+    "force_trough_position_fraction",
+    "force_linear_slope_per_valid_step",
+    "force_derivative_absolute_mean",
+    "force_derivative_standard_deviation",
+    "force_derivative_absolute_maximum",
+    "force_early_mean",
+    "force_middle_mean",
+    "force_late_mean"
+  ]
+}

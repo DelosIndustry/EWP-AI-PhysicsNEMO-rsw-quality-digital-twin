@@ -1,0 +1,8 @@
+requirement_id,requirement
+1,synchronized terminal voltage and welding current with verified SI transfer functions
+2,electrode force at a named measurement location with a traceable force calibration
+3,"original timestamps, sampling mode, bandwidth, anti-alias filter and clock synchronization"
+4,"sheet grade, thickness, coating or surface preparation and lot identifiers"
+5,"electrode alloy, tip geometry, dress count, cooling boundary and contact geometry"
+6,independent nugget cross-section or pull-test CTQ kept separate from solver fitting
+7,"physical weld, batch and schedule group identifiers for leakage-safe splits"

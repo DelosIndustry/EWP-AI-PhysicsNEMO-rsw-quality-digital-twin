@@ -1,0 +1,64 @@
+{
+  "experiment_id": "M3_simulation_dataset_audit",
+  "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+  "melt_ctq_status": "not_configured",
+  "overall_t_max_k": {
+    "max": 1623.3310546875,
+    "min": 327.43914794921875
+  },
+  "split_samples": {
+    "test_corner": 8,
+    "test_iid": 16,
+    "test_process_ood": 16,
+    "train": 64,
+    "validation": 16
+  },
+  "split_validation": {
+    "group_overlap_counts": {
+      "contact_model_id": 0,
+      "schedule_id": 0,
+      "stack_id": 0
+    },
+    "input_channel_count": 10,
+    "maximum_joule_terminal_energy_relative_gap": 3.8184459667438633e-16,
+    "melt_ctq_status": "not_configured",
+    "passed": true,
+    "tensor_shapes": {
+      "test_corner": [
+        8,
+        10,
+        8,
+        8,
+        8
+      ],
+      "test_iid": [
+        16,
+        10,
+        8,
+        8,
+        8
+      ],
+      "test_process_ood": [
+        16,
+        10,
+        8,
+        8,
+        8
+      ],
+      "train": [
+        64,
+        10,
+        8,
+        8,
+        8
+      ],
+      "validation": [
+        16,
+        10,
+        8,
+        8,
+        8
+      ]
+    }
+  }
+}

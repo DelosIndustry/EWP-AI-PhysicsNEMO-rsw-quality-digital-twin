@@ -1,0 +1,249 @@
+{
+  "evidence_inventory": [
+    {
+      "evidence_id": "mendeley_target_stack",
+      "note": "Dataset records AISI 1010 and per-weld thickness; local development mode is about 0.63 mm per sheet.",
+      "quantity": "sheet_material_and_thickness",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/",
+      "status": "direct_target"
+    },
+    {
+      "evidence_id": "mendeley_surface_unknown",
+      "note": "Neither the article nor the downloaded CSV identifies coating or surface preparation.",
+      "quantity": "surface_coating",
+      "source_url": "",
+      "status": "unknown"
+    },
+    {
+      "evidence_id": "mendeley_electrode_material",
+      "note": "The article says only copper alloy; the exact alloy grade is absent.",
+      "quantity": "electrode_material",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/#tbl0005",
+      "status": "direct_target"
+    },
+    {
+      "evidence_id": "mendeley_electrode_grade_unknown",
+      "note": "The exact copper-alloy designation and properties are not reported.",
+      "quantity": "electrode_alloy_grade",
+      "source_url": "",
+      "status": "unknown"
+    },
+    {
+      "evidence_id": "mendeley_tip_diameter",
+      "note": "Reported contact diameter is 1/8 inch, converted exactly to 3.175 mm.",
+      "quantity": "electrode_tip_diameter",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/#tbl0005",
+      "status": "direct_target"
+    },
+    {
+      "evidence_id": "nist_iron_resistivity_proxy",
+      "note": "Electrolytic iron temperature trend, not an AISI 1010 absolute-property calibration.",
+      "quantity": "bulk_electrical_resistivity",
+      "source_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication260-90.pdf",
+      "status": "proxy",
+      "valid_temperature_max_k": 1000.0,
+      "valid_temperature_min_k": 300.0
+    },
+    {
+      "evidence_id": "carbon_steel_k_0p1pct",
+      "note": "Tabulated 0.1 percent carbon-steel values; above 1073.15 K remains an extrapolation.",
+      "quantity": "thermal_conductivity",
+      "source_url": "https://doi.org/10.24425/ather.2022.143170",
+      "status": "direct_family",
+      "uncertainty_fraction": 0.05,
+      "valid_temperature_max_k": 1073.15,
+      "valid_temperature_min_k": 273.15
+    },
+    {
+      "evidence_id": "mills_steel_property_model",
+      "note": "Composition-based steel-property framework; exact coupon chemistry is unavailable.",
+      "quantity": "heat_capacity_density",
+      "source_url": "https://doi.org/10.2355/isijinternational.ISIJINT-2015-365",
+      "status": "proxy",
+      "valid_temperature_max_k": 2000.0,
+      "valid_temperature_min_k": 298.0
+    },
+    {
+      "evidence_id": "generic_low_carbon_phase_proxy",
+      "note": "Existing M2.1 solidus, liquidus, and latent heat remain bounded proxies.",
+      "quantity": "phase_change",
+      "source_url": "https://doi.org/10.2355/isijinternational.ISIJINT-2015-365",
+      "status": "proxy",
+      "valid_temperature_max_k": 2000.0,
+      "valid_temperature_min_k": 298.0
+    },
+    {
+      "evidence_id": "synthetic_contact_reconstruction",
+      "note": "M2.4 effective-resistance decomposition; not measured on the target coupons.",
+      "quantity": "contact_resistance",
+      "source_url": "",
+      "status": "assumption"
+    },
+    {
+      "evidence_id": "contact_law_shape_prior",
+      "note": "Power-law screening shape only; coefficients are not transferred as target measurements.",
+      "quantity": "contact_force_temperature_dependence",
+      "source_url": "https://doi.org/10.1179/136217101101538631",
+      "status": "assumption"
+    },
+    {
+      "evidence_id": "effective_contact_area_unknown",
+      "note": "Electrode tip radius is an upper geometric reference, not the measured electrical contact radius.",
+      "quantity": "effective_electrical_contact_radius",
+      "source_url": "",
+      "status": "unknown"
+    },
+    {
+      "evidence_id": "synthetic_screening_process",
+      "note": "Short high-current pulse used only to activate numerical sensitivity inside the M2.5 validity domain.",
+      "quantity": "screening_process",
+      "source_url": "",
+      "status": "assumption"
+    }
+  ],
+  "external_development_manifest_id": "e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62",
+  "external_test_outcomes_used": false,
+  "manifest_id": "3291bd08e78f33170b1be2380deb86114e482190e870eb7c0b371f965344626f",
+  "parameters": [
+    {
+      "evidence_id": "mendeley_target_stack",
+      "include_in_screening": true,
+      "maximum": 0.00066,
+      "minimum": 0.0006,
+      "name": "sheet_thickness_m",
+      "nominal": 0.00063,
+      "role": "bounded",
+      "units": "m_per_sheet"
+    },
+    {
+      "evidence_id": "mendeley_tip_diameter",
+      "maximum": 0.0015875,
+      "minimum": 0.0015875,
+      "name": "electrode_tip_radius_m",
+      "nominal": 0.0015875,
+      "role": "fixed",
+      "units": "m"
+    },
+    {
+      "evidence_id": "effective_contact_area_unknown",
+      "include_in_screening": true,
+      "maximum": 0.0015875,
+      "minimum": 0.0011,
+      "name": "effective_contact_radius_m",
+      "nominal": 0.00135,
+      "role": "nuisance",
+      "units": "m"
+    },
+    {
+      "evidence_id": "nist_iron_resistivity_proxy",
+      "include_in_screening": true,
+      "maximum": 1.3,
+      "minimum": 1.0,
+      "name": "bulk_resistivity_scale",
+      "nominal": 1.15,
+      "role": "bounded",
+      "units": "relative_to_electrolytic_iron"
+    },
+    {
+      "evidence_id": "carbon_steel_k_0p1pct",
+      "include_in_screening": true,
+      "maximum": 1.15,
+      "minimum": 0.85,
+      "name": "thermal_conductivity_scale",
+      "nominal": 1.0,
+      "note": "Wider than the reported low-temperature measurement uncertainty because the curve is extended above 1073.15 K.",
+      "role": "bounded",
+      "units": "relative"
+    },
+    {
+      "evidence_id": "mills_steel_property_model",
+      "include_in_screening": true,
+      "maximum": 1.1,
+      "minimum": 0.9,
+      "name": "volumetric_heat_capacity_scale",
+      "nominal": 1.0,
+      "role": "bounded",
+      "units": "relative"
+    },
+    {
+      "evidence_id": "generic_low_carbon_phase_proxy",
+      "include_in_screening": true,
+      "maximum": 1.15,
+      "minimum": 0.85,
+      "name": "latent_heat_scale",
+      "nominal": 1.0,
+      "role": "bounded",
+      "units": "relative"
+    },
+    {
+      "evidence_id": "synthetic_contact_reconstruction",
+      "include_in_screening": true,
+      "maximum": 1.5,
+      "minimum": 0.5,
+      "name": "faying_resistance_scale",
+      "nominal": 1.0,
+      "role": "nuisance",
+      "units": "relative_to_M2_4_reconstruction"
+    },
+    {
+      "evidence_id": "synthetic_contact_reconstruction",
+      "include_in_screening": true,
+      "maximum": 1.5,
+      "minimum": 0.5,
+      "name": "electrode_resistance_scale",
+      "nominal": 1.0,
+      "role": "nuisance",
+      "units": "relative_to_M2_4_reconstruction"
+    },
+    {
+      "evidence_id": "contact_law_shape_prior",
+      "maximum": 0.7,
+      "minimum": 0.3,
+      "name": "faying_force_exponent",
+      "nominal": 0.5,
+      "role": "nuisance",
+      "units": "dimensionless"
+    },
+    {
+      "evidence_id": "contact_law_shape_prior",
+      "maximum": 0.55,
+      "minimum": 0.25,
+      "name": "electrode_force_exponent",
+      "nominal": 0.4,
+      "role": "nuisance",
+      "units": "dimensionless"
+    },
+    {
+      "evidence_id": "synthetic_screening_process",
+      "include_in_screening": true,
+      "maximum": 4200.0,
+      "minimum": 3400.0,
+      "name": "screening_peak_current_a",
+      "nominal": 3800.0,
+      "role": "nuisance",
+      "units": "A"
+    }
+  ],
+  "schema_version": "0.1",
+  "screening_process": {
+    "calibration_status": "synthetic_screening_not_recipe",
+    "force_n": 3500.0,
+    "time_steps": 60,
+    "total_time_s": 0.08,
+    "weld_time_s": 0.04
+  },
+  "target_stack": {
+    "coating_or_surface": "not_reported_by_public_dataset",
+    "electrode_material": "copper_alloy_exact_grade_not_reported",
+    "electrode_tip_diameter_mm": 3.175,
+    "intended_use": "public_lab_dataset_compatible_preflight_not_automotive_calibration",
+    "sheet_count": 2,
+    "sheet_material": "AISI 1010 carbon steel",
+    "sheet_thickness_compatibility_mm": [
+      0.6,
+      0.66
+    ],
+    "sheet_thickness_nominal_mm": 0.63,
+    "stack_id": "AISI1010_0p63x2_surfaceUnknown_CuAlloyTip3p175"
+  }
+}

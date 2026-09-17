@@ -1,0 +1,82 @@
+{
+  "all_checks_passed": true,
+  "basic_verification": {
+    "uniform_source_energy_balance_relative_error": 9.269255425830685e-13,
+    "uniform_source_final_max_error_k": 1.5916157281026244e-12,
+    "zero_source_max_temperature_error_k": 1.8189894035458565e-12
+  },
+  "coupled_case": {
+    "final_convective_energy_j": 16.3771964279173,
+    "final_maximum_temperature_k": 494.350064877396,
+    "final_source_energy_j": 67.85696885070864,
+    "final_stored_energy_change_j": 51.47977242279626,
+    "joule_terminal_energy_relative_gap": 0.00012312902333368804,
+    "max_energy_balance_relative_error": 7.246058606415616e-14,
+    "max_linear_residual_relative_norm": 2.414771084818979e-15,
+    "maximum_temperature_k": 556.3086279028358,
+    "maximum_temperature_time_s": 0.04,
+    "peak_current_a": 5000.0,
+    "peak_joule_heat_w_m3": 55378378784.84491,
+    "peak_voltage_v": 0.33924307358521993,
+    "terminal_electrical_energy_j": 67.84861471704399,
+    "thermal_source_energy_j": 67.85696885070864
+  },
+  "experiment_id": "E02_M2_thermal_solver",
+  "grid_convergence": {
+    "axial_cells": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "cell_size_m": [
+      0.00025,
+      0.000125,
+      6.25e-05,
+      3.125e-05
+    ],
+    "observed_order": 1.9821841882203175,
+    "strictly_decreasing_error": true,
+    "temperature_rmse_k": [
+      0.12479484693941946,
+      0.03212561345363855,
+      0.008091863862202345,
+      0.002026786244182585
+    ]
+  },
+  "time_convergence": {
+    "observed_order": 0.982130326777476,
+    "strictly_decreasing_error": true,
+    "temperature_rmse_k": [
+      0.055300682829402065,
+      0.028022038807754824,
+      0.014163386795441902,
+      0.007178037760206836
+    ],
+    "time_step_counts": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "time_step_s": [
+      0.00125,
+      0.000625,
+      0.0003125,
+      0.00015625
+    ]
+  },
+  "time_scheme": "backward_euler",
+  "verification_checks": {
+    "coupled_energy_balance": true,
+    "grid_convergence": true,
+    "joule_terminal_energy_consistency": true,
+    "nonnegative_joule_heat": true,
+    "post_pulse_cooling": true,
+    "time_convergence": true,
+    "uniform_source_analytic": true,
+    "uniform_source_energy_balance": true,
+    "zero_source_invariance": true
+  },
+  "verification_scope": "synthetic numerical verification; not process calibrated"
+}

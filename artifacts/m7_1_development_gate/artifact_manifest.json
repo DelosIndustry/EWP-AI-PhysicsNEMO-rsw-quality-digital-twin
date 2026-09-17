@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "01_probability_distributions.png": "f56c6665bdca8201dac24219e02467beba39714d4efb30f15d61b68d930a784d",
+    "02_failure_reliability.png": "f14298d17779c4ae336332290ddefd5f5cba4095c021d4479c2ec1db44245eca",
+    "03_decisions_by_category.png": "c45336e8d41e711ddda4ba8f86b96a4d5ef78b1db35f3de2badfd2983a5ce7c6",
+    "04_policy_tradeoff.png": "65342917e3253963b15c827319837f52e37552b78d33f5bc5264670678815b6e",
+    "05_ood_diagnostics.png": "c301bba15b8b445831f9b84c2c40df0444bce7536b86060b469f75329143666c",
+    "06_category_confusion.png": "0ea56d527e093b368c7ec9694e17400a127de6decccad743c17bdd9cc0008f57",
+    "07_fold_thresholds.png": "ba514899207bcb942e5b4464204a1dc8b5b5fe3d157662aabbfd7ce0ae61aaf2",
+    "INTERPRETATION.md": "b81ad35831443361e710449b613310f99a32a7a4cea84e1b26749d12ea7933a9",
+    "bootstrap_intervals.csv": "a39d5c162f90bce9911b92a2b36920860cdaee808303d57800743d2e744f3f30",
+    "cross_fitted_predictions.csv": "26879b03c135eb15e5ad41a455435f9ebd05d2670d4ec64b8ee809792e359b6a",
+    "fold_thresholds.csv": "625aaadd4116ca61fa451f7663ab31a1e122c8a4ccb003e30cfa71c3afeaf58c",
+    "metrics.json": "d2d750ea34a1e7f9b667437806bfbbaacb117194dce31b32bd750d6b888b9fc8",
+    "policy_metrics.csv": "7c466f24ca858aefb2f32c44248c4a3fbee8fb4455133e5e27f6968edacf604a"
+  },
+  "config_sha256": "0e52ced0e226d32a14dabfe45ed62ba5ede51a0186664596af47852e35ceda43",
+  "experiment_id": "E09_M7_1_development_gate_feasibility",
+  "implementation_sha256": {
+    "evaluator": "439b721cdda566fc5c83390d020193ad2c61ab262be641a60b1d503200ac26a1",
+    "runner": "4e37c0c97dba73fe8e163249241f6d530ab6149a93d970707d0c319964c5f441"
+  },
+  "manifest_id": "2b9f0110d10d962aab74377bd04915236439ea24a48f2c326a057622ef3330ca",
+  "scope": "development_only_no_external_test_retuning"
+}

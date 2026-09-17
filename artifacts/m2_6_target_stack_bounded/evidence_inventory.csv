@@ -1,0 +1,14 @@
+evidence_id,quantity,status,source_url,valid_temperature_min_k,valid_temperature_max_k,uncertainty_fraction,note
+mendeley_target_stack,sheet_material_and_thickness,direct_target,https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/,,,,Dataset records AISI 1010 and per-weld thickness; local development mode is about 0.63 mm per sheet.
+mendeley_surface_unknown,surface_coating,unknown,,,,,Neither the article nor the downloaded CSV identifies coating or surface preparation.
+mendeley_electrode_material,electrode_material,direct_target,https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/#tbl0005,,,,The article says only copper alloy; the exact alloy grade is absent.
+mendeley_electrode_grade_unknown,electrode_alloy_grade,unknown,,,,,The exact copper-alloy designation and properties are not reported.
+mendeley_tip_diameter,electrode_tip_diameter,direct_target,https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/#tbl0005,,,,"Reported contact diameter is 1/8 inch, converted exactly to 3.175 mm."
+nist_iron_resistivity_proxy,bulk_electrical_resistivity,proxy,https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication260-90.pdf,300.0,1000.0,,"Electrolytic iron temperature trend, not an AISI 1010 absolute-property calibration."
+carbon_steel_k_0p1pct,thermal_conductivity,direct_family,https://doi.org/10.24425/ather.2022.143170,273.15,1073.15,0.05,Tabulated 0.1 percent carbon-steel values; above 1073.15 K remains an extrapolation.
+mills_steel_property_model,heat_capacity_density,proxy,https://doi.org/10.2355/isijinternational.ISIJINT-2015-365,298.0,2000.0,,Composition-based steel-property framework; exact coupon chemistry is unavailable.
+generic_low_carbon_phase_proxy,phase_change,proxy,https://doi.org/10.2355/isijinternational.ISIJINT-2015-365,298.0,2000.0,,"Existing M2.1 solidus, liquidus, and latent heat remain bounded proxies."
+synthetic_contact_reconstruction,contact_resistance,assumption,,,,,M2.4 effective-resistance decomposition; not measured on the target coupons.
+contact_law_shape_prior,contact_force_temperature_dependence,assumption,https://doi.org/10.1179/136217101101538631,,,,Power-law screening shape only; coefficients are not transferred as target measurements.
+effective_contact_area_unknown,effective_electrical_contact_radius,unknown,,,,,"Electrode tip radius is an upper geometric reference, not the measured electrical contact radius."
+synthetic_screening_process,screening_process,assumption,,,,,Short high-current pulse used only to activate numerical sensitivity inside the M2.5 validity domain.

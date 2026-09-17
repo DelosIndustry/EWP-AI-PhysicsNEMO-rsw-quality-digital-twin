@@ -1,0 +1,135 @@
+{
+  "device": "cuda",
+  "eligible_variants": [],
+  "evaluation_splits": [
+    "validation"
+  ],
+  "experiment_id": "E05_1_physics_constraint_ablation",
+  "loss_weights": {
+    "data_only": {
+      "data": 1.0,
+      "initial": 0.0,
+      "nonnegative": 0.0,
+      "thermal_residual": 0.0
+    },
+    "plus_thermal_residual": {
+      "data": 1.0,
+      "initial": 0.1,
+      "nonnegative": 0.1,
+      "thermal_residual": 0.01
+    }
+  },
+  "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+  "overfit_results": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/data_only/last.ckpt",
+      "experiment_id": "E05_1_overfit_64",
+      "field_nrmse": 0.753412591149292,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.0,
+      "normalized_mse": 0.9811649210751057,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 64,
+      "selected_epoch": 1,
+      "split": "train_overfit",
+      "tmax_mae_k": 179.0181908607483,
+      "variant": "data_only",
+      "worst_5pct_tmax_mae_k": 505.6214065551758
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/plus_thermal_residual/last.ckpt",
+      "experiment_id": "E05_1_overfit_64",
+      "field_nrmse": 0.7561506888833337,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.0,
+      "normalized_mse": 0.9883094355463982,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 64,
+      "selected_epoch": 1,
+      "split": "train_overfit",
+      "tmax_mae_k": 184.47309255599976,
+      "variant": "plus_thermal_residual",
+      "worst_5pct_tmax_mae_k": 512.025146484375
+    }
+  ],
+  "overfit_target_field_nrmse": 0.05,
+  "precision": "fp32",
+  "reference_residual_gate": {
+    "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+    "maximum_equivalent_temperature_error_k": 0.001,
+    "maximum_initial_condition_error_k": 1e-06,
+    "observed_maximum_equivalent_temperature_error_k": 0.00035106836003251374,
+    "observed_maximum_initial_condition_error_k": 0.0,
+    "passed": true,
+    "path": "projects/rsw_quality_digital_twin/artifacts/m5_1_reference_residual/reference_residual_audit.json"
+  },
+  "requested_epochs": 1,
+  "results": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/data_only/best.ckpt",
+      "experiment_id": "E05_1_physics_ablation",
+      "field_nrmse": 0.9021888142220272,
+      "initial_condition_rmse_normalized": 0.8325174549781661,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.0,
+      "nonnegative_penalty_rmse_normalized": 0.0,
+      "normalized_mse": 0.3693767189979553,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 16,
+      "selected_epoch": 1,
+      "split": "validation",
+      "thermal_residual_rmse_normalized": 0.25360963074793047,
+      "tmax_mae_k": 62.97801399230957,
+      "variant": "data_only",
+      "worst_5pct_tmax_mae_k": 130.41122436523438
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/plus_thermal_residual/best.ckpt",
+      "experiment_id": "E05_1_physics_ablation",
+      "field_nrmse": 0.8395655391631243,
+      "initial_condition_rmse_normalized": 0.7581719204880013,
+      "model": "fno3d",
+      "negative_temperature_rise_fraction": 0.0,
+      "nonnegative_penalty_rmse_normalized": 0.0,
+      "normalized_mse": 0.31987762451171875,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 1771393,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 16,
+      "selected_epoch": 1,
+      "split": "validation",
+      "thermal_residual_rmse_normalized": 0.25044036615167714,
+      "tmax_mae_k": 62.979291915893555,
+      "variant": "plus_thermal_residual",
+      "worst_5pct_tmax_mae_k": 137.64715576171875
+    }
+  ],
+  "seed": 42,
+  "selected_variant": null,
+  "selection_metric": "validation_tmax_mae_k_among_overfit_eligible",
+  "test_access_policy": "sealed_until_loss_and_model_freeze",
+  "train_samples": 64,
+  "visualization": {
+    "figures": [
+      "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/figures/physics_ablation_training.png",
+      "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/figures/physics_ablation_accuracy.png",
+      "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/figures/physics_ablation_constraints.png",
+      "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/figures/physics_ablation_worst_fields.png"
+    ],
+    "interpretation": "projects/rsw_quality_digital_twin/artifacts/m5_1_path_check/INTERPRETATION.md",
+    "worst_validation_sample_indices": {
+      "data_only": 12,
+      "plus_thermal_residual": 12
+    }
+  }
+}

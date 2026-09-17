@@ -1,0 +1,118 @@
+experiment_id: E10_M7_2a_polito_fault_development
+seed: 42
+
+inputs:
+  manifest: projects/rsw_quality_digital_twin/data/manifests/m6_polito_factory_manifest.json
+  train_npz: projects/rsw_quality_digital_twin/data/processed_external/polito_factory/train.npz
+  validation_npz: projects/rsw_quality_digital_twin/data/processed_external/polito_factory/validation.npz
+  sealed_test_npz: projects/rsw_quality_digital_twin/data/processed_external/polito_factory/test.npz
+  allowed_splits: [train, validation]
+  test_signal_or_outcome_accessed: false
+  expected_manifest_id: 9c3b4a099d3f05641f15c18b24f8321b0050691732727e822f2b46ee30e21975
+  expected_sealed_test_sha256_from_manifest: 42e4615f8510b53ce3cf88ce9ae1d503ab3145b11f2e376a129afbaab439421d
+
+frozen_development_inputs:
+  - path: projects/rsw_quality_digital_twin/data/manifests/m6_polito_factory_manifest.json
+    sha256: 38f76120742274f67e925fd3cce9ad3f83a6bcd45eef6aa0969f68b1588034ef
+  - path: projects/rsw_quality_digital_twin/data/processed_external/polito_factory/train.npz
+    sha256: 1bff7815c24248ef07fb8c6aa9d1e9a0bacc622a7b30bf887faf76a0e2dc97be
+  - path: projects/rsw_quality_digital_twin/data/processed_external/polito_factory/validation.npz
+    sha256: 4a3ac5750efc586e959503b9eec07968c08fc089de66b5913ed5087c49c57987
+
+feature_contract:
+  signals: [voltage, current, force]
+  semantics: upstream_normalized_zero_to_one_no_si_reconstruction
+  include_validity_masks_for_cnn: true
+  statistical_features:
+    - length_fraction
+    - mean
+    - standard_deviation
+    - minimum
+    - maximum
+    - rms
+    - q10
+    - q25
+    - median
+    - q75
+    - q90
+    - first
+    - last
+    - end_minus_start
+    - peak_position_fraction
+    - trough_position_fraction
+    - linear_slope_per_valid_step
+    - derivative_absolute_mean
+    - derivative_standard_deviation
+    - derivative_absolute_maximum
+    - early_mean
+    - middle_mean
+    - late_mean
+  forbidden_model_inputs: [sample_row_id, car_body, date, welding_spot, fault]
+  si_unit_reconstruction_allowed: false
+  cross_dataset_category_merge_allowed: false
+
+models:
+  candidates: [prior, logistic_balanced, random_forest_balanced, cnn_1d]
+  logistic:
+    c: 1.0
+    max_iter: 5000
+  random_forest:
+    n_estimators: 400
+    max_depth: 9
+    min_samples_leaf: 3
+    max_features: sqrt
+    n_jobs: 1
+  cnn_1d:
+    channels: [16, 32]
+    kernel_sizes: [9, 7]
+    epochs: 40
+    batch_size: 128
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    selection_metric: validation_pr_auc
+
+selection:
+  primary_metric: validation_pr_auc
+  secondary_metric: validation_fault_recall_at_0p5
+  tertiary_metric: validation_brier_score
+  higher_is_better: [validation_pr_auc, validation_fault_recall_at_0p5]
+  lower_is_better: [validation_brier_score]
+  accuracy_only_selection_allowed: false
+
+decision_policy:
+  status: development_feasibility_not_production_specification
+  normal_definition: predicted_fault_probability_below_normal_threshold
+  fault_definition: predicted_fault_probability_at_or_above_fault_threshold
+  overlap_or_middle_action: REVIEW
+  threshold_source: selected_model_validation_only
+  normal_threshold_rule: largest_automatic_normal_region_with_zero_observed_fault_escape
+  fault_threshold_rule: largest_automatic_fault_region_with_zero_observed_normal_reject
+  illustrative_costs:
+    fault_escape: 20
+    normal_reject: 5
+    review: 1
+  costs_are_automotive_requirements: false
+
+verification:
+  expected_train_samples: 1380
+  expected_validation_samples: 300
+  expected_train_faults: 55
+  expected_validation_faults: 12
+  expected_train_car_bodies: 20
+  expected_validation_car_bodies: 4
+  expected_signal_steps: 1000
+  expected_statistical_feature_count: 69
+  expected_figure_count: 7
+
+bootstrap:
+  replicates: 2000
+  confidence_level: 0.95
+  method: car_body_cluster_resampling
+
+release_policy:
+  polito_test_access_allowed: false
+  automatic_factory_quality_acceptance: false
+  si_physics_interpretation_allowed: false
+  mendeley_category_merge_allowed: false
+  physicsnemo_temperature_validation_claim_allowed: false
+  production_release_allowed: false

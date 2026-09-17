@@ -1,0 +1,12 @@
+{
+  "electrical_calibration_status": "electrolytic_iron_proxy_not_low_carbon_steel_calibration",
+  "experiment_id": "E02_M2_2_temperature_dependent_electrothermal",
+  "figures": {
+    "electrical_property_coverage.png": "configured curve and missing phase-range coverage",
+    "energy_accounting.png": "all cumulative energy and error time points",
+    "feedback_history.png": "all dynamic and frozen time points",
+    "field_snapshots.png": "last active electrical interval"
+  },
+  "quality_limit_status": "not_configured",
+  "v3_dataset_readiness": "blocked_electrical_property_temperature_range"
+}

@@ -1,0 +1,95 @@
+{
+  "adapter_version": "m6-rsw-external-v1",
+  "config_sha256": "290ef543a3b948328519af8fcfd99eab12524fedea716e22f8e4d494dbc18d38",
+  "contract": {
+    "conflict_rule": "ambiguous scalar is null; min/max/unique_count and conflict flag preserve evidence",
+    "forbidden_target": "internal temperature field T(r,z,t)",
+    "independent_sample": "sample_id",
+    "measured_ctq": [
+      "nugget_diameter_mm",
+      "pull_test_n",
+      "category"
+    ],
+    "simulation_normalization_allowed": false,
+    "split_unit": "sample_id"
+  },
+  "created_at_utc": "2026-09-09T09:46:41.448777+00:00",
+  "dataset_kind": "experimental_ctq",
+  "files": {
+    "records": {
+      "bytes": 410643,
+      "path": "records.csv",
+      "sha256": "bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108"
+    },
+    "welds": {
+      "bytes": 160473,
+      "path": "welds.csv",
+      "sha256": "69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6"
+    }
+  },
+  "manifest_id": "e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62",
+  "schema_version": "1.0",
+  "source": {
+    "download_manifest_id": "04f0c46c456fcb2af5daed2ccb38b2787b88820c01dff45d5189d0ef334b3fcd",
+    "files": [
+      {
+        "bytes": 341710,
+        "filename": "Data_RSW.csv",
+        "sha256": "917dac7251795bb333970529f3c5a4b6c780874af83c2f1b08c57a9627e4e027"
+      }
+    ],
+    "metadata": {
+      "dataset_id": "rwh8kjzdch",
+      "doi": "10.17632/rwh8kjzdch.3",
+      "license": "CC BY 4.0",
+      "version": 3
+    }
+  },
+  "validation": {
+    "adapted_records": 4186,
+    "conflict_column_weld_pairs": 7,
+    "conflict_counts_by_field": {
+      "angle_deg": 0,
+      "category": 0,
+      "material": 0,
+      "nugget_diameter_mm": 0,
+      "pressure_psi": 0,
+      "pull_test_n": 3,
+      "thickness_a_mm": 2,
+      "thickness_b_mm": 2,
+      "welding_time_ms": 0
+    },
+    "conflicting_weld_count": 5,
+    "conflicting_weld_ids": [
+      117,
+      161,
+      185,
+      213,
+      325
+    ],
+    "group_overlap_count": 0,
+    "independent_welds": 495,
+    "passed": true,
+    "source_rows": 4186,
+    "split_summary": {
+      "development": {
+        "category_counts": {
+          "Bad": 17,
+          "Explode": 25,
+          "Good": 354
+        },
+        "records": 3378,
+        "welds": 396
+      },
+      "test": {
+        "category_counts": {
+          "Bad": 4,
+          "Explode": 6,
+          "Good": 89
+        },
+        "records": 808,
+        "welds": 99
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+project:
+  experiment_id: M3_2_physical_validity_qualification
+  source_data_version_id: RSW-SIM-V2
+  source_manifest_id: 2e43da1c058aef17a5500145fc92ea241b038457973adbcddb7162c1b39d2b98
+
+model_scope:
+  # This is a conservative model-review boundary, not a calibrated AISI 1010
+  # solidus and not a production PASS/FAIL specification.
+  review_temperature_k: 1700.0
+  review_boundary_status: engineering_assumption
+  review_action: require_phase_change_model_or_restrict_quantitative_use
+  temperature_dependent_properties: false
+  phase_change: false
+  latent_heat: false
+
+material_reference:
+  material: example_low_carbon_steel_not_aisi_1010_calibration
+  solidus_temperature_k: 1768.0
+  liquidus_temperature_k: 1797.0
+  latent_heat_j_per_kg: 270000.0
+  source_title: Numerical Study on the Solidification Microstructure Evolution in Industrial Twin-Roll Casting of Low-Carbon Steel
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12525790/
+  usage: plausibility_reference_only
+
+diagnostics:
+  temperature_thresholds_k: [1000.0, 1500.0, 1700.0, 1768.0, 1797.0, 2000.0]
+  quantiles: [0.0, 0.5, 0.9, 0.95, 0.99, 1.0]
+  hottest_sample_count: 10
+
+gates:
+  maximum_train_validation_ks: 0.10
+  maximum_relative_energy_balance_error: 1.0e-10
+  maximum_joule_terminal_energy_relative_gap: 1.0e-10
+  require_zero_train_samples_above_review_temperature: true
+
+visualization:
+  dpi: 150

@@ -1,0 +1,126 @@
+{
+  "all_checks_passed": true,
+  "analytic_series_check": {
+    "analytic_contact_power_w": 229.18311805232932,
+    "analytic_voltage_v": 0.09167324722093172,
+    "contact_power_relative_error": 8.184864741993588e-15,
+    "numerical_contact_power_w": 229.1831180523312,
+    "numerical_voltage_v": 0.09167324722093208,
+    "voltage_relative_error": 3.935962714766685e-15
+  },
+  "contact_model_status": {
+    "conservative_contact_heat_partition": "implemented",
+    "explicit_electrode_plate_contact": "implemented_static_Rpp",
+    "explicit_plate_plate_contact": "implemented_static_Rpp",
+    "force_dependence": "not_implemented",
+    "surface_and_coating_calibration": "not_implemented",
+    "temperature_dependence": "not_implemented"
+  },
+  "effective_resistance_reconstruction": {
+    "absolute_bulk_resistivity_ohm_m": 1.056e-07,
+    "allocation_fraction": {
+      "bottom_electrode_sheet": 0.22,
+      "faying_interface": 0.56,
+      "top_electrode_sheet": 0.22
+    },
+    "bulk_area_resistance_ohm_m2": 2.112e-10,
+    "interpretation": "initialization_identity_not_contact_calibration",
+    "old_effective_conductivity_s_m": 1000000.0,
+    "old_total_area_resistance_ohm_m2": 2e-09,
+    "purpose": "split_the_old_1e6_S_m_effective_scale_into_bulk_and_contacts_at_300K",
+    "residual_contact_area_resistance_ohm_m2": 1.7888e-09,
+    "sheet_height_m": 0.002
+  },
+  "experiment_id": "E02_M2_4_explicit_electrical_contact_resistance",
+  "scenario_metrics": {
+    "high": {
+      "boundary_contact_energy_j": 103.16180645273195,
+      "bulk_energy_j": 41.38847264194901,
+      "contact_fraction_of_terminal_energy": 0.8505893071457749,
+      "electrode_absorbed_energy_j": 51.58090322636597,
+      "internal_contact_energy_j": 132.46117069714325,
+      "max_current_conservation_relative_error": 4.824090740286203e-13,
+      "max_electrical_power_balance_relative_error": 1.4469655650880233e-13,
+      "max_electrical_thermal_source_relative_gap": 2.5957015756081266e-16,
+      "max_target_current_relative_error": 8.533179375508318e-16,
+      "max_terminal_partition_energy_relative_gap": 4.065965221860758e-14,
+      "max_thermal_energy_balance_relative_error": 2.5215490858202042e-15,
+      "maximum_active_voltage_v": 1.2164835318003568,
+      "maximum_liquid_fraction": 0.006197623674787447,
+      "maximum_nonlinear_iterations": 5,
+      "maximum_temperature_k": 1768.1797310865688,
+      "mushy_diameter_proxy_mm": 1.0,
+      "sheet_source_energy_j": 225.43054656545823,
+      "temperature_inside_bulk_curve": true,
+      "terminal_energy_j": 277.0114497918252
+    },
+    "low": {
+      "boundary_contact_energy_j": 34.623062850154255,
+      "bulk_energy_j": 17.827861100020826,
+      "contact_fraction_of_terminal_energy": 0.81568524926927,
+      "electrode_absorbed_energy_j": 17.311531425077128,
+      "internal_contact_energy_j": 44.27416739135172,
+      "max_current_conservation_relative_error": 1.4705512457124907e-13,
+      "max_electrical_power_balance_relative_error": 3.17329848877694e-14,
+      "max_electrical_thermal_source_relative_gap": 2.2145529487001104e-16,
+      "max_target_current_relative_error": 8.533179375508318e-16,
+      "max_terminal_partition_energy_relative_gap": 5.360279100939783e-15,
+      "max_thermal_energy_balance_relative_error": 5.368423754137121e-15,
+      "maximum_active_voltage_v": 0.4155781236429715,
+      "maximum_liquid_fraction": 0.0,
+      "maximum_nonlinear_iterations": 1,
+      "maximum_temperature_k": 807.1271134638408,
+      "mushy_diameter_proxy_mm": 0.0,
+      "sheet_source_energy_j": 79.4135599164497,
+      "temperature_inside_bulk_curve": true,
+      "terminal_energy_j": 96.72509134152654
+    },
+    "nominal": {
+      "boundary_contact_energy_j": 68.8227186470597,
+      "bulk_energy_j": 29.512875115854534,
+      "contact_fraction_of_terminal_energy": 0.8420494618917814,
+      "electrode_absorbed_energy_j": 34.41135932352986,
+      "internal_contact_energy_j": 88.51324809182826,
+      "max_current_conservation_relative_error": 1.8772994626116539e-13,
+      "max_electrical_power_balance_relative_error": 4.4564842702568383e-14,
+      "max_electrical_thermal_source_relative_gap": 2.1724042419771185e-16,
+      "max_target_current_relative_error": 8.533179375508318e-16,
+      "max_terminal_partition_energy_relative_gap": 2.7696360357304598e-14,
+      "max_thermal_energy_balance_relative_error": 3.26284524496938e-15,
+      "maximum_active_voltage_v": 0.8228484627226473,
+      "maximum_liquid_fraction": 0.0,
+      "maximum_nonlinear_iterations": 1,
+      "maximum_temperature_k": 1288.799668676904,
+      "mushy_diameter_proxy_mm": 0.0,
+      "sheet_source_energy_j": 152.43748253121265,
+      "temperature_inside_bulk_curve": true,
+      "terminal_energy_j": 186.8488418547419
+    }
+  },
+  "time_refinement_tmax_difference_k": 0.47394809458432974,
+  "v3_dataset_readiness": {
+    "next_step": "M2.5 contact-law calibration interface and external-data mapping",
+    "ready": false,
+    "status": "blocked_contact_calibration_and_force_temperature_laws"
+  },
+  "verification_checks": {
+    "all_temperatures_inside_bulk_curve": true,
+    "analytic_contact_power": true,
+    "analytic_series_voltage": true,
+    "bulk_and_contact_power_both_active": true,
+    "conservative_zero_contact_power": true,
+    "contact_scale_orders_maximum_temperature": true,
+    "contact_scale_orders_terminal_energy": true,
+    "phase_change_activated": true,
+    "scenario_numerics_and_energy_ledgers": true,
+    "time_refinement_stable": true,
+    "zero_contact_current_regression": true,
+    "zero_contact_potential_regression": true
+  },
+  "zero_contact_regression": {
+    "conservative_heat_to_terminal_relative_gap": 5.981190691979919e-16,
+    "current_relative_error": 9.569905107167861e-16,
+    "legacy_gradient_heat_to_terminal_relative_gap": 0.0006206045125977294,
+    "potential_relative_linf_error": 1.1407664406415037e-15
+  }
+}

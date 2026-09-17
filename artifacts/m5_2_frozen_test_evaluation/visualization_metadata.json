@@ -1,0 +1,23 @@
+{
+  "figures": [
+    "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_split_accuracy.png",
+    "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_tmax_parity.png",
+    "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_physics_constraints.png",
+    "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_ood_degradation.png",
+    "projects/rsw_quality_digital_twin/artifacts/m5_2_frozen_test_evaluation/figures/sealed_worst_fields.png"
+  ],
+  "worst_samples": {
+    "test_corner": {
+      "sample_index": 5,
+      "time_index": 3
+    },
+    "test_iid": {
+      "sample_index": 5,
+      "time_index": 3
+    },
+    "test_process_ood": {
+      "sample_index": 3,
+      "time_index": 4
+    }
+  }
+}

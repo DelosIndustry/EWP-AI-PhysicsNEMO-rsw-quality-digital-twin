@@ -1,0 +1,77 @@
+{
+  "all_checks_passed": true,
+  "coupled_case": {
+    "final_convective_energy_j": 59.548966745365156,
+    "final_maximum_temperature_k": 1744.2706998832546,
+    "final_source_energy_j": 304.06858838729937,
+    "final_stored_energy_change_j": 244.51962164193412,
+    "joule_terminal_energy_relative_gap": 1.869427524963717e-16,
+    "max_energy_balance_relative_error": 1.5189098640330175e-15,
+    "max_nonlinear_residual_relative_norm": 5.306720876293291e-10,
+    "maximum_liquid_fraction": 0.39918983548784187,
+    "maximum_nonlinear_iterations": 5,
+    "maximum_temperature_k": 1779.5765052291474,
+    "maximum_temperature_time_s": 0.04,
+    "peak_current_a": 8500.0,
+    "peak_voltage_v": 0.8943193776097038,
+    "source_normalization_factor": 1.0000000000000053,
+    "terminal_electrical_energy_j": 304.0685883872993,
+    "thermal_source_energy_j": 304.06858838729937
+  },
+  "equation": "backward_euler_volumetric_enthalpy",
+  "experiment_id": "E02_M2_1_enthalpy_phase_change",
+  "material": {
+    "calibration_status": "literature_plausibility_reference_only",
+    "density_kg_m3": 7000.0,
+    "latent_heat_j_kg": 270000.0,
+    "liquidus_temperature_k": 1797.0,
+    "name": "example_low_carbon_steel_not_aisi_1010_calibration",
+    "reference_temperature_k": 293.15,
+    "solidus_temperature_k": 1768.0,
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12525790/",
+    "temperature_knots_k": [
+      293.15,
+      1768.0,
+      1797.0,
+      2100.0
+    ],
+    "thermal_conductivity_values_w_mk": [
+      28.4,
+      28.4,
+      36.0,
+      36.0
+    ],
+    "volumetric_heat_capacity_values_j_m3k": [
+      4760000.0,
+      4760000.0,
+      4760000.0,
+      4760000.0
+    ],
+    "volumetric_latent_heat_j_m3": 1890000000.0
+  },
+  "nonlinear_method": "damped_quasi_newton_with_conductivity_picard_update",
+  "uniform_analytic_case": {
+    "maximum_energy_balance_relative_error": 2.0941923828565923e-14,
+    "maximum_nonlinear_iterations": 3,
+    "maximum_nonlinear_residual_relative_norm": 1.2411839958763258e-16,
+    "maximum_temperature_error_k": 1.2505552149377763e-11
+  },
+  "verification_checks": {
+    "coupled_energy_balance": true,
+    "coupled_phase_change_activated": true,
+    "coupled_within_material_curve_range": true,
+    "joule_terminal_energy_consistency": true,
+    "latent_heat_temperature_suppression": true,
+    "liquid_fraction_bounds": true,
+    "nonlinear_convergence": true,
+    "post_pulse_cooling": true,
+    "uniform_energy_balance": true,
+    "uniform_enthalpy_analytic": true,
+    "zero_latent_m2_regression": true
+  },
+  "verification_scope": "synthetic numerical verification; literature plausibility material; not process calibrated",
+  "zero_latent_regression": {
+    "maximum_stored_energy_difference_j": 2.4119595209981526e-14,
+    "maximum_temperature_difference_k": 2.8421709430404007e-13
+  }
+}

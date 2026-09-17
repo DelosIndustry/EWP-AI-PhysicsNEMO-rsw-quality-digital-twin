@@ -1,0 +1,183 @@
+{
+  "all_checks_passed": true,
+  "audit_manifest_id": "8394d8ce236de1b3a7c75fd346806f731627ef6e2eab2c2b5d4c7d859df9774d",
+  "candidate_summary": {
+    "candidate_count": 5,
+    "internal_temperature_validation_candidate_count": 0,
+    "raw_audited_count": 2,
+    "search_results_reviewed": 40,
+    "terminal_energy_calibration_candidate_count": 0
+  },
+  "development_trace_audit": {
+    "actual_timestamp_column_present": false,
+    "current_jensen_ratio_summary": {
+      "max": 1.172672557410888,
+      "median": 1.0296021852565704,
+      "min": 1.0001224247158897,
+      "q05": 1.005519535440714,
+      "q95": 1.0846089696288859
+    },
+    "declared_newton_overlap_conditional": {
+      "max_overlap_count_if_header_N_is_assumed": 0,
+      "mean_overlap_count_if_header_N_is_assumed": 0,
+      "permission_to_convert_or_rescale": false,
+      "status": "indeterminate_because_force_unit_claims_conflict",
+      "validity_interval_n": [
+        1500.0,
+        6000.0
+      ]
+    },
+    "development_record_count": 3378,
+    "development_weld_count": 396,
+    "external_test_outcomes_used": false,
+    "invalid_or_nonpositive_current_record_count": 1,
+    "invalid_or_nonpositive_force_record_count": 14,
+    "nominal_inclusive_count_match_welds": 262,
+    "nominal_inclusive_count_mismatch_welds": 134,
+    "nominal_sampling_rate_hz": 10.0,
+    "record_index_order_pass_count": 396,
+    "selection_split": "development",
+    "stored_force_summary_all_development": {
+      "max": 132.45199999999997,
+      "median": 94.838,
+      "min": 4.9350000000000005,
+      "q05": 65.00900952380954,
+      "q95": 115.37840277777778
+    },
+    "target_stack_compatible_weld_count": 359,
+    "time_interpretation": "10 Hz is reported metadata; record index is not promoted to an exact timestamp"
+  },
+  "experiment_id": "E02_M2_7_calibration_feasibility",
+  "force_sensor_mass_check": {
+    "bias_g": 1.2622222222222481,
+    "maximum_absolute_deviation_g": 4.5300000000002,
+    "maximum_reference_mass_force_equivalent_n": 20.8685512,
+    "not_authorized_inference": "mass-check results do not define archived force units or the electrode transfer chain",
+    "point_count": 9,
+    "reference_mass_interval_g": [
+      0.0,
+      2128.0
+    ],
+    "rmse_g": 2.828207127414075,
+    "scope": "reported_mass_check_not_electrode_transfer_chain"
+  },
+  "force_transfer_gate": {
+    "checks": {
+      "calibration_traceable": false,
+      "measurement_location_known": false,
+      "pressure_transfer_parameters_complete": false,
+      "unit_conflict_resolved": false
+    },
+    "equation": "F_tip = P_cylinder * A_piston * mechanical_ratio * efficiency - friction",
+    "force_calibration_allowed": false,
+    "missing_pressure_transfer_parameters": [
+      "efficiency",
+      "mechanical_ratio",
+      "piston_area_m2"
+    ],
+    "source_unit": "N_or_PSI_conflicted"
+  },
+  "identifiability": {
+    "contact_partition_nullity": 2,
+    "contact_partition_unknown_count": 3,
+    "terminal_V_I_F_only_contact_partition_rank": 1,
+    "tier_a_claim": "effective_total_contact_component_only"
+  },
+  "input_integrity": {
+    "all_frozen_hashes_match": true,
+    "external_manifest_id": "e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62",
+    "external_manifest_id_matches_config": true,
+    "external_manifest_self_hash_valid": true,
+    "frozen_file_hashes": {
+      "projects/rsw_quality_digital_twin/artifacts/m2_6_target_stack_bounded/metrics.json": {
+        "actual_sha256": "aa6c62538b48d436a664de3f63d26525df442977b640c4452d382b4b0e37e6fd",
+        "expected_sha256": "aa6c62538b48d436a664de3f63d26525df442977b640c4452d382b4b0e37e6fd"
+      },
+      "projects/rsw_quality_digital_twin/artifacts/m2_6_target_stack_bounded/target_stack_manifest.json": {
+        "actual_sha256": "ff72bd492ae0bacbdf6c3f76631fb611c888f24c35f35cd2fa3b0cdb5fa743d1",
+        "expected_sha256": "ff72bd492ae0bacbdf6c3f76631fb611c888f24c35f35cd2fa3b0cdb5fa743d1"
+      },
+      "projects/rsw_quality_digital_twin/configs/m2_6_target_stack_bounded.yaml": {
+        "actual_sha256": "d7bb5860255fc71a1e2562aeb804418d5994483adab527c698b2fa42f565d320",
+        "expected_sha256": "d7bb5860255fc71a1e2562aeb804418d5994483adab527c698b2fa42f565d320"
+      },
+      "projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/records.csv": {
+        "actual_sha256": "bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108",
+        "expected_sha256": "bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108"
+      },
+      "projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv": {
+        "actual_sha256": "69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6",
+        "expected_sha256": "69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6"
+      }
+    },
+    "unchanged_during_run": true
+  },
+  "proposed_coupon_protocol": {
+    "calibration_welds": 27,
+    "sealed_qualification_welds": 15,
+    "status": "proposed_learning_protocol_not_industry_recipe",
+    "total_welds": 42
+  },
+  "track_decisions": {
+    "automotive_physical_twin_calibration_ready": false,
+    "lab_default_force_feature_allowed": false,
+    "lab_external_ctq_baseline_feasible": true,
+    "rsw_sim_v3_generation_ready": false
+  },
+  "unit_consistency": {
+    "electrode_force_signal": {
+      "claim_ids": [
+        "mendeley_csv_force_header",
+        "data_in_brief_force_description",
+        "sensors_table5_force_description"
+      ],
+      "conversion_allowed": false,
+      "quantity": "electrode_force_signal",
+      "reported_units": [
+        "n",
+        "psi"
+      ],
+      "status": "conflicted"
+    },
+    "welding_current_signal": {
+      "claim_ids": [
+        "data_in_brief_current_header"
+      ],
+      "conversion_allowed": true,
+      "quantity": "welding_current_signal",
+      "reported_units": [
+        "a"
+      ],
+      "status": "documented"
+    }
+  },
+  "verification_checks": {
+    "candidate_registry_complete": true,
+    "coupon_plan_count_correct": true,
+    "development_counts_match": true,
+    "development_split_only": true,
+    "external_manifest_identity_verified": true,
+    "external_test_outcomes_not_used": true,
+    "force_conversion_correctly_blocked": true,
+    "force_unit_conflict_detected": true,
+    "frozen_inputs_unchanged": true,
+    "invalid_values_flagged_not_imputed": true,
+    "jensen_inequality_holds": true,
+    "lab_track_progress_allowed": true,
+    "no_candidate_claims_internal_temperature_validation": true,
+    "physical_twin_release_correctly_blocked": true,
+    "source_record_order_preserved": true,
+    "timestamp_not_fabricated": true
+  },
+  "visualization": {
+    "deterministically_selected_trace_sample_ids": [
+      252,
+      181,
+      261,
+      401
+    ],
+    "figure_count": 6,
+    "force_axis_unit": "unit_disputed",
+    "trace_x_axis": "record_index_within_weld_not_timestamp"
+  }
+}

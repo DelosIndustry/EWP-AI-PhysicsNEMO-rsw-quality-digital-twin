@@ -1,0 +1,69 @@
+experiment_id: E02_M2_2_temperature_dependent_electrothermal
+
+# Synthetic numerical-verification case. It is not calibrated to a production
+# weld schedule, electrode geometry, contact resistance, or a specific steel.
+geometry:
+  radius_m: 0.005
+  height_m: 0.002
+  radial_cells: 10
+  axial_cells: 16
+
+electrical:
+  reference_conductivity_s_m: 1.0e6
+  inactive_conductivity_fraction: 0.08
+  contact_radius_m: 0.0022
+  peak_current_a: 3500.0
+  weld_time_s: 0.04
+
+electrical_material:
+  name: nist_electrolytic_iron_relative_resistivity_proxy
+  temperature_knots_k: [300.0, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0, 1000.0]
+  resistivity_nano_ohm_m: [105.6, 166.6, 241.8, 335.1, 449.1, 583.0, 737.0, 909.0]
+  out_of_range_policy: error
+  use_mode: normalized_temperature_dependence_only
+  calibration_status: electrolytic_iron_proxy_not_low_carbon_steel_calibration
+  transcribed_table_temperature_range_k: [300.0, 1000.0]
+  source_report_range_k: [296.0, 1373.0]
+  source_name: NBS_Special_Publication_260-90_Table_4.1_electrolytic_iron
+  source_url: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication260-90.pdf
+
+thermal:
+  initial_temperature_k: 300.0
+  ambient_temperature_k: 300.0
+  electrode_cooling_w_m2k: 2.0e4
+  interface_conductance_w_m2k: 2.0e5
+
+thermal_material:
+  name: example_low_carbon_steel_not_aisi_1010_calibration
+  temperature_knots_k: [293.15, 1768.0, 1797.0, 2100.0]
+  thermal_conductivity_values_w_mk: [28.4, 28.4, 36.0, 36.0]
+  volumetric_heat_capacity_values_j_m3k: [4.76e+6, 4.76e+6, 4.76e+6, 4.76e+6]
+  density_kg_m3: 7000.0
+  latent_heat_j_kg: 270000.0
+  solidus_temperature_k: 1768.0
+  liquidus_temperature_k: 1797.0
+  reference_temperature_k: 293.15
+  calibration_status: literature_plausibility_reference_only
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12525790/
+
+time:
+  total_time_s: 0.08
+  time_steps: 40
+
+solver:
+  electrical_tolerance: 1.0e-10
+  nonlinear_tolerance: 1.0e-9
+  maximum_nonlinear_iterations: 50
+
+verification:
+  fixed_current_scaling_relative_tolerance: 1.0e-10
+  constant_property_regression_tolerance_k: 1.0e-8
+  maximum_current_conservation_relative_error: 1.0e-10
+  maximum_target_current_relative_error: 1.0e-10
+  maximum_electrical_residual_relative_norm: 1.0e-10
+  maximum_terminal_source_energy_relative_gap: 1.0e-10
+  maximum_energy_balance_relative_error: 1.0e-8
+  require_temperature_inside_electrical_table: true
+
+visualization:
+  dpi: 150

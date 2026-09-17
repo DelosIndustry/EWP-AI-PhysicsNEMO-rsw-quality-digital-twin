@@ -1,0 +1,277 @@
+{
+  "all_checks_passed": true,
+  "baseline_comparison": {
+    "category": {
+      "baseline_macro_f1": 0.3153153153153153,
+      "baseline_model": "prior",
+      "macro_f1_absolute_gain": 0.36603389103389117,
+      "selected_macro_f1": 0.6813492063492065
+    },
+    "nugget_diameter_mm": {
+      "baseline_mae": 0.2949694749694749,
+      "baseline_model": "mean",
+      "relative_mae_reduction": 0.21224213155601723,
+      "selected_mae": 0.23236452485799428
+    },
+    "pull_test_n": {
+      "baseline_mae": 301.8433275989187,
+      "baseline_model": "mean",
+      "relative_mae_reduction": 0.42304404963577913,
+      "selected_mae": 174.15030393593298
+    }
+  },
+  "data_audit": {
+    "category_counts": {
+      "Bad": 17,
+      "Explode": 25,
+      "Good": 351
+    },
+    "external_test_outcomes_used": false,
+    "feature_eligible_weld_count": 393,
+    "feature_excluded_weld_count": 3,
+    "feature_exclusion_reason_counts": {
+      "missing_or_nonfinite_current_jensen_ratio": 1,
+      "missing_or_nonfinite_current_max_positive_a": 1,
+      "missing_or_nonfinite_current_mean_positive_a": 1,
+      "missing_or_nonfinite_current_min_positive_a": 1,
+      "missing_or_nonfinite_current_rms_positive_a": 1,
+      "missing_or_nonfinite_thickness_a_mm": 2,
+      "missing_or_nonfinite_thickness_b_mm": 2
+    },
+    "selection_split": "development",
+    "source_development_record_count": 3378,
+    "source_development_weld_count": 396,
+    "target_stack_compatible_feature_eligible_count": 360,
+    "task_eligible_counts": {
+      "category": 393,
+      "nugget_diameter_mm": 393,
+      "pull_test_n": 391
+    }
+  },
+  "experiment_id": "E06_M6_1_external_ctq_baseline",
+  "feature_contract": {
+    "checks": {
+      "features_unique": true,
+      "forbidden_columns_absent": true,
+      "force_named_features_absent": true,
+      "pressure_not_declared_tip_force": true,
+      "targets_absent_from_features": true,
+      "timestamp_not_reconstructed": true
+    },
+    "features": [
+      "pressure_psi",
+      "welding_time_ms",
+      "angle_deg",
+      "thickness_a_mm",
+      "thickness_b_mm",
+      "record_count",
+      "current_mean_positive_a",
+      "current_rms_positive_a",
+      "current_min_positive_a",
+      "current_max_positive_a",
+      "current_jensen_ratio",
+      "invalid_current_count"
+    ],
+    "forbidden": [
+      "category",
+      "force_max_n",
+      "force_mean_n",
+      "force_min_n",
+      "force_n",
+      "nugget_diameter_mm",
+      "pull_test_n"
+    ]
+  },
+  "input_integrity": {
+    "all_frozen_hashes_match": true,
+    "calibration_manifest_id": "8394d8ce236de1b3a7c75fd346806f731627ef6e2eab2c2b5d4c7d859df9774d",
+    "calibration_manifest_id_matches": true,
+    "calibration_manifest_self_hash_valid": true,
+    "external_manifest_id": "e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62",
+    "external_manifest_id_matches": true,
+    "external_manifest_self_hash_valid": true,
+    "frozen_file_hashes": {
+      "projects/rsw_quality_digital_twin/artifacts/m2_7_calibration_feasibility/calibration_feasibility_manifest.json": {
+        "actual_sha256": "9a90d9e2a7a7ac4c01ee113dca24316308dcca60282624fcc028bbf29afa2489",
+        "expected_sha256": "9a90d9e2a7a7ac4c01ee113dca24316308dcca60282624fcc028bbf29afa2489"
+      },
+      "projects/rsw_quality_digital_twin/artifacts/m2_7_calibration_feasibility/metrics.json": {
+        "actual_sha256": "919bd1b0a7aec444416cb589b39dabb0cf9218c2b9edc93173905b5ae868cc07",
+        "expected_sha256": "919bd1b0a7aec444416cb589b39dabb0cf9218c2b9edc93173905b5ae868cc07"
+      },
+      "projects/rsw_quality_digital_twin/data/manifests/m6_mendeley_ctq_manifest.json": {
+        "actual_sha256": "b29983679e66db53a38824699fc8d45dadac2806628238ad13db8a90e166179c",
+        "expected_sha256": "b29983679e66db53a38824699fc8d45dadac2806628238ad13db8a90e166179c"
+      },
+      "projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/records.csv": {
+        "actual_sha256": "bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108",
+        "expected_sha256": "bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108"
+      },
+      "projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv": {
+        "actual_sha256": "69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6",
+        "expected_sha256": "69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6"
+      }
+    },
+    "m2_7_force_feature_allowed": false,
+    "m2_7_physical_twin_ready": false,
+    "m2_7_v3_ready": false,
+    "unchanged_during_run": true
+  },
+  "internal_split": {
+    "group_overlap_count": 0,
+    "manifest_id": "a7f9c4477da399b24d9a020363bcf48a1786c773f7c600b1f4983147c1772043",
+    "train_category_counts": {
+      "Bad": 14,
+      "Explode": 20,
+      "Good": 281
+    },
+    "train_welds": 315,
+    "validation_category_counts": {
+      "Bad": 3,
+      "Explode": 5,
+      "Good": 70
+    },
+    "validation_welds": 78
+  },
+  "model_files": {
+    "category": {
+      "bytes": 923516,
+      "model": "random_forest_balanced",
+      "path": "models/category__random_forest_balanced.pkl",
+      "round_trip_predictions_match": true,
+      "sha256": "178c4b1d0454512aebabadc89d240f494eae639e79172e0e58a7b1afe4f80d7c"
+    },
+    "nugget_diameter_mm": {
+      "bytes": 1316816,
+      "model": "random_forest",
+      "path": "models/nugget_diameter_mm__random_forest.pkl",
+      "round_trip_predictions_match": true,
+      "sha256": "1231c6671aa8c0e7e183a2ccff57b412b90ddca47b6f3fd38d675413dfe32743"
+    },
+    "pull_test_n": {
+      "bytes": 1092581,
+      "model": "random_forest",
+      "path": "models/pull_test_n__random_forest.pkl",
+      "round_trip_predictions_match": true,
+      "sha256": "670d8ecf1144bd6b2b87a90e09e717af8394ef60bfcd6eae0835d7317d11cd12"
+    }
+  },
+  "release_boundaries": {
+    "automotive_physical_twin_calibration_ready": false,
+    "lab_external_ctq_baseline_selected": true,
+    "physicsnemo_temperature_field_model": false,
+    "rsw_sim_v3_generation_ready": false
+  },
+  "selected_models": {
+    "category": {
+      "accuracy": 0.9230769230769231,
+      "all_classes_present": true,
+      "balanced_accuracy": 0.6174603174603175,
+      "class_counts": {
+        "Bad": 3,
+        "Explode": 5,
+        "Good": 70
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          69
+        ]
+      ],
+      "macro_f1": 0.6813492063492065,
+      "model": "random_forest_balanced",
+      "per_class_recall": {
+        "Bad": 0.6666666666666666,
+        "Explode": 0.2,
+        "Good": 0.9857142857142858
+      },
+      "target_stack_all_classes_present": true,
+      "target_stack_balanced_accuracy": 0.3282051282051282,
+      "target_stack_class_counts": {
+        "Bad": 1,
+        "Explode": 4,
+        "Good": 65
+      },
+      "target_stack_macro_f1": 0.31840796019900497,
+      "target_stack_validation_samples": 70,
+      "task": "category",
+      "task_type": "classification",
+      "train_samples": 315,
+      "validation_samples": 78
+    },
+    "nugget_diameter_mm": {
+      "bias": -0.021703170121783338,
+      "mae": 0.23236452485799428,
+      "median_absolute_error": 0.138059981670261,
+      "model": "random_forest",
+      "r2": 0.3751538108816106,
+      "rmse": 0.32811247163993496,
+      "target_stack_mae": 0.21051235500664184,
+      "target_stack_rmse": 0.2947294404467242,
+      "target_stack_validation_samples": 70,
+      "task": "nugget_diameter_mm",
+      "task_type": "regression",
+      "train_samples": 315,
+      "validation_samples": 78
+    },
+    "pull_test_n": {
+      "bias": 14.143202315114968,
+      "mae": 174.15030393593298,
+      "median_absolute_error": 94.39008055063664,
+      "model": "random_forest",
+      "r2": 0.6829070645834019,
+      "rmse": 310.8432339497482,
+      "target_stack_mae": 143.9229970701436,
+      "target_stack_rmse": 269.2714314786527,
+      "target_stack_validation_samples": 70,
+      "task": "pull_test_n",
+      "task_type": "regression",
+      "train_samples": 313,
+      "validation_samples": 78
+    }
+  },
+  "selection_manifest_id": "174006ad63c751f58f40a38b8a4c27dbf7f110727f4f0c854b0f29801be6fd01",
+  "test_access": {
+    "external_test_outcomes_used": false,
+    "policy": "sealed_external_test_until_selection_manifest_frozen",
+    "ready_for_separate_frozen_test_runner": true
+  },
+  "verification_checks": {
+    "all_classes_in_validation": true,
+    "all_fixed_candidates_evaluated": true,
+    "external_test_outcomes_not_used": true,
+    "feature_contract_passed": true,
+    "feature_eligible_count_matches": true,
+    "force_feature_absent": true,
+    "frozen_inputs_match": true,
+    "internal_group_split_disjoint": true,
+    "physical_twin_block_preserved": true,
+    "selected_models_round_trip_match": true,
+    "selected_models_serialized": true,
+    "selection_manifest_self_hash_valid": true,
+    "selection_policy_is_test_sealed": true,
+    "source_development_count_matches": true,
+    "source_split_is_development": true,
+    "split_manifest_self_hash_valid": true,
+    "task_eligible_counts_match": true,
+    "upstream_manifests_verified": true,
+    "v3_block_preserved": true,
+    "validation_metrics_finite": true
+  },
+  "visualization": {
+    "figure_count": 7,
+    "permutation_importance_repeats": 20,
+    "validation_only": true
+  }
+}

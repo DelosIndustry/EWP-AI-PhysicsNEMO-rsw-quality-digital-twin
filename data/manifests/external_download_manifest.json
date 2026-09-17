@@ -1,0 +1,98 @@
+{
+  "files": [
+    {
+      "expected_git_blob_sha1": null,
+      "expected_sha256": "917dac7251795bb333970529f3c5a4b6c780874af83c2f1b08c57a9627e4e027",
+      "expected_size": 341710,
+      "filename": "Data_RSW.csv",
+      "git_blob_sha1": "b79997ee87c5d3ea3aaf3cbac854ddd2c6a54a2a",
+      "local_path": "projects/rsw_quality_digital_twin/data/raw_external/mendeley_rsw_v3/Data_RSW.csv",
+      "sha256": "917dac7251795bb333970529f3c5a4b6c780874af83c2f1b08c57a9627e4e027",
+      "size": 341710,
+      "source": "mendeley_rsw_v3",
+      "status": "downloaded",
+      "url": "https://data.mendeley.com/public-files/datasets/rwh8kjzdch/files/36f1ddd0-c966-43d5-bb64-5731e10bc128/file_downloaded"
+    },
+    {
+      "expected_git_blob_sha1": "bd73ad9d9e0d2df8f2723c391b2e3580be42ee90",
+      "expected_sha256": null,
+      "expected_size": 1994,
+      "filename": "README.md",
+      "git_blob_sha1": "bd73ad9d9e0d2df8f2723c391b2e3580be42ee90",
+      "local_path": "projects/rsw_quality_digital_twin/data/raw_external/polito_automotive_rsw/README.md",
+      "sha256": "2bcc0425379bcde95d2f25a1107d26b3da73f6003abf53ab29833e2c1f6e9432",
+      "size": 1994,
+      "source": "polito_automotive_rsw",
+      "status": "downloaded",
+      "url": "https://raw.githubusercontent.com/smartdatapolito/resistance_spot_welding_dataset/81b93668db6d52fde747c7a049e2d4b0f04d5d40/README.md"
+    },
+    {
+      "expected_git_blob_sha1": "393bc683323d7fc023b7548db7ee7ced3a53a3c8",
+      "expected_sha256": null,
+      "expected_size": 24823087,
+      "filename": "current.csv",
+      "git_blob_sha1": "393bc683323d7fc023b7548db7ee7ced3a53a3c8",
+      "local_path": "projects/rsw_quality_digital_twin/data/raw_external/polito_automotive_rsw/current.csv",
+      "sha256": "0d01cda0b4f5bd280aaeff5676376dda491f78b09b29a651318ce7bd6b1b49c2",
+      "size": 24823087,
+      "source": "polito_automotive_rsw",
+      "status": "downloaded",
+      "url": "https://raw.githubusercontent.com/smartdatapolito/resistance_spot_welding_dataset/81b93668db6d52fde747c7a049e2d4b0f04d5d40/current.csv"
+    },
+    {
+      "expected_git_blob_sha1": "ed252b4375d16d27ee3e7b1de21cb67b6ea553ae",
+      "expected_sha256": null,
+      "expected_size": 22176815,
+      "filename": "force.csv",
+      "git_blob_sha1": "ed252b4375d16d27ee3e7b1de21cb67b6ea553ae",
+      "local_path": "projects/rsw_quality_digital_twin/data/raw_external/polito_automotive_rsw/force.csv",
+      "sha256": "7fb4db697401fcbe6c7710889e52fef322978d8646ba21627d6e68a5a071cba4",
+      "size": 22176815,
+      "source": "polito_automotive_rsw",
+      "status": "downloaded",
+      "url": "https://raw.githubusercontent.com/smartdatapolito/resistance_spot_welding_dataset/81b93668db6d52fde747c7a049e2d4b0f04d5d40/force.csv"
+    },
+    {
+      "expected_git_blob_sha1": "fc20a778a276a27db85271e58d5b304b0417d884",
+      "expected_sha256": null,
+      "expected_size": 39055,
+      "filename": "labels.csv",
+      "git_blob_sha1": "fc20a778a276a27db85271e58d5b304b0417d884",
+      "local_path": "projects/rsw_quality_digital_twin/data/raw_external/polito_automotive_rsw/labels.csv",
+      "sha256": "5f0dc537ac9aceffd6fc1be2b90d68fd2d481c59738097390bb9778b39331007",
+      "size": 39055,
+      "source": "polito_automotive_rsw",
+      "status": "downloaded",
+      "url": "https://raw.githubusercontent.com/smartdatapolito/resistance_spot_welding_dataset/81b93668db6d52fde747c7a049e2d4b0f04d5d40/labels.csv"
+    },
+    {
+      "expected_git_blob_sha1": "2549e088c48e68d2b1f22b964be2bbfe3f2d7e83",
+      "expected_sha256": null,
+      "expected_size": 25175528,
+      "filename": "voltage.csv",
+      "git_blob_sha1": "2549e088c48e68d2b1f22b964be2bbfe3f2d7e83",
+      "local_path": "projects/rsw_quality_digital_twin/data/raw_external/polito_automotive_rsw/voltage.csv",
+      "sha256": "7237a046a98b35d041309d3623d909fba153cf5b60a27ace9673af88a6a055e3",
+      "size": 25175528,
+      "source": "polito_automotive_rsw",
+      "status": "downloaded",
+      "url": "https://raw.githubusercontent.com/smartdatapolito/resistance_spot_welding_dataset/81b93668db6d52fde747c7a049e2d4b0f04d5d40/voltage.csv"
+    }
+  ],
+  "manifest_sha256": "04f0c46c456fcb2af5daed2ccb38b2787b88820c01dff45d5189d0ef334b3fcd",
+  "retrieved_at_utc": "2026-09-03T14:33:09.122842+00:00",
+  "schema_version": "0.1",
+  "sources": {
+    "mendeley_rsw_v3": {
+      "dataset_id": "rwh8kjzdch",
+      "doi": "10.17632/rwh8kjzdch.3",
+      "license": "CC BY 4.0",
+      "version": 3
+    },
+    "polito_automotive_rsw": {
+      "commit": "81b93668db6d52fde747c7a049e2d4b0f04d5d40",
+      "license": "not declared in the repository; local analysis only",
+      "repository": "smartdatapolito/resistance_spot_welding_dataset"
+    }
+  }
+}

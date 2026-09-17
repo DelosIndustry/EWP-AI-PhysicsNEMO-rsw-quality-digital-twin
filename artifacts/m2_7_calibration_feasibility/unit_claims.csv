@@ -1,0 +1,5 @@
+claim_id,quantity,reported_unit,status,source_url,locator
+mendeley_csv_force_header,electrode_force_signal,N,documented,https://data.mendeley.com/datasets/rwh8kjzdch/3,Data_RSW.csv column header Force (N)
+data_in_brief_force_description,electrode_force_signal,N,documented,https://doi.org/10.1016/j.dib.2025.111373,data description and parameter table
+sensors_table5_force_description,electrode_force_signal,PSI,conflicted,https://doi.org/10.3390/s25061744,"Table 5, Electrode pressure range 0-133.53 PSI"
+data_in_brief_current_header,welding_current_signal,A,documented,https://doi.org/10.1016/j.dib.2025.111373,Data_RSW.csv and Table 4

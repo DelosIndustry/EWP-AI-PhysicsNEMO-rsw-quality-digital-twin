@@ -1,0 +1,27 @@
+{
+  "artifacts": {
+    "01_split_distribution.png": "7db3d574fcced8d8b63c1960e8e069e2ae0cdc491e8ce2db85290cc23b8c64f3",
+    "02_validation_signal_profiles.png": "5f05f4a16da974f8fcb2e65d6a9bd4462ffa8afbba37d96e94684f644937c48b",
+    "03_validation_pr_curves.png": "a8f5703576a103408ef354a7805e3c6194919eab3b64814f66148033aa702504",
+    "04_validation_roc_curves.png": "cddb1897e9c619214cf16ea8d991172dbc62b8453325ac3eadbf512a057b6962",
+    "05_validation_calibration.png": "5d36920eae5f1f6e731ae27ce4bb784bc74879df6bb2e965de9deb57da82b68d",
+    "06_validation_triage.png": "d9d030471473436f9695f57656198c1c864ea1380cc08f570907326980c7a6df",
+    "07_rf_feature_importance.png": "b7dca60cd65433a1396a1051b6b69ecd2f0f9fccee9ad61297fb9c96448d6d06",
+    "INTERPRETATION.md": "078e914d260e6d9a1f07534988cca9e8dc5e05e795a4e51f00d7d9f340cb20b0",
+    "bootstrap_intervals.csv": "d13c4ec310850850fb880cccaad4b194447c1a691f4dadd1ee175e5ea8852ec1",
+    "candidate_metrics.csv": "586486a3c3db4fa673f25a67550d309a3b782f3df015838411a3ca54e8d0327c",
+    "cnn_1d.pt": "97aee14ebbdce4ff939514507e404ce5e4ab8adce890474f9b6aaf17710eeee0",
+    "cnn_training_history.csv": "610d0cc1505c038a50bc560aa6e1010646495f3dab01195c7ee0747088353cd5",
+    "logistic_balanced.pkl": "2cafdf5a526a139057c2cdd81d943a618fbc1936a7b7871caea3901e8241e4c2",
+    "metrics.json": "cc9d6774d2307bb59b9843727cc27bff7763aa7cb140533c317ed93deb40caa5",
+    "prior.pkl": "9ea79672f13df75b885ef31c503428d01f9624983dd1d96a481a2ddfc74a1c57",
+    "random_forest_balanced.pkl": "d0684bfa135a0a771393ac765d08dbcf64e8e3ee8154d8e30cf3e9699eb7c432",
+    "rf_feature_importance.csv": "85f9cc648575c95a856bf4a2625243f1146c1a58fd6ed6555db4d6bf237db8b1",
+    "selection_manifest.json": "07fa21964b83e33233fdf03174cae27d977343ae297a722294d2bdbbf8dfdaa2",
+    "validation_predictions.csv": "8055835bce942d97b0f02901f3eb65446b43ab4e2d74e9b0053db8475ca12164"
+  },
+  "experiment_id": "E10_M7_2a_polito_fault_development",
+  "manifest_id": "42b372f6da0a9f34bbf8840f6b7898c72f0fd8142f7f11525ea3d0479f5406f0",
+  "sealed_test_accessed": false,
+  "selection_manifest_id": "2ca70b27dc8420683d9914cf2882199c9b9cdff6b6fb8e79bf4a79545612b653"
+}

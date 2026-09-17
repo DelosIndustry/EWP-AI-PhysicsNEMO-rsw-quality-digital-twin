@@ -1,0 +1,71 @@
+experiment_id: E02_M2_4_explicit_electrical_contact_resistance
+
+# M2.3 contains the measured bulk-resistivity anchors and thermal material.
+# M2.4 deliberately reuses them instead of duplicating source tables.
+base_config: projects/rsw_quality_digital_twin/configs/m2_3_high_temperature_sensitivity.yaml
+bulk_resistivity_bridge_exponent: 1.0
+bulk_reference_conductivity_s_m: 9469696.96969697
+
+process:
+  peak_current_a: 6395.0
+  weld_time_s: 0.04
+
+electrical_contacts:
+  representation: static_area_specific_resistance_Rpp_ohm_m2
+  contact_radius_m: 0.0022
+  inactive_conductance_fraction: 0.08
+  nominal_faying_resistivity_ohm_m2: 1.001728e-9
+  nominal_bottom_resistivity_ohm_m2: 3.93536e-10
+  nominal_top_resistivity_ohm_m2: 3.93536e-10
+  calibration_status: synthetic_reconstruction_not_measured_contact_values
+
+# Half of boundary contact heat enters the sheet; half enters the electrode.
+boundary_heat_partition:
+  bottom_fraction_to_sheet: 0.5
+  top_fraction_to_sheet: 0.5
+  calibration_status: symmetric_sensitivity_assumption
+
+effective_resistance_reconstruction:
+  purpose: split_the_old_1e6_S_m_effective_scale_into_bulk_and_contacts_at_300K
+  old_effective_conductivity_s_m: 1.0e+6
+  sheet_height_m: 0.002
+  old_total_area_resistance_ohm_m2: 2.0e-9
+  absolute_bulk_resistivity_ohm_m: 1.056e-7
+  bulk_area_resistance_ohm_m2: 2.112e-10
+  residual_contact_area_resistance_ohm_m2: 1.7888e-9
+  allocation_fraction:
+    faying_interface: 0.56
+    bottom_electrode_sheet: 0.22
+    top_electrode_sheet: 0.22
+  interpretation: initialization_identity_not_contact_calibration
+
+contact_scenarios:
+  low:
+    scale: 0.5
+    meaning: half_the_synthetic_nominal_Rpp
+  nominal:
+    scale: 1.0
+    meaning: reconstructed_initial_Rpp
+  high:
+    scale: 1.5
+    meaning: one_and_a_half_times_synthetic_nominal_Rpp
+
+analytic_validation:
+  conductivity_s_m: 5.0e6
+  current_a: 3000.0
+  internal_contact_resistivity_ohm_m2: 1.2e-9
+  bottom_contact_resistivity_ohm_m2: 0.3e-9
+  top_contact_resistivity_ohm_m2: 0.5e-9
+
+time_steps: 80
+refinement_time_steps: 160
+
+verification:
+  maximum_numerical_relative_error: 1.0e-10
+  maximum_energy_relative_error: 1.0e-9
+  maximum_time_refinement_tmax_difference_k: 5.0
+  require_phase_activation: true
+  require_all_temperatures_inside_curve: true
+
+visualization:
+  dpi: 150

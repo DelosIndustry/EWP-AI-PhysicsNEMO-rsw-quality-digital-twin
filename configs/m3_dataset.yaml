@@ -1,0 +1,66 @@
+project:
+  name: rsw_quality_digital_twin
+  schema_version: "0.1"
+  seed: 42
+
+# Synthetic solver-study geometry; not a production weld specification.
+geometry:
+  radius_m: 0.005
+  height_m: 0.002
+  radial_cells: 8
+  axial_cells: 8
+
+time:
+  total_time_s: 0.08
+  output_time_count: 8
+
+data:
+  split_sizes:
+    train: 64
+    validation: 16
+    test_iid: 16
+    test_process_ood: 16
+    test_corner: 8
+
+sampling:
+  samples_per_group: 4
+  common:
+    initial_temperature_k: [290.0, 310.0]
+    cooling_coefficient_w_m2k: [1.0e+4, 4.0e+4]
+    current_jitter_multiplier: [0.97, 1.03]
+    inactive_electrical_conductivity_fraction: 0.04
+    outside_contact_conductance_fraction: 0.05
+  iid:
+    electrical_conductivity_s_m: [8.0e+5, 1.2e+6]
+    thermal_conductivity_w_mk: [35.0, 55.0]
+    volumetric_heat_capacity_j_m3k: [3.2e+6, 4.2e+6]
+    peak_current_a: [2.0e+3, 4.5e+3]
+    weld_time_s: [0.025, 0.050]
+    contact_resistivity_ohm_m2: [1.0e-9, 4.0e-9]
+    thermal_contact_conductance_w_m2k: [1.5e+5, 5.0e+5]
+    contact_radius_m: [0.0020, 0.0035]
+    pulse_shapes: [rectangular, ramp]
+  process_ood:
+    electrical_conductivity_s_m: [7.0e+5, 1.3e+6]
+    thermal_conductivity_w_mk: [30.0, 60.0]
+    volumetric_heat_capacity_j_m3k: [3.0e+6, 4.5e+6]
+    peak_current_a: [3.3e+3, 4.2e+3]
+    weld_time_s: [0.030, 0.045]
+    contact_resistivity_ohm_m2: [3.5e-9, 4.5e-9]
+    thermal_contact_conductance_w_m2k: [8.0e+4, 1.4e+5]
+    contact_radius_m: [0.0020, 0.0025]
+    pulse_shapes: [double_pulse]
+  corner_ood:
+    electrical_conductivity_s_m: [7.0e+5, 9.0e+5]
+    thermal_conductivity_w_mk: [30.0, 38.0]
+    volumetric_heat_capacity_j_m3k: [3.0e+6, 3.4e+6]
+    peak_current_a: [4.0e+3, 4.6e+3]
+    weld_time_s: [0.025, 0.038]
+    contact_resistivity_ohm_m2: [4.5e-9, 5.2e-9]
+    thermal_contact_conductance_w_m2k: [5.0e+4, 8.0e+4]
+    contact_radius_m: [0.0019, 0.0022]
+    pulse_shapes: [double_pulse]
+
+quality:
+  # Intentionally unset until the M3 temperature distribution is reviewed.
+  melt_temperature_k: null

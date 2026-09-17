@@ -1,0 +1,406 @@
+{
+  "all_checks_passed": true,
+  "candidate_metrics": [
+    {
+      "model": "prior",
+      "model_family": "statistical_feature_classifier",
+      "selected_epoch": null,
+      "validation_accuracy_at_0p5": 0.96,
+      "validation_balanced_accuracy_at_0p5": 0.5,
+      "validation_brier_score": 0.03840002100399075,
+      "validation_confusion_matrix_at_0p5": [
+        [
+          288,
+          0
+        ],
+        [
+          12,
+          0
+        ]
+      ],
+      "validation_f1_at_0p5": 0.0,
+      "validation_fault_count": 12,
+      "validation_fault_precision_at_0p5": 0.0,
+      "validation_fault_prevalence": 0.04,
+      "validation_fault_recall_at_0p5": 0.0,
+      "validation_pr_auc": 0.04,
+      "validation_roc_auc": 0.5,
+      "validation_sample_count": 300
+    },
+    {
+      "model": "logistic_balanced",
+      "model_family": "statistical_feature_classifier",
+      "selected_epoch": null,
+      "validation_accuracy_at_0p5": 0.8466666666666667,
+      "validation_balanced_accuracy_at_0p5": 0.7604166666666666,
+      "validation_brier_score": 0.11655730094646595,
+      "validation_confusion_matrix_at_0p5": [
+        [
+          246,
+          42
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "validation_f1_at_0p5": 0.25806451612903225,
+      "validation_fault_count": 12,
+      "validation_fault_precision_at_0p5": 0.16,
+      "validation_fault_prevalence": 0.04,
+      "validation_fault_recall_at_0p5": 0.6666666666666666,
+      "validation_pr_auc": 0.2331247068931301,
+      "validation_roc_auc": 0.8428819444444444,
+      "validation_sample_count": 300
+    },
+    {
+      "model": "random_forest_balanced",
+      "model_family": "statistical_feature_classifier",
+      "selected_epoch": null,
+      "validation_accuracy_at_0p5": 0.97,
+      "validation_balanced_accuracy_at_0p5": 0.7447916666666667,
+      "validation_brier_score": 0.0297592466642531,
+      "validation_confusion_matrix_at_0p5": [
+        [
+          285,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "validation_f1_at_0p5": 0.5714285714285714,
+      "validation_fault_count": 12,
+      "validation_fault_precision_at_0p5": 0.6666666666666666,
+      "validation_fault_prevalence": 0.04,
+      "validation_fault_recall_at_0p5": 0.5,
+      "validation_pr_auc": 0.61038739289127,
+      "validation_roc_auc": 0.8799189814814815,
+      "validation_sample_count": 300
+    },
+    {
+      "model": "cnn_1d",
+      "model_family": "raw_normalized_signal_cnn",
+      "selected_epoch": 14,
+      "validation_accuracy_at_0p5": 0.6566666666666666,
+      "validation_balanced_accuracy_at_0p5": 0.7413194444444444,
+      "validation_brier_score": 0.23795063157704854,
+      "validation_confusion_matrix_at_0p5": [
+        [
+          187,
+          101
+        ],
+        [
+          2,
+          10
+        ]
+      ],
+      "validation_f1_at_0p5": 0.16260162601626016,
+      "validation_fault_count": 12,
+      "validation_fault_precision_at_0p5": 0.09009009009009009,
+      "validation_fault_prevalence": 0.04,
+      "validation_fault_recall_at_0p5": 0.8333333333333334,
+      "validation_pr_auc": 0.23084456453523206,
+      "validation_roc_auc": 0.8041087962962963,
+      "validation_sample_count": 300
+    }
+  ],
+  "car_body_cluster_bootstrap_intervals": [
+    {
+      "confidence_level": 0.95,
+      "lower": 0.5999638899391692,
+      "method": "car_body_cluster_resampling",
+      "metric": "pr_auc",
+      "point_estimate": 0.61038739289127,
+      "requested_replicates": 2000,
+      "upper": 1.0,
+      "valid_replicates": 1990
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.0,
+      "method": "car_body_cluster_resampling",
+      "metric": "fault_escape_rate",
+      "point_estimate": 0.0,
+      "requested_replicates": 2000,
+      "upper": 0.0,
+      "valid_replicates": 1990
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.0,
+      "method": "car_body_cluster_resampling",
+      "metric": "normal_reject_rate",
+      "point_estimate": 0.0,
+      "requested_replicates": 2000,
+      "upper": 0.0,
+      "valid_replicates": 1990
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.5,
+      "method": "car_body_cluster_resampling",
+      "metric": "review_rate",
+      "point_estimate": 0.5633333333333334,
+      "requested_replicates": 2000,
+      "upper": 0.8611111111111112,
+      "valid_replicates": 1990
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.1388888888888889,
+      "method": "car_body_cluster_resampling",
+      "metric": "auto_coverage",
+      "point_estimate": 0.43666666666666665,
+      "requested_replicates": 2000,
+      "upper": 0.5,
+      "valid_replicates": 1990
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 1.0,
+      "method": "car_body_cluster_resampling",
+      "metric": "fault_safe_capture_rate",
+      "point_estimate": 1.0,
+      "requested_replicates": 2000,
+      "upper": 1.0,
+      "valid_replicates": 1990
+    }
+  ],
+  "decision_thresholds": {
+    "fault_probability_fault_threshold": 0.7050271810002953,
+    "normal_probability_fault_threshold": 0.02019776752297377,
+    "threshold_overlap_routes_to_review": false,
+    "validation_auto_coverage": 0.43666666666666665,
+    "validation_fault_escape_count": 0,
+    "validation_normal_reject_count": 0,
+    "validation_review_rate": 0.5633333333333334
+  },
+  "device": "cuda",
+  "experiment_id": "E10_M7_2a_polito_fault_development",
+  "feature_contract": {
+    "cnn_input_shape_train": [
+      1380,
+      6,
+      1000
+    ],
+    "metadata_features_used": [],
+    "si_unit_reconstruction_performed": false,
+    "statistical_feature_count": 69
+  },
+  "input_audit": {
+    "checks": {
+      "all_development_hashes_match": true,
+      "cross_dataset_merge_blocked": true,
+      "manifest_id_matches": true,
+      "manifest_self_hash_valid": true,
+      "metadata_shortcuts_forbidden": true,
+      "only_train_validation_allowed": true,
+      "si_reconstruction_blocked": true,
+      "signals_are_normalized_only": true,
+      "split_unit_is_car_body": true,
+      "target_is_fault": true,
+      "test_and_production_release_blocked": true,
+      "test_declared_unaccessed": true,
+      "test_hash_copied_from_manifest": true
+    },
+    "frozen_development_file_hashes": {
+      "projects/rsw_quality_digital_twin/data/manifests/m6_polito_factory_manifest.json": {
+        "actual_sha256": "38f76120742274f67e925fd3cce9ad3f83a6bcd45eef6aa0969f68b1588034ef",
+        "expected_sha256": "38f76120742274f67e925fd3cce9ad3f83a6bcd45eef6aa0969f68b1588034ef"
+      },
+      "projects/rsw_quality_digital_twin/data/processed_external/polito_factory/train.npz": {
+        "actual_sha256": "1bff7815c24248ef07fb8c6aa9d1e9a0bacc622a7b30bf887faf76a0e2dc97be",
+        "expected_sha256": "1bff7815c24248ef07fb8c6aa9d1e9a0bacc622a7b30bf887faf76a0e2dc97be"
+      },
+      "projects/rsw_quality_digital_twin/data/processed_external/polito_factory/validation.npz": {
+        "actual_sha256": "4a3ac5750efc586e959503b9eec07968c08fc089de66b5913ed5087c49c57987",
+        "expected_sha256": "4a3ac5750efc586e959503b9eec07968c08fc089de66b5913ed5087c49c57987"
+      }
+    },
+    "manifest_id": "9c3b4a099d3f05641f15c18b24f8321b0050691732727e822f2b46ee30e21975",
+    "sealed_test_file_opened_or_hashed": false,
+    "sealed_test_sha256_from_manifest_only": "42e4615f8510b53ce3cf88ce9ae1d503ab3145b11f2e376a129afbaab439421d"
+  },
+  "model_reload_prediction_checks": {
+    "cnn_1d": true,
+    "logistic_balanced": true,
+    "prior": true,
+    "random_forest_balanced": true
+  },
+  "release_policy": {
+    "automatic_factory_quality_acceptance": false,
+    "mendeley_category_merge_allowed": false,
+    "physicsnemo_temperature_validation_claim_allowed": false,
+    "polito_test_access_allowed": false,
+    "production_release_allowed": false,
+    "si_physics_interpretation_allowed": false
+  },
+  "scope": "polito_train_validation_only_test_sealed",
+  "sealed_test_status": {
+    "evaluation_allowed_in_m7_2a": false,
+    "file_opened_or_hashed": false,
+    "path_reference_only": "projects/rsw_quality_digital_twin/data/processed_external/polito_factory/test.npz",
+    "sha256_copied_from_source_manifest": "42e4615f8510b53ce3cf88ce9ae1d503ab3145b11f2e376a129afbaab439421d"
+  },
+  "seed": 42,
+  "selected_model": "random_forest_balanced",
+  "selected_validation_metrics": {
+    "model": "random_forest_balanced",
+    "model_family": "statistical_feature_classifier",
+    "selected_epoch": null,
+    "validation_accuracy_at_0p5": 0.97,
+    "validation_balanced_accuracy_at_0p5": 0.7447916666666667,
+    "validation_brier_score": 0.0297592466642531,
+    "validation_confusion_matrix_at_0p5": [
+      [
+        285,
+        3
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "validation_f1_at_0p5": 0.5714285714285714,
+    "validation_fault_count": 12,
+    "validation_fault_precision_at_0p5": 0.6666666666666666,
+    "validation_fault_prevalence": 0.04,
+    "validation_fault_recall_at_0p5": 0.5,
+    "validation_pr_auc": 0.61038739289127,
+    "validation_roc_auc": 0.8799189814814815,
+    "validation_sample_count": 300
+  },
+  "selection_manifest_id": "2ca70b27dc8420683d9914cf2882199c9b9cdff6b6fb8e79bf4a79545612b653",
+  "split_audit": {
+    "checks": {
+      "car_bodies_are_disjoint": true,
+      "sample_ids_are_disjoint": true,
+      "signal_step_count_matches": true,
+      "train_car_body_count_matches": true,
+      "train_fault_count_matches": true,
+      "train_sample_count_matches": true,
+      "validation_car_body_count_matches": true,
+      "validation_fault_count_matches": true,
+      "validation_sample_count_matches": true
+    },
+    "missing_sequences": {
+      "train": {
+        "current": {
+          "count": 0,
+          "fault_count": 0,
+          "normal_count": 0,
+          "policy": "retain_as_zero_length_with_explicit_mask_no_imputation",
+          "rate": 0.0
+        },
+        "force": {
+          "count": 166,
+          "fault_count": 5,
+          "normal_count": 161,
+          "policy": "retain_as_zero_length_with_explicit_mask_no_imputation",
+          "rate": 0.12028985507246377
+        },
+        "voltage": {
+          "count": 0,
+          "fault_count": 0,
+          "normal_count": 0,
+          "policy": "retain_as_zero_length_with_explicit_mask_no_imputation",
+          "rate": 0.0
+        }
+      },
+      "validation": {
+        "current": {
+          "count": 0,
+          "fault_count": 0,
+          "normal_count": 0,
+          "policy": "retain_as_zero_length_with_explicit_mask_no_imputation",
+          "rate": 0.0
+        },
+        "force": {
+          "count": 63,
+          "fault_count": 2,
+          "normal_count": 61,
+          "policy": "retain_as_zero_length_with_explicit_mask_no_imputation",
+          "rate": 0.21
+        },
+        "voltage": {
+          "count": 0,
+          "fault_count": 0,
+          "normal_count": 0,
+          "policy": "retain_as_zero_length_with_explicit_mask_no_imputation",
+          "rate": 0.0
+        }
+      }
+    },
+    "train": {
+      "car_bodies": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26
+      ],
+      "faults": 55,
+      "samples": 1380
+    },
+    "validation": {
+      "car_bodies": [
+        4,
+        8,
+        10,
+        27
+      ],
+      "faults": 12,
+      "samples": 300
+    }
+  },
+  "validation_triage_metrics": {
+    "auto_coverage": 0.43666666666666665,
+    "decision_fault_count": 4,
+    "decision_normal_count": 127,
+    "decision_review_count": 169,
+    "fault_auto_fault_recall": 0.3333333333333333,
+    "fault_count": 12,
+    "fault_escape_count": 0,
+    "fault_escape_rate": 0.0,
+    "fault_safe_capture_rate": 1.0,
+    "illustrative_cost_per_sample": 0.5633333333333334,
+    "illustrative_cost_total": 169,
+    "normal_auto_normal_rate": 0.4409722222222222,
+    "normal_count": 288,
+    "normal_reject_count": 0,
+    "normal_reject_rate": 0.0,
+    "review_rate": 0.5633333333333334,
+    "sample_count": 300
+  },
+  "verification": {
+    "accuracy_only_selection_blocked": true,
+    "all_model_reload_predictions_match": true,
+    "candidate_count_matches": true,
+    "figure_count_matches": true,
+    "input_contract_passed": true,
+    "production_release_blocked": true,
+    "sealed_test_not_opened_or_hashed": true,
+    "selection_manifest_self_hash_valid": true,
+    "selection_metric_is_pr_auc": true,
+    "split_contract_passed": true,
+    "validation_threshold_fault_escape_zero": true,
+    "validation_threshold_normal_reject_zero": true
+  }
+}

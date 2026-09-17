@@ -1,0 +1,85 @@
+project:
+  name: rsw_quality_digital_twin
+  data_version_id: RSW-SIM-V2
+  schema_version: "0.2"
+  generator_version: "0.2.0"
+  seed: 20260910
+
+# Keep the validated M3 grid so M4/M5 architectures remain directly comparable.
+geometry:
+  radius_m: 0.005
+  height_m: 0.002
+  radial_cells: 8
+  axial_cells: 8
+
+time:
+  total_time_s: 0.08
+  output_time_count: 8
+
+data:
+  dataset_kind: simulation_space_filling
+  split_sizes:
+    train: 1024
+    validation: 256
+    test_iid: 256
+    test_process_ood: 256
+    test_corner: 128
+
+sampling:
+  samples_per_group: 4
+  design:
+    method: maximin_latin_hypercube
+    maximin_candidates: 12
+    minimum_joint_high_energy_groups:
+      train: 4
+      validation: 1
+      test_iid: 1
+  common:
+    initial_temperature_k: [290.0, 310.0]
+    cooling_coefficient_w_m2k: [1.0e+4, 4.0e+4]
+    current_jitter_multiplier: [0.97, 1.03]
+    inactive_electrical_conductivity_fraction: 0.04
+    outside_contact_conductance_fraction: 0.05
+  # IID is deliberately wider than M3 smoke. This is a new data version after E05
+  # exposed weak high-energy coverage; old E05 test/checkpoints stay frozen.
+  iid:
+    electrical_conductivity_s_m: [7.5e+5, 1.3e+6]
+    thermal_conductivity_w_mk: [32.0, 58.0]
+    volumetric_heat_capacity_j_m3k: [3.0e+6, 4.4e+6]
+    peak_current_a: [2.0e+3, 4.7e+3]
+    weld_time_s: [0.022, 0.052]
+    contact_resistivity_ohm_m2: [8.0e-10, 4.5e-9]
+    thermal_contact_conductance_w_m2k: [1.2e+5, 5.5e+5]
+    contact_radius_m: [0.0019, 0.0037]
+    pulse_shapes: [rectangular, ramp]
+  process_ood:
+    electrical_conductivity_s_m: [7.0e+5, 1.35e+6]
+    thermal_conductivity_w_mk: [28.0, 62.0]
+    volumetric_heat_capacity_j_m3k: [2.8e+6, 4.6e+6]
+    peak_current_a: [3.4e+3, 4.5e+3]
+    weld_time_s: [0.028, 0.046]
+    contact_resistivity_ohm_m2: [4.0e-9, 4.8e-9]
+    thermal_contact_conductance_w_m2k: [7.0e+4, 1.2e+5]
+    contact_radius_m: [0.0019, 0.0025]
+    pulse_shapes: [double_pulse]
+  corner_ood:
+    electrical_conductivity_s_m: [7.0e+5, 9.0e+5]
+    thermal_conductivity_w_mk: [30.0, 38.0]
+    volumetric_heat_capacity_j_m3k: [3.0e+6, 3.4e+6]
+    peak_current_a: [4.0e+3, 4.7e+3]
+    weld_time_s: [0.025, 0.040]
+    contact_resistivity_ohm_m2: [4.6e-9, 5.3e-9]
+    thermal_contact_conductance_w_m2k: [5.0e+4, 8.0e+4]
+    contact_radius_m: [0.0019, 0.0022]
+    pulse_shapes: [double_pulse]
+
+quality:
+  # Phase change is absent from M2, so this remains unset until a cited material
+  # property and a solver-validity policy are fixed.
+  melt_temperature_k: null
+
+preflight:
+  previous_manifest: projects/rsw_quality_digital_twin/data/manifests/m3_simulation_smoke_manifest.json
+  output_dir: projects/rsw_quality_digital_twin/artifacts/m3_1_design_preflight
+  estimated_free_space_safety_factor: 3.0
+  dpi: 150

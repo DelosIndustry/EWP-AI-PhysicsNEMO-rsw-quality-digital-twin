@@ -1,0 +1,12 @@
+{
+  "experiment_id": "E02_M2_1_enthalpy_phase_change",
+  "figures": {
+    "coupled_temperature_phase_fields.png": "global Tmax time index 20",
+    "coupled_temperature_phase_history.png": "coupled case all time points",
+    "energy_nonlinear_convergence.png": "coupled case all time intervals",
+    "material_enthalpy_properties.png": "configured material curve",
+    "uniform_heating_verification.png": "analytic and numerical all time points"
+  },
+  "material_calibration_status": "literature_plausibility_reference_only",
+  "quality_limit_status": "not_configured"
+}

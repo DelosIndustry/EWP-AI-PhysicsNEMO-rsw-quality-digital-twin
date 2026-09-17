@@ -1,0 +1,552 @@
+{
+  "config_sha256": "0621df9f377ac1837d8565f9292adf3e57c871f5a2d622f1f78c597d95193e5b",
+  "created_at_utc": "2026-09-10T07:44:35.624210+00:00",
+  "dataset_kind": "simulation_space_filling",
+  "files": {
+    "test_corner": {
+      "bytes": 345191,
+      "path": "test_corner.npz",
+      "sha256": "11075ce68d571470464f0bfabadfe1b9fedd830c111cb7b84a5fd38dd0375e13"
+    },
+    "test_iid": {
+      "bytes": 817198,
+      "path": "test_iid.npz",
+      "sha256": "ce850a1f1f832c88e619672d7e1410e0e323272b061e1a3cbb7b7b85e9a402ca"
+    },
+    "test_process_ood": {
+      "bytes": 683328,
+      "path": "test_process_ood.npz",
+      "sha256": "cc801497db72a390e76814351c3b12fc3c39e212bbf1266df9916ba01b0699ba"
+    },
+    "train": {
+      "bytes": 3216408,
+      "path": "train.npz",
+      "sha256": "b6e7c30266bf09f3a4f58ff029ca6a678aa90654459542e67b0907d1a95a9624"
+    },
+    "validation": {
+      "bytes": 821628,
+      "path": "validation.npz",
+      "sha256": "1e0cced10c4adc20d2da7185886bd79d0fdc62b293215634bd089ebbca8d0c5d"
+    }
+  },
+  "generator_version": "0.2.0",
+  "global_seed": 20260910,
+  "grid": {
+    "axial": 8,
+    "height_m": 0.002,
+    "radial": 8,
+    "radius_m": 0.005,
+    "time": 8,
+    "total_time_s": 0.08
+  },
+  "grouping": {
+    "samples_per_group": 4,
+    "split_keys": [
+      "stack_id",
+      "schedule_id",
+      "contact_model_id"
+    ]
+  },
+  "manifest_id": "2e43da1c058aef17a5500145fc92ea241b038457973adbcddb7162c1b39d2b98",
+  "normalization": {
+    "input_channels": {
+      "contact_resistivity_ohm_m2": {
+        "mean": 3.7152896451480904e-10,
+        "std": 1.0041106090012722e-09
+      },
+      "cooling_coefficient_w_per_m2k": {
+        "mean": 3505.2098666131496,
+        "std": 9268.202879872928
+      },
+      "current_schedule_a": {
+        "mean": 1471.6549453437328,
+        "std": 1652.64614068372
+      },
+      "electrical_conductivity_s_per_m": {
+        "mean": 461016.002576828,
+        "std": 438458.4885889874
+      },
+      "initial_temperature_k": {
+        "mean": 300.00012788176537,
+        "std": 5.773194797512522
+      },
+      "interface_mask": {
+        "mean": 0.1400146484375,
+        "std": 0.347002228610168
+      },
+      "sheet_mask": {
+        "mean": 1.0,
+        "std": 1.0
+      },
+      "thermal_conductivity_w_per_mk": {
+        "mean": 44.99953544139862,
+        "std": 7.50576839481356
+      },
+      "thermal_contact_conductance_w_per_m2k": {
+        "mean": 46840.006967544556,
+        "std": 125005.20938096105
+      },
+      "volumetric_heat_capacity_j_per_m3k": {
+        "mean": 3700094.8603515625,
+        "std": 404192.5543515373
+      }
+    },
+    "source_split": "train",
+    "target_temperature_rise_k": {
+      "mean": 89.2716033975903,
+      "std": 120.26411683537209
+    }
+  },
+  "parameter_ranges": {
+    "common": {
+      "cooling_coefficient_w_m2k": [
+        10000.0,
+        40000.0
+      ],
+      "current_jitter_multiplier": [
+        0.97,
+        1.03
+      ],
+      "inactive_electrical_conductivity_fraction": 0.04,
+      "initial_temperature_k": [
+        290.0,
+        310.0
+      ],
+      "outside_contact_conductance_fraction": 0.05
+    },
+    "corner_ood": {
+      "contact_radius_m": [
+        0.0019,
+        0.0022
+      ],
+      "contact_resistivity_ohm_m2": [
+        4.6e-09,
+        5.3e-09
+      ],
+      "electrical_conductivity_s_m": [
+        700000.0,
+        900000.0
+      ],
+      "peak_current_a": [
+        4000.0,
+        4700.0
+      ],
+      "pulse_shapes": [
+        "double_pulse"
+      ],
+      "thermal_conductivity_w_mk": [
+        30.0,
+        38.0
+      ],
+      "thermal_contact_conductance_w_m2k": [
+        50000.0,
+        80000.0
+      ],
+      "volumetric_heat_capacity_j_m3k": [
+        3000000.0,
+        3400000.0
+      ],
+      "weld_time_s": [
+        0.025,
+        0.04
+      ]
+    },
+    "design": {
+      "maximin_candidates": 12,
+      "method": "maximin_latin_hypercube",
+      "minimum_joint_high_energy_groups": {
+        "test_iid": 1,
+        "train": 4,
+        "validation": 1
+      }
+    },
+    "iid": {
+      "contact_radius_m": [
+        0.0019,
+        0.0037
+      ],
+      "contact_resistivity_ohm_m2": [
+        8e-10,
+        4.5e-09
+      ],
+      "electrical_conductivity_s_m": [
+        750000.0,
+        1300000.0
+      ],
+      "peak_current_a": [
+        2000.0,
+        4700.0
+      ],
+      "pulse_shapes": [
+        "rectangular",
+        "ramp"
+      ],
+      "thermal_conductivity_w_mk": [
+        32.0,
+        58.0
+      ],
+      "thermal_contact_conductance_w_m2k": [
+        120000.0,
+        550000.0
+      ],
+      "volumetric_heat_capacity_j_m3k": [
+        3000000.0,
+        4400000.0
+      ],
+      "weld_time_s": [
+        0.022,
+        0.052
+      ]
+    },
+    "process_ood": {
+      "contact_radius_m": [
+        0.0019,
+        0.0025
+      ],
+      "contact_resistivity_ohm_m2": [
+        4e-09,
+        4.8e-09
+      ],
+      "electrical_conductivity_s_m": [
+        700000.0,
+        1350000.0
+      ],
+      "peak_current_a": [
+        3400.0,
+        4500.0
+      ],
+      "pulse_shapes": [
+        "double_pulse"
+      ],
+      "thermal_conductivity_w_mk": [
+        28.0,
+        62.0
+      ],
+      "thermal_contact_conductance_w_m2k": [
+        70000.0,
+        120000.0
+      ],
+      "volumetric_heat_capacity_j_m3k": [
+        2800000.0,
+        4600000.0
+      ],
+      "weld_time_s": [
+        0.028,
+        0.046
+      ]
+    },
+    "samples_per_group": 4
+  },
+  "quality": {
+    "melt_temperature_k": null,
+    "unset_metric_encoding": "NaN in NPZ; null/not_configured in manifest"
+  },
+  "schema_version": "0.2",
+  "solver": {
+    "coupling": "sequential_electrical_to_thermal",
+    "electrical": "M1-1.0.0",
+    "thermal": "M2-1.0.0",
+    "time_scheme": "backward_euler"
+  },
+  "split_sizes": {
+    "test_corner": 128,
+    "test_iid": 256,
+    "test_process_ood": 256,
+    "train": 1024,
+    "validation": 256
+  },
+  "split_validation": {
+    "group_overlap_counts": {
+      "contact_model_id": 0,
+      "schedule_id": 0,
+      "stack_id": 0
+    },
+    "input_channel_count": 10,
+    "maximum_joule_terminal_energy_relative_gap": 5.188968833505167e-16,
+    "melt_ctq_status": "not_configured",
+    "passed": true,
+    "tensor_shapes": {
+      "test_corner": [
+        128,
+        10,
+        8,
+        8,
+        8
+      ],
+      "test_iid": [
+        256,
+        10,
+        8,
+        8,
+        8
+      ],
+      "test_process_ood": [
+        256,
+        10,
+        8,
+        8,
+        8
+      ],
+      "train": [
+        1024,
+        10,
+        8,
+        8,
+        8
+      ],
+      "validation": [
+        256,
+        10,
+        8,
+        8,
+        8
+      ]
+    }
+  },
+  "summaries": {
+    "test_corner": {
+      "actual_ranges": {
+        "contact_resistivity_ohm_m2": [
+          4.605624770448458e-09,
+          5.289764182236922e-09
+        ],
+        "cooling_coefficient_w_m2k": [
+          10034.255859375,
+          39829.12890625
+        ],
+        "electrical_energy_j": [
+          92.6989517211914,
+          175.60836791992188
+        ],
+        "peak_current_a": [
+          3965.858154296875,
+          4762.791015625
+        ],
+        "t_max_k": [
+          975.040771484375,
+          2004.811279296875
+        ],
+        "thermal_contact_conductance_w_m2k": [
+          50876.3515625,
+          79868.2421875
+        ],
+        "weld_time_s": [
+          0.025436153635382652,
+          0.039957206696271896
+        ]
+      },
+      "contact_groups": 32,
+      "distribution_counts": {
+        "corner_ood": 128
+      },
+      "maximum_energy_balance_relative_error": 3.220977883689564e-15,
+      "maximum_joule_terminal_energy_relative_gap": 4.145457065014575e-16,
+      "ood_samples": 128,
+      "pulse_shape_counts": {
+        "double_pulse": 128
+      },
+      "samples": 128,
+      "schedule_groups": 32,
+      "stack_groups": 32
+    },
+    "test_iid": {
+      "actual_ranges": {
+        "contact_resistivity_ohm_m2": [
+          8.360299119658521e-10,
+          4.455190438790169e-09
+        ],
+        "cooling_coefficient_w_m2k": [
+          10049.1416015625,
+          39925.52734375
+        ],
+        "electrical_energy_j": [
+          7.030639171600342,
+          165.89617919921875
+        ],
+        "peak_current_a": [
+          1999.2884521484375,
+          4755.08447265625
+        ],
+        "t_max_k": [
+          321.58544921875,
+          1437.0697021484375
+        ],
+        "thermal_contact_conductance_w_m2k": [
+          121017.9921875,
+          549709.375
+        ],
+        "weld_time_s": [
+          0.022000016644597054,
+          0.05165638402104378
+        ]
+      },
+      "contact_groups": 64,
+      "distribution_counts": {
+        "iid": 256
+      },
+      "maximum_energy_balance_relative_error": 4.126403334151797e-14,
+      "maximum_joule_terminal_energy_relative_gap": 4.0018140414456384e-16,
+      "ood_samples": 0,
+      "pulse_shape_counts": {
+        "ramp": 128,
+        "rectangular": 128
+      },
+      "samples": 256,
+      "schedule_groups": 64,
+      "stack_groups": 64
+    },
+    "test_process_ood": {
+      "actual_ranges": {
+        "contact_resistivity_ohm_m2": [
+          4.007592480093081e-09,
+          4.7926174140400235e-09
+        ],
+        "cooling_coefficient_w_m2k": [
+          10064.12890625,
+          39883.53515625
+        ],
+        "electrical_energy_j": [
+          49.822574615478516,
+          227.33926391601562
+        ],
+        "peak_current_a": [
+          3375.455322265625,
+          4563.5595703125
+        ],
+        "t_max_k": [
+          584.9315185546875,
+          1815.6881103515625
+        ],
+        "thermal_contact_conductance_w_m2k": [
+          70100.453125,
+          119522.671875
+        ],
+        "weld_time_s": [
+          0.02822825498878956,
+          0.04577124863862991
+        ]
+      },
+      "contact_groups": 64,
+      "distribution_counts": {
+        "process_ood": 256
+      },
+      "maximum_energy_balance_relative_error": 1.0451941876820758e-14,
+      "maximum_joule_terminal_energy_relative_gap": 5.188968833505167e-16,
+      "ood_samples": 256,
+      "pulse_shape_counts": {
+        "double_pulse": 256
+      },
+      "samples": 256,
+      "schedule_groups": 64,
+      "stack_groups": 64
+    },
+    "train": {
+      "actual_ranges": {
+        "contact_resistivity_ohm_m2": [
+          8.013861241273901e-10,
+          4.486828686367517e-09
+        ],
+        "cooling_coefficient_w_m2k": [
+          10002.4013671875,
+          39971.66796875
+        ],
+        "electrical_energy_j": [
+          5.455354690551758,
+          242.54307556152344
+        ],
+        "peak_current_a": [
+          1946.1669921875,
+          4808.3388671875
+        ],
+        "t_max_k": [
+          309.7950744628906,
+          1915.109619140625
+        ],
+        "thermal_contact_conductance_w_m2k": [
+          120224.0234375,
+          548690.9375
+        ],
+        "weld_time_s": [
+          0.02201276458799839,
+          0.051910702139139175
+        ]
+      },
+      "contact_groups": 256,
+      "distribution_counts": {
+        "iid": 1024
+      },
+      "maximum_energy_balance_relative_error": 3.781285519617074e-14,
+      "maximum_joule_terminal_energy_relative_gap": 4.3313175341636457e-16,
+      "ood_samples": 0,
+      "pulse_shape_counts": {
+        "ramp": 512,
+        "rectangular": 512
+      },
+      "samples": 1024,
+      "schedule_groups": 256,
+      "stack_groups": 256
+    },
+    "validation": {
+      "actual_ranges": {
+        "contact_resistivity_ohm_m2": [
+          8.087981950843925e-10,
+          4.459175695359363e-09
+        ],
+        "cooling_coefficient_w_m2k": [
+          10024.537109375,
+          39944.31640625
+        ],
+        "electrical_energy_j": [
+          6.838613033294678,
+          189.5659637451172
+        ],
+        "peak_current_a": [
+          1949.7882080078125,
+          4792.80615234375
+        ],
+        "t_max_k": [
+          329.1131896972656,
+          1514.40966796875
+        ],
+        "thermal_contact_conductance_w_m2k": [
+          120052.4765625,
+          545799.125
+        ],
+        "weld_time_s": [
+          0.022334765642881393,
+          0.05196748673915863
+        ]
+      },
+      "contact_groups": 64,
+      "distribution_counts": {
+        "iid": 256
+      },
+      "maximum_energy_balance_relative_error": 2.1638523899124643e-14,
+      "maximum_joule_terminal_energy_relative_gap": 4.749243855036714e-16,
+      "ood_samples": 0,
+      "pulse_shape_counts": {
+        "ramp": 128,
+        "rectangular": 128
+      },
+      "samples": 256,
+      "schedule_groups": 64,
+      "stack_groups": 64
+    }
+  },
+  "tensor_contract": {
+    "input_channels": [
+      "electrical_conductivity_s_per_m",
+      "thermal_conductivity_w_per_mk",
+      "volumetric_heat_capacity_j_per_m3k",
+      "sheet_mask",
+      "interface_mask",
+      "current_schedule_a",
+      "contact_resistivity_ohm_m2",
+      "thermal_contact_conductance_w_per_m2k",
+      "initial_temperature_k",
+      "cooling_coefficient_w_per_m2k"
+    ],
+    "inputs": "N,C,T,R,Z",
+    "targets": "N,1,T,R,Z"
+  }
+}

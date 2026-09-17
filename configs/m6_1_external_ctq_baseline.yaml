@@ -1,0 +1,116 @@
+experiment_id: E06_M6_1_external_ctq_baseline
+seed: 42
+
+inputs:
+  welds_csv: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv
+  records_csv: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/records.csv
+  external_manifest: projects/rsw_quality_digital_twin/data/manifests/m6_mendeley_ctq_manifest.json
+  expected_external_manifest_id: e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62
+  calibration_manifest: projects/rsw_quality_digital_twin/artifacts/m2_7_calibration_feasibility/calibration_feasibility_manifest.json
+  expected_calibration_manifest_id: 8394d8ce236de1b3a7c75fd346806f731627ef6e2eab2c2b5d4c7d859df9774d
+  calibration_metrics: projects/rsw_quality_digital_twin/artifacts/m2_7_calibration_feasibility/metrics.json
+  source_split: development
+  external_test_outcomes_used: false
+
+frozen_inputs:
+  - path: projects/rsw_quality_digital_twin/data/manifests/m6_mendeley_ctq_manifest.json
+    sha256: b29983679e66db53a38824699fc8d45dadac2806628238ad13db8a90e166179c
+  - path: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/records.csv
+    sha256: bec9b9b0a066db8c1b2f42e183d750a21402a39f863b8aa3461aa3e6c80c5108
+  - path: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv
+    sha256: 69a9a845e08cdb02c8b5333274a604fea9e6ba7be5c4ca18e9e29f98b22540a6
+  - path: projects/rsw_quality_digital_twin/artifacts/m2_7_calibration_feasibility/calibration_feasibility_manifest.json
+    sha256: 9a90d9e2a7a7ac4c01ee113dca24316308dcca60282624fcc028bbf29afa2489
+  - path: projects/rsw_quality_digital_twin/artifacts/m2_7_calibration_feasibility/metrics.json
+    sha256: 919bd1b0a7aec444416cb589b39dabb0cf9218c2b9edc93173905b5ae868cc07
+
+feature_contract:
+  columns:
+    - pressure_psi
+    - welding_time_ms
+    - angle_deg
+    - thickness_a_mm
+    - thickness_b_mm
+    - record_count
+    - current_mean_positive_a
+    - current_rms_positive_a
+    - current_min_positive_a
+    - current_max_positive_a
+    - current_jensen_ratio
+    - invalid_current_count
+  forbidden_columns:
+    - force_n
+    - force_min_n
+    - force_mean_n
+    - force_max_n
+    - pull_test_n
+    - nugget_diameter_mm
+    - category
+  current_invalid_policy: exclude_nonpositive_records_keep_count_and_exclude_weld_if_none_valid
+  missing_feature_policy: complete_case_no_imputation
+  pressure_semantics: pneumatic_setting_psi_not_electrode_tip_force
+  timestamp_semantics: record_order_only_no_time_axis_reconstruction
+
+targets:
+  nugget_diameter_mm:
+    task: regression
+    valid_minimum_exclusive: 0.0
+    selection_metric: validation_mae
+  pull_test_n:
+    task: regression
+    valid_minimum_exclusive: 0.0
+    selection_metric: validation_mae
+  category:
+    task: classification
+    classes: [Bad, Explode, Good]
+    selection_metric: validation_macro_f1
+
+split:
+  method: deterministic_stratified_independent_weld_holdout
+  stratify_by: category
+  validation_fraction: 0.20
+  independent_group: sample_id
+  test_access_policy: sealed_external_test_until_selection_manifest_frozen
+
+models:
+  regression:
+    candidates: [mean, ridge, random_forest]
+    ridge_alpha: 10.0
+    random_forest:
+      n_estimators: 300
+      max_depth: 7
+      min_samples_leaf: 4
+      max_features: 0.8
+      n_jobs: 1
+  classification:
+    candidates: [prior, logistic_balanced, random_forest_balanced]
+    logistic_c: 0.5
+    random_forest:
+      n_estimators: 300
+      max_depth: 7
+      min_samples_leaf: 3
+      max_features: 0.8
+      n_jobs: 1
+  permutation_importance_repeats: 20
+
+target_stack_subgroup:
+  material: AISI 1010 carbon steel
+  sheet_thickness_interval_mm: [0.60, 0.66]
+
+verification:
+  expected_source_development_welds: 396
+  expected_feature_eligible_welds: 393
+  expected_feature_excluded_welds: 3
+  expected_nugget_eligible_welds: 393
+  expected_pull_eligible_welds: 391
+  expected_classification_eligible_welds: 393
+  expected_validation_classes: [Bad, Explode, Good]
+  require_force_feature_absent: true
+  require_zero_external_test_outcomes_used: true
+  require_disjoint_internal_split: true
+  require_selected_models_serialized: true
+  require_physical_twin_still_blocked: true
+  require_v3_still_blocked: true
+
+visualization:
+  dpi: 150

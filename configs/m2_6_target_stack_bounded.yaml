@@ -1,0 +1,238 @@
+experiment_id: E02_M2_6_target_stack_bounded_preflight
+base_contact_law_config: projects/rsw_quality_digital_twin/configs/m2_5_contact_law_identifiability.yaml
+
+target_stack:
+  stack_id: AISI1010_0p63x2_surfaceUnknown_CuAlloyTip3p175
+  sheet_material: AISI 1010 carbon steel
+  sheet_count: 2
+  sheet_thickness_nominal_mm: 0.63
+  sheet_thickness_compatibility_mm: [0.60, 0.66]
+  coating_or_surface: not_reported_by_public_dataset
+  electrode_material: copper_alloy_exact_grade_not_reported
+  electrode_tip_diameter_mm: 3.175
+  intended_use: public_lab_dataset_compatible_preflight_not_automotive_calibration
+
+evidence_inventory:
+  - evidence_id: mendeley_target_stack
+    quantity: sheet_material_and_thickness
+    status: direct_target
+    source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/
+    note: Dataset records AISI 1010 and per-weld thickness; local development mode is about 0.63 mm per sheet.
+  - evidence_id: mendeley_surface_unknown
+    quantity: surface_coating
+    status: unknown
+    source_url: ""
+    note: Neither the article nor the downloaded CSV identifies coating or surface preparation.
+  - evidence_id: mendeley_electrode_material
+    quantity: electrode_material
+    status: direct_target
+    source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/#tbl0005
+    note: The article says only copper alloy; the exact alloy grade is absent.
+  - evidence_id: mendeley_electrode_grade_unknown
+    quantity: electrode_alloy_grade
+    status: unknown
+    source_url: ""
+    note: The exact copper-alloy designation and properties are not reported.
+  - evidence_id: mendeley_tip_diameter
+    quantity: electrode_tip_diameter
+    status: direct_target
+    source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11893339/#tbl0005
+    note: Reported contact diameter is 1/8 inch, converted exactly to 3.175 mm.
+  - evidence_id: nist_iron_resistivity_proxy
+    quantity: bulk_electrical_resistivity
+    status: proxy
+    source_url: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication260-90.pdf
+    valid_temperature_min_k: 300.0
+    valid_temperature_max_k: 1000.0
+    note: Electrolytic iron temperature trend, not an AISI 1010 absolute-property calibration.
+  - evidence_id: carbon_steel_k_0p1pct
+    quantity: thermal_conductivity
+    status: direct_family
+    source_url: https://doi.org/10.24425/ather.2022.143170
+    valid_temperature_min_k: 273.15
+    valid_temperature_max_k: 1073.15
+    uncertainty_fraction: 0.05
+    note: Tabulated 0.1 percent carbon-steel values; above 1073.15 K remains an extrapolation.
+  - evidence_id: mills_steel_property_model
+    quantity: heat_capacity_density
+    status: proxy
+    source_url: https://doi.org/10.2355/isijinternational.ISIJINT-2015-365
+    valid_temperature_min_k: 298.0
+    valid_temperature_max_k: 2000.0
+    note: Composition-based steel-property framework; exact coupon chemistry is unavailable.
+  - evidence_id: generic_low_carbon_phase_proxy
+    quantity: phase_change
+    status: proxy
+    source_url: https://doi.org/10.2355/isijinternational.ISIJINT-2015-365
+    valid_temperature_min_k: 298.0
+    valid_temperature_max_k: 2000.0
+    note: Existing M2.1 solidus, liquidus, and latent heat remain bounded proxies.
+  - evidence_id: synthetic_contact_reconstruction
+    quantity: contact_resistance
+    status: assumption
+    source_url: ""
+    note: M2.4 effective-resistance decomposition; not measured on the target coupons.
+  - evidence_id: contact_law_shape_prior
+    quantity: contact_force_temperature_dependence
+    status: assumption
+    source_url: https://doi.org/10.1179/136217101101538631
+    note: Power-law screening shape only; coefficients are not transferred as target measurements.
+  - evidence_id: effective_contact_area_unknown
+    quantity: effective_electrical_contact_radius
+    status: unknown
+    source_url: ""
+    note: Electrode tip radius is an upper geometric reference, not the measured electrical contact radius.
+  - evidence_id: synthetic_screening_process
+    quantity: screening_process
+    status: assumption
+    source_url: ""
+    note: Short high-current pulse used only to activate numerical sensitivity inside the M2.5 validity domain.
+
+parameters:
+  - name: sheet_thickness_m
+    role: bounded
+    nominal: 0.00063
+    minimum: 0.00060
+    maximum: 0.00066
+    units: m_per_sheet
+    evidence_id: mendeley_target_stack
+    include_in_screening: true
+  - name: electrode_tip_radius_m
+    role: fixed
+    nominal: 0.0015875
+    minimum: 0.0015875
+    maximum: 0.0015875
+    units: m
+    evidence_id: mendeley_tip_diameter
+  - name: effective_contact_radius_m
+    role: nuisance
+    nominal: 0.00135
+    minimum: 0.00110
+    maximum: 0.0015875
+    units: m
+    evidence_id: effective_contact_area_unknown
+    include_in_screening: true
+  - name: bulk_resistivity_scale
+    role: bounded
+    nominal: 1.15
+    minimum: 1.00
+    maximum: 1.30
+    units: relative_to_electrolytic_iron
+    evidence_id: nist_iron_resistivity_proxy
+    include_in_screening: true
+  - name: thermal_conductivity_scale
+    role: bounded
+    nominal: 1.00
+    minimum: 0.85
+    maximum: 1.15
+    units: relative
+    evidence_id: carbon_steel_k_0p1pct
+    include_in_screening: true
+    note: Wider than the reported low-temperature measurement uncertainty because the curve is extended above 1073.15 K.
+  - name: volumetric_heat_capacity_scale
+    role: bounded
+    nominal: 1.00
+    minimum: 0.90
+    maximum: 1.10
+    units: relative
+    evidence_id: mills_steel_property_model
+    include_in_screening: true
+  - name: latent_heat_scale
+    role: bounded
+    nominal: 1.00
+    minimum: 0.85
+    maximum: 1.15
+    units: relative
+    evidence_id: generic_low_carbon_phase_proxy
+    include_in_screening: true
+  - name: faying_resistance_scale
+    role: nuisance
+    nominal: 1.00
+    minimum: 0.50
+    maximum: 1.50
+    units: relative_to_M2_4_reconstruction
+    evidence_id: synthetic_contact_reconstruction
+    include_in_screening: true
+  - name: electrode_resistance_scale
+    role: nuisance
+    nominal: 1.00
+    minimum: 0.50
+    maximum: 1.50
+    units: relative_to_M2_4_reconstruction
+    evidence_id: synthetic_contact_reconstruction
+    include_in_screening: true
+  - name: faying_force_exponent
+    role: nuisance
+    nominal: 0.50
+    minimum: 0.30
+    maximum: 0.70
+    units: dimensionless
+    evidence_id: contact_law_shape_prior
+  - name: electrode_force_exponent
+    role: nuisance
+    nominal: 0.40
+    minimum: 0.25
+    maximum: 0.55
+    units: dimensionless
+    evidence_id: contact_law_shape_prior
+  - name: screening_peak_current_a
+    role: nuisance
+    nominal: 3800.0
+    minimum: 3400.0
+    maximum: 4200.0
+    units: A
+    evidence_id: synthetic_screening_process
+    include_in_screening: true
+
+thermal_material_proxy:
+  temperature_knots_k: [293.15, 373.15, 473.15, 573.15, 673.15, 773.15, 873.15, 973.15, 1073.15, 1768.0, 1797.0, 2100.0]
+  thermal_conductivity_values_w_mk: [59.5, 57.6, 53.4, 49.3, 43.7, 40.2, 36.0, 31.8, 28.5, 28.5, 28.5, 28.5]
+  volumetric_heat_capacity_values_j_m3k: [4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6, 4.76e6]
+  density_kg_m3: 7000.0
+  latent_heat_j_kg: 270000.0
+  solidus_temperature_k: 1768.0
+  liquidus_temperature_k: 1797.0
+  reference_temperature_k: 293.15
+  high_temperature_extension: hold_1073K_k_constant_as_bounded_proxy
+
+screening_process:
+  force_n: 3500.0
+  weld_time_s: 0.04
+  total_time_s: 0.08
+  time_steps: 60
+  calibration_status: synthetic_screening_not_recipe
+
+external_development_audit:
+  welds_csv: projects/rsw_quality_digital_twin/data/processed_external/mendeley_ctq/welds.csv
+  manifest: projects/rsw_quality_digital_twin/data/manifests/m6_mendeley_ctq_manifest.json
+  expected_manifest_id: e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62
+  selection_split: development
+  exact_material: AISI 1010 carbon steel
+  contact_law_force_validity_n: [1500.0, 6000.0]
+  require_positive_current_force_time: true
+  test_outcomes_used: false
+
+provenance_gate:
+  required_quantities:
+    - sheet_material_and_thickness
+    - surface_coating
+    - electrode_material
+    - electrode_alloy_grade
+    - electrode_tip_diameter
+    - bulk_electrical_resistivity
+    - thermal_conductivity
+    - heat_capacity_density
+    - phase_change
+    - contact_resistance
+    - contact_force_temperature_dependence
+    - effective_electrical_contact_radius
+    - screening_process
+
+verification:
+  maximum_conservation_relative_error: 1.0e-8
+  maximum_temperature_k: 1800.0
+  require_v3_blocked_when_unknown_or_no_overlap: true
+  require_zero_test_outcomes_used: true
+
+visualization:
+  dpi: 150

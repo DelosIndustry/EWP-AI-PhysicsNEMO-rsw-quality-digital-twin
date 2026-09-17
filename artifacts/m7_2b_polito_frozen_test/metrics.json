@@ -1,0 +1,260 @@
+{
+  "access_contract": {
+    "feature_change_forbidden": true,
+    "model_fit_forbidden": true,
+    "model_selection_forbidden": true,
+    "protocol_verified_before_test": true,
+    "report_only": true,
+    "selection_verified_before_test": true,
+    "source_split_is_test": true,
+    "threshold_tuning_forbidden": true,
+    "validation_revisit_forbidden": true
+  },
+  "all_checks_passed": true,
+  "car_body_cluster_bootstrap_intervals": [
+    {
+      "confidence_level": 0.95,
+      "lower": 0.40448430493273546,
+      "method": "car_body_cluster_resampling",
+      "metric": "pr_auc",
+      "point_estimate": 0.41568939241712805,
+      "requested_replicates": 5000,
+      "upper": 0.5072463768115942,
+      "valid_replicates": 4984
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.0,
+      "method": "car_body_cluster_resampling",
+      "metric": "fault_escape_rate",
+      "point_estimate": 0.16666666666666666,
+      "requested_replicates": 5000,
+      "upper": 0.5,
+      "valid_replicates": 4984
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.0,
+      "method": "car_body_cluster_resampling",
+      "metric": "normal_reject_rate",
+      "point_estimate": 0.0,
+      "requested_replicates": 5000,
+      "upper": 0.0,
+      "valid_replicates": 4984
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.45652173913043476,
+      "method": "car_body_cluster_resampling",
+      "metric": "review_rate",
+      "point_estimate": 0.543918918918919,
+      "requested_replicates": 5000,
+      "upper": 0.9354838709677419,
+      "valid_replicates": 4984
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.06451612903225806,
+      "method": "car_body_cluster_resampling",
+      "metric": "auto_coverage",
+      "point_estimate": 0.4560810810810811,
+      "requested_replicates": 5000,
+      "upper": 0.5434782608695652,
+      "valid_replicates": 4984
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.5,
+      "method": "car_body_cluster_resampling",
+      "metric": "fault_safe_capture_rate",
+      "point_estimate": 0.8333333333333334,
+      "requested_replicates": 5000,
+      "upper": 1.0,
+      "valid_replicates": 4984
+    }
+  ],
+  "classification_metrics": {
+    "accuracy_at_0p5": 0.9527027027027027,
+    "balanced_accuracy_at_0p5": 0.6561032863849765,
+    "brier_score": 0.03825285801282282,
+    "confusion_matrix_at_0p5": [
+      [
+        278,
+        6
+      ],
+      [
+        8,
+        4
+      ]
+    ],
+    "f1_at_0p5": 0.36363636363636365,
+    "fault_count": 12,
+    "fault_precision_at_0p5": 0.4,
+    "fault_prevalence": 0.04054054054054054,
+    "fault_recall_at_0p5": 0.3333333333333333,
+    "pr_auc": 0.41568939241712805,
+    "roc_auc": 0.7994424882629109,
+    "sample_count": 296
+  },
+  "experiment_id": "E11_M7_2b_polito_frozen_test",
+  "frozen_model": "random_forest_balanced",
+  "frozen_thresholds": {
+    "fault_probability_fault_threshold": 0.7050271810002953,
+    "normal_probability_fault_threshold": 0.02019776752297377,
+    "overlap_or_middle_action": "REVIEW"
+  },
+  "protocol_audit": {
+    "checks": {
+      "all_protocol_file_hashes_match": true,
+      "experiment_id_matches": true,
+      "model_fit_forbidden": true,
+      "model_selection_forbidden": true,
+      "protocol_id_self_hash_valid": true,
+      "threshold_tuning_forbidden": true
+    },
+    "file_hashes": {
+      "config": "139380c5d860d7ecef29f4614cd9148527cd0208ca25128799f08d3bd0bbdb20",
+      "evaluator": "2660a300cd147c4b78f6e54206ffe30971a68c09e57632390024d0e94d493991",
+      "runner": "13080cce6a16db16dad1e2cf7d7dc4fa52c1d9a14bd7d07a63ddc042a09991e5"
+    },
+    "protocol_id": "c33ff7a804748c90a747f1e9347977d6bf4c6063363525c2c6590fffce7b099c",
+    "verified_before_test_access": true
+  },
+  "release_policy": {
+    "automatic_factory_quality_acceptance": false,
+    "mendeley_category_merge_allowed": false,
+    "physicsnemo_temperature_validation_claim_allowed": false,
+    "production_release_allowed": false,
+    "si_physics_interpretation_allowed": false
+  },
+  "scope": "one_time_hash_frozen_polito_test",
+  "seed": 42,
+  "selection_audit": {
+    "checks": {
+      "decision_thresholds_match_selection": true,
+      "m7_2a_implementation_hashes_match": true,
+      "m7_2a_production_release_was_blocked": true,
+      "m7_2a_test_was_sealed": true,
+      "selected_model_file_hash_matches": true,
+      "selected_model_hash_matches_config": true,
+      "selected_model_name_matches": true,
+      "selected_model_path_matches": true,
+      "selection_manifest_id_matches": true,
+      "selection_manifest_self_hash_valid": true,
+      "source_manifest_hash_matches": true
+    },
+    "m7_2a_implementation_paths": {
+      "config": "projects/rsw_quality_digital_twin/configs/m7_2a_polito_fault_development.yaml",
+      "evaluator": "src/physicsnemo_study/training/rsw_polito_fault_development.py",
+      "runner": "scripts/run_rsw_m7_2a_polito_development.py"
+    },
+    "selected_model_sha256": "d0684bfa135a0a771393ac765d08dbcf64e8e3ee8154d8e30cf3e9699eb7c432",
+    "selection_manifest_sha256": "07fa21964b83e33233fdf03174cae27d977343ae297a722294d2bdbbf8dfdaa2",
+    "verified_before_test_access": true
+  },
+  "test_data_audit": {
+    "car_bodies": [
+      2,
+      6,
+      12,
+      23
+    ],
+    "faults": 12,
+    "force_empty_sequence_count": 55,
+    "normal": 284,
+    "samples": 296,
+    "test_npz_sha256": "42e4615f8510b53ce3cf88ce9ae1d503ab3145b11f2e376a129afbaab439421d"
+  },
+  "triage_metrics": {
+    "auto_coverage": 0.4560810810810811,
+    "decision_fault_count": 2,
+    "decision_normal_count": 133,
+    "decision_review_count": 161,
+    "fault_auto_fault_recall": 0.16666666666666666,
+    "fault_count": 12,
+    "fault_escape_count": 2,
+    "fault_escape_rate": 0.16666666666666666,
+    "fault_safe_capture_rate": 0.8333333333333334,
+    "illustrative_cost_per_sample": 0.6790540540540541,
+    "illustrative_cost_total": 201,
+    "normal_auto_normal_rate": 0.4612676056338028,
+    "normal_count": 284,
+    "normal_reject_count": 0,
+    "normal_reject_rate": 0.0,
+    "review_rate": 0.543918918918919,
+    "sample_count": 296
+  },
+  "validation_metrics_for_comparison_only": {
+    "model": "random_forest_balanced",
+    "model_family": "statistical_feature_classifier",
+    "selected_epoch": null,
+    "validation_accuracy_at_0p5": 0.97,
+    "validation_balanced_accuracy_at_0p5": 0.7447916666666667,
+    "validation_brier_score": 0.0297592466642531,
+    "validation_confusion_matrix_at_0p5": [
+      [
+        285,
+        3
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "validation_f1_at_0p5": 0.5714285714285714,
+    "validation_fault_count": 12,
+    "validation_fault_precision_at_0p5": 0.6666666666666666,
+    "validation_fault_prevalence": 0.04,
+    "validation_fault_recall_at_0p5": 0.5,
+    "validation_pr_auc": 0.61038739289127,
+    "validation_roc_auc": 0.8799189814814815,
+    "validation_sample_count": 300
+  },
+  "verification": {
+    "feature_contract_changed": false,
+    "figure_count_matches": true,
+    "model_fit_performed": false,
+    "model_selection_performed": false,
+    "pre_access_protocol_verified": true,
+    "pre_access_selection_verified": true,
+    "production_release_blocked": true,
+    "test_car_body_count_matches": true,
+    "test_fault_count_matches": true,
+    "test_sample_count_matches": true,
+    "test_sha256_matches": true,
+    "test_signal_steps_match": true,
+    "threshold_tuning_performed": false
+  },
+  "wilson_intervals": [
+    {
+      "confidence_level": 0.95,
+      "lower": 0.13812009109121315,
+      "method": "Wilson score interval",
+      "metric": "fault_recall_at_0p5",
+      "point_estimate": 0.3333333333333333,
+      "successes": 4,
+      "total": 12,
+      "upper": 0.6093779111272004
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.16818032970623614,
+      "method": "Wilson score interval",
+      "metric": "fault_precision_at_0p5",
+      "point_estimate": 0.4,
+      "successes": 4,
+      "total": 10,
+      "upper": 0.6873262302663417
+    },
+    {
+      "confidence_level": 0.95,
+      "lower": 0.5519691377470266,
+      "method": "Wilson score interval",
+      "metric": "fault_safe_capture_rate",
+      "point_estimate": 0.8333333333333334,
+      "successes": 10,
+      "total": 12,
+      "upper": 0.9530348578161463
+    }
+  ]
+}

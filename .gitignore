@@ -1,0 +1,6 @@
+data/raw_external/
+data/raw_simulation/
+data/processed_simulation/
+data/processed_external/
+artifacts/m0_5_external_audit/
+

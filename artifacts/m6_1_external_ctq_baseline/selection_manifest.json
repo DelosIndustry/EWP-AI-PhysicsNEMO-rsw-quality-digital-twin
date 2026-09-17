@@ -1,0 +1,197 @@
+{
+  "calibration_manifest_id": "8394d8ce236de1b3a7c75fd346806f731627ef6e2eab2c2b5d4c7d859df9774d",
+  "experiment_id": "E06_M6_1_external_ctq_baseline",
+  "external_manifest_id": "e5afa13f2d4ff33f72127993e0ef87289f425c0f28758a4ce1921ce90bc6fb62",
+  "external_test_outcomes_used": false,
+  "feature_contract": {
+    "columns": [
+      "pressure_psi",
+      "welding_time_ms",
+      "angle_deg",
+      "thickness_a_mm",
+      "thickness_b_mm",
+      "record_count",
+      "current_mean_positive_a",
+      "current_rms_positive_a",
+      "current_min_positive_a",
+      "current_max_positive_a",
+      "current_jensen_ratio",
+      "invalid_current_count"
+    ],
+    "current_invalid_policy": "exclude_nonpositive_records_keep_count_and_exclude_weld_if_none_valid",
+    "forbidden_columns": [
+      "force_n",
+      "force_min_n",
+      "force_mean_n",
+      "force_max_n",
+      "pull_test_n",
+      "nugget_diameter_mm",
+      "category"
+    ],
+    "missing_feature_policy": "complete_case_no_imputation",
+    "pressure_semantics": "pneumatic_setting_psi_not_electrode_tip_force",
+    "timestamp_semantics": "record_order_only_no_time_axis_reconstruction"
+  },
+  "manifest_id": "174006ad63c751f58f40a38b8a4c27dbf7f110727f4f0c854b0f29801be6fd01",
+  "model_files": {
+    "category": {
+      "bytes": 923516,
+      "model": "random_forest_balanced",
+      "path": "models/category__random_forest_balanced.pkl",
+      "round_trip_predictions_match": true,
+      "sha256": "178c4b1d0454512aebabadc89d240f494eae639e79172e0e58a7b1afe4f80d7c"
+    },
+    "nugget_diameter_mm": {
+      "bytes": 1316816,
+      "model": "random_forest",
+      "path": "models/nugget_diameter_mm__random_forest.pkl",
+      "round_trip_predictions_match": true,
+      "sha256": "1231c6671aa8c0e7e183a2ccff57b412b90ddca47b6f3fd38d675413dfe32743"
+    },
+    "pull_test_n": {
+      "bytes": 1092581,
+      "model": "random_forest",
+      "path": "models/pull_test_n__random_forest.pkl",
+      "round_trip_predictions_match": true,
+      "sha256": "670d8ecf1144bd6b2b87a90e09e717af8394ef60bfcd6eae0835d7317d11cd12"
+    }
+  },
+  "models": {
+    "classification": {
+      "candidates": [
+        "prior",
+        "logistic_balanced",
+        "random_forest_balanced"
+      ],
+      "logistic_c": 0.5,
+      "random_forest": {
+        "max_depth": 7,
+        "max_features": 0.8,
+        "min_samples_leaf": 3,
+        "n_estimators": 300,
+        "n_jobs": 1
+      }
+    },
+    "permutation_importance_repeats": 20,
+    "regression": {
+      "candidates": [
+        "mean",
+        "ridge",
+        "random_forest"
+      ],
+      "random_forest": {
+        "max_depth": 7,
+        "max_features": 0.8,
+        "min_samples_leaf": 4,
+        "n_estimators": 300,
+        "n_jobs": 1
+      },
+      "ridge_alpha": 10.0
+    }
+  },
+  "physical_twin_calibration_ready": false,
+  "rsw_sim_v3_generation_ready": false,
+  "schema_version": "0.1",
+  "selected_models": {
+    "category": {
+      "accuracy": 0.9230769230769231,
+      "all_classes_present": true,
+      "balanced_accuracy": 0.6174603174603175,
+      "class_counts": {
+        "Bad": 3,
+        "Explode": 5,
+        "Good": 70
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          69
+        ]
+      ],
+      "macro_f1": 0.6813492063492065,
+      "model": "random_forest_balanced",
+      "per_class_recall": {
+        "Bad": 0.6666666666666666,
+        "Explode": 0.2,
+        "Good": 0.9857142857142858
+      },
+      "target_stack_all_classes_present": true,
+      "target_stack_balanced_accuracy": 0.3282051282051282,
+      "target_stack_class_counts": {
+        "Bad": 1,
+        "Explode": 4,
+        "Good": 65
+      },
+      "target_stack_macro_f1": 0.31840796019900497,
+      "target_stack_validation_samples": 70,
+      "task": "category",
+      "task_type": "classification",
+      "train_samples": 315,
+      "validation_samples": 78
+    },
+    "nugget_diameter_mm": {
+      "bias": -0.021703170121783338,
+      "mae": 0.23236452485799428,
+      "median_absolute_error": 0.138059981670261,
+      "model": "random_forest",
+      "r2": 0.3751538108816106,
+      "rmse": 0.32811247163993496,
+      "target_stack_mae": 0.21051235500664184,
+      "target_stack_rmse": 0.2947294404467242,
+      "target_stack_validation_samples": 70,
+      "task": "nugget_diameter_mm",
+      "task_type": "regression",
+      "train_samples": 315,
+      "validation_samples": 78
+    },
+    "pull_test_n": {
+      "bias": 14.143202315114968,
+      "mae": 174.15030393593298,
+      "median_absolute_error": 94.39008055063664,
+      "model": "random_forest",
+      "r2": 0.6829070645834019,
+      "rmse": 310.8432339497482,
+      "target_stack_mae": 143.9229970701436,
+      "target_stack_rmse": 269.2714314786527,
+      "target_stack_validation_samples": 70,
+      "task": "pull_test_n",
+      "task_type": "regression",
+      "train_samples": 313,
+      "validation_samples": 78
+    }
+  },
+  "split_manifest_id": "a7f9c4477da399b24d9a020363bcf48a1786c773f7c600b1f4983147c1772043",
+  "targets": {
+    "category": {
+      "classes": [
+        "Bad",
+        "Explode",
+        "Good"
+      ],
+      "selection_metric": "validation_macro_f1",
+      "task": "classification"
+    },
+    "nugget_diameter_mm": {
+      "selection_metric": "validation_mae",
+      "task": "regression",
+      "valid_minimum_exclusive": 0.0
+    },
+    "pull_test_n": {
+      "selection_metric": "validation_mae",
+      "task": "regression",
+      "valid_minimum_exclusive": 0.0
+    }
+  },
+  "test_access_policy": "sealed_external_test_until_selection_manifest_frozen"
+}

@@ -1,0 +1,13 @@
+{
+  "amendment_type": "presentation_only_title_correction",
+  "corrected_figure": "06_test_triage_corrected.png",
+  "corrected_figure_sha256": "6d557b7e9074ca525025f113e4f7e37d5b88716df3e0ebf8db31fa99c49e99a7",
+  "manifest_id": "76691ad52c64d5b5a59caa01ad482bd2554e35457865680f9c82b5cb94b7d377",
+  "model_fit_performed": false,
+  "model_selection_performed": false,
+  "original_evaluation_receipt_id": "0c115d373eb8e76a79d59817f548ac046ee03a3719ae1906cf3daf91eda382c5",
+  "original_figure_sha256": "947dea77e9ea557fb7fd1af741a2afe02631877b81a6740cf4a30575876ffcce",
+  "predictions_or_metrics_changed": false,
+  "source_test_predictions_sha256": "779a5b1741b0b69f6f79f505dde17b01ca10af02ffb1c3cde3887045a74bea4c",
+  "threshold_tuning_performed": false
+}

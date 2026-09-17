@@ -1,0 +1,10 @@
+quantity,mendeley,polito
+current,direct_si,normalized_only
+voltage,absent,normalized_only
+force,direct_si,normalized_only
+material_and_thickness,direct_or_categorical,absent
+nugget_and_pull_test,direct_si,absent
+fault_or_category,direct_label,direct_label
+internal_temperature_field,absent,absent
+absolute_total_dynamic_resistance,unavailable_without_voltage,unavailable_without_si_scaling
+separate_interface_resistances,not_identifiable,not_identifiable

@@ -1,0 +1,133 @@
+{
+  "device": "cuda",
+  "evaluation_splits": [
+    "validation"
+  ],
+  "experiment_id": "E04_mean_cnn3d_overfit64",
+  "manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+  "melt_ctq_status": "not_configured",
+  "overfit_check": {
+    "checkpoint_role": "last_epoch",
+    "cnn_improves_over_mean": true,
+    "cnn_train_field_nrmse": 0.02351014466453778,
+    "failure_is_fatal": true,
+    "mean_train_field_nrmse": 0.5397011363957466,
+    "passed": true,
+    "sample_count": 64,
+    "target_train_field_nrmse": 0.05
+  },
+  "overfit_results": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m4_baseline_overfit64/mean/best.ckpt",
+      "checkpoint_role": "last_epoch",
+      "experiment_id": "E04_overfit_64",
+      "field_nrmse": 0.5397011363957466,
+      "model": "mean",
+      "negative_temperature_rise_fraction": 0.0,
+      "normalized_mse": 0.5034807901829481,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 0,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 64,
+      "seed": 42,
+      "selected_epoch": null,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "train_overfit",
+      "tmax_mae_k": 133.75824689865112,
+      "worst_5pct_tmax_mae_k": 347.2611083984375
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m4_baseline_overfit64/cnn3d/last.ckpt",
+      "checkpoint_role": "last_epoch",
+      "experiment_id": "E04_overfit_64",
+      "field_nrmse": 0.02351014466453778,
+      "model": "cnn3d",
+      "negative_temperature_rise_fraction": 0.062774658203125,
+      "normalized_mse": 0.0009554035714245401,
+      "p50_latency_ms": null,
+      "p95_latency_ms": null,
+      "parameter_count": 230145,
+      "peak_gpu_memory_mb": null,
+      "sample_count": 64,
+      "seed": 42,
+      "selected_epoch": 100,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "train_overfit",
+      "tmax_mae_k": 3.0612268447875977,
+      "worst_5pct_tmax_mae_k": 10.42327880859375
+    }
+  ],
+  "precision": "fp32",
+  "requested_epochs": 100,
+  "results": [
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m4_baseline_overfit64/mean/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E04",
+      "field_nrmse": 0.9009670349867663,
+      "melt_boundary_dice": null,
+      "melt_diameter_proxy_mae_mm": null,
+      "model": "mean",
+      "negative_temperature_rise_fraction": 0.0,
+      "normalized_mse": 0.3683769553899765,
+      "p50_latency_ms": 0.014813616871833801,
+      "p95_latency_ms": 0.01764846965670585,
+      "parameter_count": 0,
+      "peak_gpu_memory_mb": 0.48974609375,
+      "sample_count": 16,
+      "seed": 42,
+      "selected_epoch": null,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "validation",
+      "tmax_mae_k": 114.85108184814453,
+      "worst_5pct_tmax_mae_k": 188.62258911132812
+    },
+    {
+      "checkpoint": "projects/rsw_quality_digital_twin/artifacts/m4_baseline_overfit64/cnn3d/best.ckpt",
+      "checkpoint_role": "best_validation",
+      "experiment_id": "E04",
+      "field_nrmse": 0.36722780389544535,
+      "melt_boundary_dice": null,
+      "melt_diameter_proxy_mae_mm": null,
+      "model": "cnn3d",
+      "negative_temperature_rise_fraction": 0.089111328125,
+      "normalized_mse": 0.06119920313358307,
+      "p50_latency_ms": 0.603286549448967,
+      "p95_latency_ms": 0.6116681732237339,
+      "parameter_count": 230145,
+      "peak_gpu_memory_mb": 6.568359375,
+      "sample_count": 16,
+      "seed": 42,
+      "selected_epoch": 20,
+      "simulation_manifest_id": "8a39a964572700bcf06c11dbebf3cde1b0d6430673ce17441d6384eaf51ae8be",
+      "split": "validation",
+      "tmax_mae_k": 45.87347412109375,
+      "worst_5pct_tmax_mae_k": 85.96435546875
+    }
+  ],
+  "seed": 42,
+  "selection_metric": "validation_tmax_mae_k",
+  "selection_split": "validation",
+  "test_access_policy": "frozen-best-checkpoint-only",
+  "train_samples": 64,
+  "visualization": {
+    "figure_files": [
+      "cnn3d_training_history.png",
+      "cnn3d_worst_field_panel.png",
+      "tmax_error_histogram.png",
+      "tmax_parity.png"
+    ],
+    "visualization_split": "validation",
+    "worst_sample": {
+      "absolute_tmax_error_k": 85.96438598632812,
+      "contact_model_id": 211000002,
+      "sample_index": 9,
+      "schedule_id": 211000002,
+      "selection_rule": "maximum_absolute_tmax_error",
+      "split": "validation",
+      "stack_id": 211000002,
+      "time_index": 3
+    }
+  }
+}

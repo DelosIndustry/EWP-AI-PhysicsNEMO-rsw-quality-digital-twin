@@ -1,0 +1,96 @@
+# PhysicsNeMo 점용접 품질 디지털 트윈
+
+## 한 문장 목표
+
+차체 저항 점용접의 공정 조건과 재료·접촉 조건으로부터 시간에 따른 전기·온도장을
+빠르게 근사하고, 용융부 직경과 과열 위험을 불확실성까지 고려해 판정하는 재현 가능한
+PhysicsNeMo 프로젝트를 만든다.
+
+> 이 프로젝트는 공개 실험 데이터와 공개 가능한 자체 시뮬레이션만 사용한다. 초기
+> 물성·접촉 모델과 품질 한계값은 학습용 가정이며 현대자동차 또는 다른 완성차 업체의
+> 실제 공정 사양을 재현하지 않는다. 모델 판정은 실제 용접 검사나 CAE 승인을 대체하지
+> 않는다.
+
+## 프로젝트 질문
+
+1. PhysicsNeMo 모델은 전류 이력과 판재·접촉 조건에서 전체 온도 이력을 얼마나 빠르고
+   정확하게 근사하는가?
+2. 고정 격자의 FNO와 좌표 기반 Transolver 중 용융 경계와 시간 이력을 더 잘 예측하는
+   모델은 무엇인가?
+3. 데이터 loss에 전기·열 방정식 residual을 더하면 적은 데이터와 OOD 조건에서 도움이
+   되는가?
+4. 공개 실험의 nugget 직경·인장강도·불량 label로 시뮬레이션 기반 CTQ를 어디까지
+   외부 검증할 수 있는가?
+5. 불확실하거나 학습 범위를 벗어난 용접 조건을 자동 합격시키지 않고 `REVIEW`로 보낼
+   수 있는가?
+
+## MVP 범위
+
+- 두 판재가 겹친 `r-z` 축대칭 2차원 영역
+- 준정상 전기전도와 과도 열전도의 순차 연성
+- 전극은 첫 단계에서 고체 mesh가 아니라 전류·냉각 경계조건으로 단순화
+- 접촉 전기저항과 열접촉 전도도는 얇은 유효 계면으로 표현
+- 자체 solver가 생성한 `T(t,r,z)` 학습 데이터
+- 같은 시공간 tensor를 사용하는 PhysicsNeMo 3D FNO와 Transolver 비교
+- 용융부 직경 proxy, 최고 온도, 냉각속도와 에너지 수지 평가
+- 공개 실험·자동차 생산 시계열은 별도 manifest와 별도 결과표로 외부 평가
+
+## MVP에서 하지 않는 것
+
+- 전극 가압에 의한 탄소성 접촉 변형 직접 해석
+- 용융 금속 유동, splash 또는 expulsion의 직접 해석
+- 온도 의존 상변태와 금속조직의 완전한 재현
+- 실제 공장 PLC의 폐루프 제어
+- 공개 실측과 시뮬레이션 field를 같은 정답처럼 병합
+- 첫 기준선 전에 3D 실차 형상, DDP 또는 대규모 탐색
+
+## 생산기술 직무와의 연결
+
+| 생산기술 업무 | 프로젝트 산출물 |
+|---|---|
+| 차체 신차 공법·구조 검토 | 판재 stack과 용접 recipe의 what-if 비교 |
+| 설비 사양 검토 | 전류·통전시간·접촉·냉각 조건의 안전 운전영역 |
+| 품질 확보 | nugget proxy, 과열 위험, false escape와 `REVIEW` 정책 |
+| 생산 데이터 활용 | 전류·전압·가압력 시계열과 CAE provenance의 분리·결합 |
+| 스마트팩토리 | 빠른 surrogate, OOD 감지, 정밀 해석 fallback |
+| 에너지·생산성 | 품질 제약 아래 에너지와 cycle time 비교 |
+
+## 문서
+
+- [문제와 물리 범위](docs/PROJECT_SPEC.md)
+- [tensor·split·manifest 명세](docs/DATA_SPEC.md)
+- [PhysicsNeMo 모델 비교와 선택](docs/MODEL_REVIEW.md)
+- [외부 실험 데이터 검토](docs/EXTERNAL_DATA_REVIEW.md)
+- [단계별 실험 계획](docs/EXPERIMENT_PLAN.md)
+- [구현 및 검증 상태](docs/IMPLEMENTATION_STATUS.md)
+- [M0 모델 smoke 실행 가이드](docs/M0_MODEL_SMOKE_GUIDE.md)
+- [M3.1 확대 space-filling 설계](docs/M3_1_SPACE_FILLING.md)
+- [M6 외부 실측 adapter](docs/M6_EXTERNAL_ADAPTERS.md)
+
+## 마일스톤
+
+| 단계 | 결과물 | 통과 기준 |
+|---|---|---|
+| M0 | 문제·데이터·모델 계약 | FNO3D와 Transolver shape/gradient smoke 통과 |
+| M1 | 축대칭 전기 solver | 해석해, 전류 보존과 Joule heat test 통과 |
+| M2 | 과도 열 solver와 연성 | 무발열·에너지 수지·격자/시간 수렴 test 통과 |
+| M3 | 결정론적 시뮬레이션 Dataset | 같은 seed/config에서 같은 manifest 생성 |
+| M4 | CNN/FNO/Transolver 기준선 | 동일 split·정규화·선택 metric 비교 완료 |
+| M5 | physics residual | data-only 대비 PINO ablation 완료 |
+| M6 | 외부 실험 adapter | simulation과 experimental 결과를 분리해 보고 |
+| M7 | 품질 gate와 OOD | false escape, review rate, OOD recall 산출 |
+| M8 | mesh·보고서 확장 | MeshGraphNet 타당성 또는 최종 실패 분석 문서화 |
+
+## 지금 실행할 명령
+
+저장소 루트와 `physicsnemo-study` Conda 환경에서 실행한다.
+
+```bash
+python scripts/smoke_rsw_model_candidates.py
+python -m pytest tests/test_rsw_model_candidates.py -q
+python scripts/download_rsw_external_data.py --source all
+```
+
+첫 두 명령은 실제 점용접 성능을 측정하지 않는다. 무작위 tensor를 이용해 두 후보 모델의
+입출력 계약과 gradient 흐름만 확인한다. 마지막 명령은 공개 원본을 내려받고 checksum
+manifest를 생성하지만 아직 학습이나 전처리를 수행하지 않는다.

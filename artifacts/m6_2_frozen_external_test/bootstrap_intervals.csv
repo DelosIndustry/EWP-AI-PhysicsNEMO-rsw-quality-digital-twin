@@ -1,0 +1,13 @@
+task,metric,point_estimate,ci_lower,ci_upper,confidence_level,valid_replicates,requested_replicates,method,independent_unit
+nugget_diameter_mm,mae,0.23684010787062065,0.19439397372100659,0.2905708772467892,0.95,5000,5000,ordinary_weld_resampling,weld_sample_id
+nugget_diameter_mm,rmse,0.33669224312644574,0.24752841337048911,0.44636782534013525,0.95,5000,5000,ordinary_weld_resampling,weld_sample_id
+nugget_diameter_mm,r2,0.20549222437646786,-0.06933211433304824,0.4490065295671127,0.95,5000,5000,ordinary_weld_resampling,weld_sample_id
+pull_test_n,mae,147.6199537775458,112.51612310174926,187.97804820813167,0.95,5000,5000,ordinary_weld_resampling,weld_sample_id
+pull_test_n,rmse,243.56718789599796,166.41469334585491,316.1065892793223,0.95,5000,5000,ordinary_weld_resampling,weld_sample_id
+pull_test_n,r2,0.5829751618429353,0.18864299970868176,0.7703961586030736,0.95,5000,5000,ordinary_weld_resampling,weld_sample_id
+category,accuracy,0.8877551020408163,0.8469387755102041,0.9285714285714286,0.95,5000,5000,class_stratified_weld_resampling,weld_sample_id
+category,balanced_accuracy,0.5681818181818182,0.40151515151515155,0.662878787878788,0.95,5000,5000,class_stratified_weld_resampling,weld_sample_id
+category,macro_f1,0.6003210272873194,0.44794007490636706,0.6537753222836096,0.95,5000,5000,class_stratified_weld_resampling,weld_sample_id
+category,recall_Bad,0.75,0.25,1.0,0.95,5000,5000,class_stratified_weld_resampling,weld_sample_id
+category,recall_Explode,0.0,0.0,0.0,0.95,5000,5000,class_stratified_weld_resampling,weld_sample_id
+category,recall_Good,0.9545454545454546,0.9090909090909091,0.9886363636363636,0.95,5000,5000,class_stratified_weld_resampling,weld_sample_id
